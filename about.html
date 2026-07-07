@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — The AI Enabled Finance</title>
+<meta name="description" content="The AI Enabled Finance — built by Petar Ivanov, a senior finance professional documenting AI adoption in real corporate finance from the inside.">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CHYSB6ECQL"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-CHYSB6ECQL');</script>
+<style>
+:root{--navy:#020B18;--navy2:#061120;--navy3:#0A1A2E;--teal:#00E5C8;--teal2:#00BFFF;--gold:#D4A843;--gold2:#F2C76E;--white:#EEF4FF;--muted:#7A9BBD;--muted2:#4A6A8A;--neon:#39FF14}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--navy);color:var(--white);font-family:'Inter',sans-serif;overflow-x:hidden;cursor:none}
+*{cursor:none!important}
+#bg-canvas{position:fixed;top:0;left:0;width:100%;height:100%;z-index:0;opacity:0.35;pointer-events:none}
+body::before{content:'';position:fixed;inset:0;z-index:1;background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,0,0,0.012) 2px,rgba(0,0,0,0.012) 4px);pointer-events:none}
+.page{position:relative;z-index:2}
+#cur{position:fixed;width:12px;height:12px;border-radius:50%;background:rgba(0,229,200,0.9);pointer-events:none;z-index:99999;transform:translate(-50%,-50%);transition:width 0.15s,height 0.15s;mix-blend-mode:screen}
+#cur-ring{position:fixed;width:32px;height:32px;border-radius:50%;border:1px solid rgba(0,229,200,0.35);pointer-events:none;z-index:99998;transform:translate(-50%,-50%);transition:width 0.2s,height 0.2s}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1rem 3rem;background:rgba(2,11,24,0.92);backdrop-filter:blur(24px);border-bottom:1px solid rgba(0,229,200,0.07)}
+nav::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--teal),var(--gold),transparent);opacity:0.2}
+.nav-brand{font-family:'Orbitron',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.1em;background:linear-gradient(135deg,var(--white) 60%,var(--gold2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;text-decoration:none}
+.nav-right{display:flex;gap:1.75rem;align-items:center}
+.nav-right a{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.14em;color:var(--muted);text-decoration:none;text-transform:uppercase;transition:color 0.2s}
+.nav-right a:hover{color:var(--teal)}
+.nav-right a.active{color:var(--teal)}
+
+/* MAIN */
+.main{max-width:900px;margin:0 auto;padding:120px 3rem 6rem}
+
+/* HERO */
+.about-hero{display:grid;grid-template-columns:200px 1fr;gap:4rem;align-items:start;margin-bottom:5rem}
+.photo-wrap{position:relative;display:flex;justify-content:center}
+.photo-ring{position:absolute;inset:-14px;border-radius:50%;border:1px dashed rgba(212,168,67,0.2);animation:spin 40s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.photo-glow{position:absolute;inset:-4px;border-radius:50%;background:radial-gradient(circle,rgba(0,229,200,0.12) 0%,transparent 70%);filter:blur(8px)}
+.photo{width:180px;height:180px;border-radius:50%;overflow:hidden;border:2px solid rgba(0,229,200,0.28);box-shadow:0 0 28px rgba(0,229,200,0.1);position:relative}
+.photo img{width:100%;height:100%;object-fit:cover;object-position:50% 6%}
+.status-dot{position:absolute;bottom:10px;right:10px;width:13px;height:13px;border-radius:50%;background:var(--teal);border:2px solid var(--navy);box-shadow:0 0 8px var(--teal);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{box-shadow:0 0 6px var(--teal)}50%{box-shadow:0 0 14px var(--teal)}}
+
+.about-intro{}
+.about-eyebrow{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.22em;text-transform:uppercase;color:var(--teal);margin-bottom:1rem;display:flex;align-items:center;gap:8px}
+.about-eyebrow::before{content:'';width:18px;height:1px;background:var(--teal)}
+.about-name{font-family:'Orbitron',sans-serif;font-size:clamp(28px,4vw,42px);font-weight:800;line-height:1.1;margin-bottom:0.5rem}
+.about-role{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--teal);margin-bottom:2rem}
+
+/* STORY LINES */
+.story{margin-bottom:4rem}
+.story-line{font-size:clamp(15px,2vw,18px);font-weight:300;line-height:1.85;color:var(--muted);margin-bottom:1rem}
+.story-line strong{color:var(--white);font-weight:400}
+.story-line .gold{background:linear-gradient(90deg,var(--gold),var(--gold2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-weight:500}
+.story-line .teal{color:var(--teal)}
+.story-divider{width:40px;height:1px;background:linear-gradient(90deg,var(--teal),transparent);margin:2rem 0}
+
+/* MISSION BOX */
+.mission{background:linear-gradient(135deg,rgba(0,229,200,0.05),rgba(212,168,67,0.03));border:1px solid rgba(0,229,200,0.12);border-radius:10px;padding:2rem;margin-bottom:4rem;position:relative;overflow:hidden}
+.mission::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--teal),var(--gold),transparent);opacity:0.4}
+.mission-label{font-family:'JetBrains Mono',monospace;font-size:8px;letter-spacing:0.2em;text-transform:uppercase;color:var(--teal);margin-bottom:1rem}
+.mission-text{font-size:15px;font-weight:300;color:var(--muted);line-height:1.9}
+.mission-text strong{color:var(--white);font-weight:400}
+
+/* PRINCIPLES */
+.principles{margin-bottom:4rem}
+.principles-title{font-family:'Orbitron',sans-serif;font-size:14px;font-weight:700;margin-bottom:1.5rem;color:var(--white)}
+.principle{display:flex;align-items:flex-start;gap:14px;margin-bottom:1.1rem;padding-bottom:1.1rem;border-bottom:1px solid rgba(255,255,255,0.04)}
+.principle:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.principle-marker{font-family:'Orbitron',sans-serif;font-size:11px;font-weight:700;color:var(--teal);flex-shrink:0;width:24px;margin-top:2px}
+.principle-text{font-size:13px;color:var(--muted);line-height:1.75}
+.principle-text strong{color:var(--white);font-weight:500}
+
+/* CTA ROW */
+.cta-row{display:flex;gap:1rem;flex-wrap:wrap;align-items:center}
+.btn-primary{display:inline-flex;align-items:center;gap:8px;font-family:'Orbitron',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.06em;color:var(--navy);background:linear-gradient(135deg,var(--teal),var(--teal2));padding:13px 26px;border-radius:2px;text-decoration:none;transition:all 0.2s}
+.btn-primary:hover{opacity:0.88;transform:translateY(-1px)}
+.btn-secondary{display:inline-flex;align-items:center;gap:8px;font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted);text-decoration:none;letter-spacing:0.08em;transition:color 0.2s}
+.btn-secondary:hover{color:var(--teal)}
+
+/* FOOTER */
+footer{background:var(--navy2);border-top:1px solid rgba(0,229,200,0.07);padding:2rem 3rem;margin-top:0}
+footer::before{content:'';display:block;height:1px;background:linear-gradient(90deg,transparent,var(--teal),var(--gold2),transparent);opacity:0.12;margin-bottom:2rem}
+.fi{max-width:900px;margin:0 auto;display:flex;align-items:center;justify-content:space-between}
+.fb{font-family:'Orbitron',sans-serif;font-size:11px;font-weight:700;background:linear-gradient(90deg,var(--teal),var(--gold2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:3px}
+.fc{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted2);letter-spacing:0.05em}
+.fl{display:flex;gap:1.5rem;flex-wrap:wrap}
+.fl a{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted2);text-decoration:none;text-transform:uppercase;letter-spacing:0.1em;transition:color 0.2s}
+.fl a:hover{color:var(--teal)}
+
+.reveal{opacity:0;transform:translateY(16px);transition:opacity 0.7s ease,transform 0.7s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+
+@media(max-width:768px){
+  nav{padding:0.75rem 1rem}
+  .nav-right{gap:1rem}
+  .main{padding:100px 1rem 4rem}
+  .about-hero{grid-template-columns:1fr;gap:2rem;text-align:center}
+  .photo-wrap{margin:0 auto;width:180px}
+  .about-eyebrow{justify-content:center}
+  .cta-row{justify-content:center}
+  .fi{flex-direction:column;gap:1rem;text-align:center}
+  .fl{justify-content:center}
+}
+</style>
+</head>
+<body>
+<canvas id="bg-canvas"></canvas>
+<div id="cur"></div>
+<div id="cur-ring"></div>
+<div class="page">
+
+<nav>
+  <a href="/" class="nav-brand">The AI Enabled Finance</a>
+  <div class="nav-right">
+    <a href="/">Home</a>
+    <a href="/prompts.html">Prompts</a>
+    <a href="/members.html">Members Hub</a>
+    <a href="/about.html" class="active">About</a>
+    <a href="mailto:peter.at.ivanov@theaienabledfinance.com">Contact</a>
+  </div>
+</nav>
+
+<div class="main">
+
+  <div class="about-hero reveal">
+    <div class="photo-wrap">
+      <div class="photo-ring"></div>
+      <div class="photo-glow"></div>
+      <div class="photo">
+        <img src="/profile_pic.png" alt="Petar Ivanov — The AI Enabled Finance">
+        <div class="status-dot"></div>
+      </div>
+    </div>
+
+    <div class="about-intro">
+      <div class="about-eyebrow">The person behind this</div>
+      <h1 class="about-name">Petar Ivanov</h1>
+      <div class="about-role">Senior Finance Analyst · Founder, The AI Enabled Finance</div>
+    </div>
+  </div>
+
+  <!-- STORY -->
+  <div class="story reveal">
+    <p class="story-line">
+      <strong>12 years in corporate finance.</strong>
+    </p>
+    <p class="story-line">
+      Audit. Commodity trading. Manufacturing.
+      Global health. Pharmaceutical.
+    </p>
+    <p class="story-line">
+      I was doing fine.
+    </p>
+
+    <div class="story-divider"></div>
+
+    <p class="story-line">
+      Then AI came into the conversation.
+    </p>
+    <p class="story-line">
+      <strong>Everyone started talking about it.</strong><br>
+      Nobody knew how to actually use it<br>
+      inside a real corporate finance role.
+    </p>
+    <p class="story-line">
+      Not safely.<br>
+      Not compliantly.<br>
+      Not in a way that survives a real deadline.
+    </p>
+
+    <div class="story-divider"></div>
+
+    <p class="story-line">
+      So six months ago I started testing it myself.
+    </p>
+    <p class="story-line">
+      During actual month-end cycles.<br>
+      Real CAPEX reviews.<br>
+      Live board preparation.
+    </p>
+    <p class="story-line">
+      <strong>Real data. Anonymised. Compliant. Under real pressure.</strong>
+    </p>
+
+    <div class="story-divider"></div>
+
+    <p class="story-line">
+      AI saved me 60 minutes on a four-hour close.
+    </p>
+    <p class="story-line">
+      It also made a confident mistake<br>
+      I nearly sent to my Finance Director.
+    </p>
+    <p class="story-line">
+      <strong>That moment told me everything.</strong>
+    </p>
+    <p class="story-line">
+      AI reasons well with data.<br>
+      It cannot reason with context.<br>
+      <span class="teal">And in corporate finance — context is everything.</span>
+    </p>
+  </div>
+
+  <!-- MISSION -->
+  <div class="mission reveal">
+    <div class="mission-label">// The Mission</div>
+    <p class="mission-text">
+      <strong>No BS. No guru. No vendor deck.</strong><br><br>
+      Just a finance professional documenting what actually works — and what does not — when you apply AI inside a real corporate finance role.<br><br>
+      Safe. Compliant. Practical. Built for the finance professionals who want to stay ahead of the gap without putting their careers at risk.<br><br>
+      <strong>That is what <span style="background:linear-gradient(90deg,var(--gold),var(--gold2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">The AI Enabled Finance</span> is.</strong>
+    </p>
+  </div>
+
+  <!-- PRINCIPLES -->
+  <div class="principles reveal">
+    <div class="principles-title">What this platform is built on</div>
+    <div class="principle">
+      <span class="principle-marker">01</span>
+      <p class="principle-text"><strong>Observation first.</strong> Every piece of content starts with something that actually happened — not something that could theoretically happen in a demo.</p>
+    </div>
+    <div class="principle">
+      <span class="principle-marker">02</span>
+      <p class="principle-text"><strong>Safe by default.</strong> Every prompt, framework, and tool is built around GDPR, data privacy, and corporate governance constraints. Not as an afterthought. As the foundation.</p>
+    </div>
+    <div class="principle">
+      <span class="principle-marker">03</span>
+      <p class="principle-text"><strong>Honest when it fails.</strong> AI gets things wrong. I document that too. The finance professionals who will use this well are the ones who understand both sides.</p>
+    </div>
+    <div class="principle">
+      <span class="principle-marker">04</span>
+      <p class="principle-text"><strong>Peer to peer.</strong> Not above you. Not below you. I am a finance professional sharing what I found with other finance professionals. That is the only relationship this platform has.</p>
+    </div>
+    <div class="principle">
+      <span class="principle-marker">05</span>
+      <p class="principle-text"><strong>Your judgment stays yours.</strong> The capital allocation decision. The re-phasing call. The stakeholder read. AI cannot make those. This platform never pretends otherwise.</p>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta-row reveal">
+    <a href="/prompts.html" class="btn-primary">Get The 25 Free Prompts →</a>
+    <a href="/members.html" class="btn-secondary">Explore the Members Hub ↗</a>
+    <a href="mailto:peter.at.ivanov@theaienabledfinance.com" class="btn-secondary">Get in touch ↗</a>
+  </div>
+
+</div>
+
+<footer>
+  <div class="fi">
+    <div>
+      <div class="fb">The AI Enabled Finance</div>
+      <div class="fc">© 2026 The AI Enabled Finance · Built by Petar Ivanov · Manchester, UK</div>
+    </div>
+    <div class="fl">
+      <a href="https://linkedin.com/in/petarativanov" target="_blank">LinkedIn</a>
+      <a href="https://www.youtube.com/@theaienabledfinance" target="_blank">YouTube</a>
+      <a href="/prompts.html">Prompts</a>
+      <a href="/members.html">Members Hub</a>
+      <a href="/about.html">About</a>
+      <a href="mailto:peter.at.ivanov@theaienabledfinance.com">Contact</a>
+      <a href="/privacy.html">Privacy</a>
+      <a href="/">Home</a>
+    </div>
+  </div>
+</footer>
+
+</div>
+
+<script>
+const cur=document.getElementById('cur'),ring=document.getElementById('cur-ring');
+document.addEventListener('mousemove',e=>{cur.style.left=e.clientX+'px';cur.style.top=e.clientY+'px';ring.style.left=e.clientX+'px';ring.style.top=e.clientY+'px';},{passive:true});
+document.querySelectorAll('a,button').forEach(el=>{
+  el.addEventListener('mouseenter',()=>{cur.style.width='20px';cur.style.height='20px';ring.style.width='44px';ring.style.height='44px';});
+  el.addEventListener('mouseleave',()=>{cur.style.width='12px';cur.style.height='12px';ring.style.width='32px';ring.style.height='32px';});
+});
+const bc=document.getElementById('bg-canvas'),bx=bc.getContext('2d');
+let pts=[];
+function rsz(){bc.width=window.innerWidth;bc.height=window.innerHeight;}
+rsz();window.addEventListener('resize',rsz,{passive:true});
+for(let i=0;i<70;i++)pts.push({x:Math.random()*window.innerWidth,y:Math.random()*window.innerHeight,vx:(Math.random()-.5)*.3,vy:(Math.random()-.5)*.3,r:Math.random()*1.5+.4,o:Math.random()*.45+.1,c:Math.random()>.75?'212,168,67':'0,229,200'});
+function abg(){bx.clearRect(0,0,bc.width,bc.height);pts.forEach(p=>{p.x+=p.vx;p.y+=p.vy;if(p.x<0)p.x=bc.width;if(p.x>bc.width)p.x=0;if(p.y<0)p.y=bc.height;if(p.y>bc.height)p.y=0;bx.beginPath();bx.arc(p.x,p.y,p.r,0,Math.PI*2);bx.fillStyle=`rgba(${p.c},${p.o})`;bx.fill();});requestAnimationFrame(abg);}
+abg();
+const ro=new IntersectionObserver(e=>{e.forEach(el=>{if(el.isIntersecting)el.target.classList.add('visible');});},{threshold:0.06});
+document.querySelectorAll('.reveal').forEach(r=>ro.observe(r));
+setTimeout(()=>document.querySelector('.about-hero')?.classList.add('visible'),80);
+</script>
+<script>
+function taief_getCookie(n){var m=document.cookie.match(new RegExp("(^| )"+n+"=([^;]+)"));return m?m[2]:null}
+function taief_isSubscriber(){return taief_getCookie("taief_subscriber")==="true"}
+function taief_updateNav(){if(!taief_isSubscriber())return;document.querySelectorAll("[data-sub-href]").forEach(function(el){el.href=el.getAttribute("data-sub-href");el.onclick=null;el.removeAttribute("onclick");});}
+document.addEventListener("DOMContentLoaded",taief_updateNav);
+</script>
+</body>
+</html>

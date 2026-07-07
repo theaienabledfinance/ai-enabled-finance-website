@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — The AI Enabled Finance</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CHYSB6ECQL"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-CHYSB6ECQL',{'anonymize_ip':true});</script>
+<style>
+:root{--navy:#020B18;--navy2:#061120;--navy3:#0A1A2E;--teal:#00E5C8;--gold:#D4A843;--gold2:#F2C76E;--white:#EEF4FF;--muted:#7A9BBD;--muted2:#4A6A8A}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--navy);color:var(--white);font-family:'Inter',sans-serif;overflow-x:hidden;cursor:none}
+*{cursor:none!important}
+#cur{position:fixed;width:12px;height:12px;border-radius:50%;background:rgba(0,229,200,0.9);pointer-events:none;z-index:99999;transform:translate(-50%,-50%);mix-blend-mode:screen}
+#cur-ring{position:fixed;width:32px;height:32px;border-radius:50%;border:1px solid rgba(0,229,200,0.35);pointer-events:none;z-index:99998;transform:translate(-50%,-50%)}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1rem 3rem;background:rgba(2,11,24,0.92);backdrop-filter:blur(24px);border-bottom:1px solid rgba(0,229,200,0.07)}
+nav::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--teal),var(--gold),transparent);opacity:0.2}
+.nav-brand{font-family:'Orbitron',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.1em;background:linear-gradient(135deg,var(--white) 60%,var(--gold2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;text-decoration:none}
+.nav-right{display:flex;gap:1.75rem}
+.nav-right a{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.14em;color:var(--muted);text-decoration:none;text-transform:uppercase;transition:color 0.2s}
+.nav-right a:hover{color:var(--teal)}
+
+.main{max-width:760px;margin:0 auto;padding:110px 3rem 6rem}
+
+.page-ey{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.22em;text-transform:uppercase;color:var(--teal);margin-bottom:1rem;display:flex;align-items:center;gap:8px}
+.page-ey::before{content:'';width:18px;height:1px;background:var(--teal)}
+.page-title{font-family:'Orbitron',sans-serif;font-size:clamp(24px,4vw,36px);font-weight:800;line-height:1.1;margin-bottom:0.5rem}
+.page-date{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted2);letter-spacing:0.1em;margin-bottom:3rem}
+
+.plain-box{background:rgba(0,229,200,0.04);border:1px solid rgba(0,229,200,0.1);border-radius:8px;padding:1.25rem 1.5rem;margin-bottom:3rem}
+.plain-box p{font-size:13px;color:var(--muted);line-height:1.8}
+.plain-box strong{color:var(--teal);font-weight:500}
+
+h2{font-family:'Orbitron',sans-serif;font-size:14px;font-weight:700;color:var(--white);margin:2.5rem 0 1rem;padding-bottom:0.5rem;border-bottom:1px solid rgba(0,229,200,0.08)}
+h2:first-of-type{margin-top:0}
+p{font-size:13px;color:var(--muted);line-height:1.85;margin-bottom:0.85rem}
+p strong{color:var(--white);font-weight:500}
+ul{margin:0.5rem 0 1rem 1.25rem}
+ul li{font-size:13px;color:var(--muted);line-height:1.75;margin-bottom:0.4rem}
+a{color:var(--teal);text-decoration:none}
+a:hover{opacity:0.75}
+.highlight{background:rgba(212,168,67,0.06);border:1px solid rgba(212,168,67,0.15);border-radius:6px;padding:1rem 1.25rem;margin:1.25rem 0}
+.highlight p{margin:0;color:var(--muted)}
+.highlight strong{color:var(--gold2)}
+
+footer{background:var(--navy2);border-top:1px solid rgba(0,229,200,0.07);padding:2rem 3rem;margin-top:0}
+footer::before{content:'';display:block;height:1px;background:linear-gradient(90deg,transparent,var(--teal),var(--gold2),transparent);opacity:0.12;margin-bottom:2rem}
+.fi{max-width:760px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.fb{font-family:'Orbitron',sans-serif;font-size:11px;font-weight:700;background:linear-gradient(90deg,var(--teal),var(--gold2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:3px}
+.fc{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted2)}
+.fl{display:flex;gap:1.5rem;flex-wrap:wrap}
+.fl a{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted2);text-decoration:none;text-transform:uppercase;letter-spacing:0.1em;transition:color 0.2s}
+.fl a:hover{color:var(--teal)}
+
+@media(max-width:768px){nav{padding:0.75rem 1rem}.nav-right{gap:1rem}.main{padding:90px 1rem 4rem}.fi{flex-direction:column;text-align:center}.fl{justify-content:center}}
+</style>
+</head>
+<body>
+<div id="cur"></div>
+<div id="cur-ring"></div>
+
+<nav>
+  <a href="/" class="nav-brand">The AI Enabled Finance</a>
+  <div class="nav-right">
+    <a href="/">Home</a>
+    <a href="/prompts.html">Prompts</a>
+    <a href="/members.html">Members Hub</a>
+    <a href="/about.html">About</a>
+  </div>
+</nav>
+
+<div class="main">
+
+  <div class="page-ey">Legal · Compliance</div>
+  <h1 class="page-title">Privacy Policy</h1>
+  <p class="page-date">Last updated: June 2026 · Governing: theaienabledfinance.com</p>
+
+  <div class="plain-box">
+    <p><strong>Plain English first.</strong> This website collects your email address when you download the free prompts. It uses Google Analytics to understand how people use the site. That is it. No company data. No selling your information. No advertising. You can ask us to delete your data at any time.</p>
+  </div>
+
+  <h2>1. Who We Are</h2>
+  <p>The AI Enabled Finance is operated by <strong>Petar Ivanov</strong>, based in Manchester, United Kingdom. For any privacy-related questions, contact us at <a href="mailto:peter.at.ivanov@theaienabledfinance.com">peter.at.ivanov@theaienabledfinance.com</a>.</p>
+  <p>We are the data controller for personal information collected through this website.</p>
+
+  <h2>2. What Data We Collect</h2>
+  <p><strong>Email address</strong> — when you subscribe to receive the 25 free AI Finance Prompts or the newsletter, you provide your email address. This is the only personal data we collect directly.</p>
+  <p><strong>Analytics data</strong> — we use Google Analytics 4 (GA4) to understand how visitors use this website. This collects anonymised data including pages visited, time spent, approximate location (country level), device type, and referral source. IP addresses are anonymised before storage. No personally identifiable information is collected through analytics.</p>
+  <p>We do not collect: names, phone numbers, company details, financial data, or any information about how you use AI tools at work.</p>
+
+  <h2>3. How We Use Your Data</h2>
+  <ul>
+    <li><strong>Email address</strong> — to send you the free prompts, occasional updates about new content, and information about Members Hub access when it becomes available.</li>
+    <li><strong>Analytics data</strong> — to understand which content is useful, how people navigate the site, and how to improve the platform. We never use analytics data to identify individuals.</li>
+  </ul>
+  <p>We do not use your data for advertising, profiling, or automated decision-making.</p>
+
+  <h2>4. Legal Basis (GDPR)</h2>
+  <p>For email subscribers, our legal basis is <strong>consent</strong> — you actively opted in by submitting your email address. You can withdraw consent at any time by unsubscribing.</p>
+  <p>For analytics, our legal basis is <strong>legitimate interest</strong> — understanding how our site is used to improve it, with IP anonymisation applied to minimise privacy impact.</p>
+
+  <h2>5. Email Service Provider</h2>
+  <p>Email subscriptions are managed through <strong>MailerLite</strong>. Your email address is stored on MailerLite's servers. MailerLite is GDPR-compliant and their privacy policy is available at <a href="https://www.mailerlite.com/legal/privacy-policy" target="_blank">mailerlite.com/legal/privacy-policy</a>.</p>
+  <p>We do not sell, rent, or share your email address with any third party for marketing purposes.</p>
+
+  <h2>6. Analytics Provider</h2>
+  <p>We use <strong>Google Analytics 4</strong> with IP anonymisation enabled. Google's privacy policy is available at <a href="https://policies.google.com/privacy" target="_blank">policies.google.com/privacy</a>. You can opt out of Google Analytics tracking using the <a href="https://tools.google.com/dlpage/gaoptout" target="_blank">Google Analytics Opt-out Browser Add-on</a>.</p>
+
+  <h2>7. Data Retention</h2>
+  <p>Email addresses are retained for as long as you remain subscribed. When you unsubscribe, your email is removed from our active list. You can request permanent deletion at any time.</p>
+  <p>Analytics data is retained for 14 months, which is the minimum Google Analytics allows.</p>
+
+  <h2>8. Your Rights (GDPR)</h2>
+  <p>Under GDPR, if you are located in the UK or EEA, you have the right to:</p>
+  <ul>
+    <li><strong>Access</strong> — request a copy of the personal data we hold about you</li>
+    <li><strong>Rectification</strong> — request correction of inaccurate data</li>
+    <li><strong>Erasure</strong> — request deletion of your personal data</li>
+    <li><strong>Portability</strong> — request your data in a portable format</li>
+    <li><strong>Objection</strong> — object to processing of your data</li>
+    <li><strong>Withdraw consent</strong> — unsubscribe from emails at any time using the link in any email we send</li>
+  </ul>
+  <p>To exercise any of these rights, email <a href="mailto:peter.at.ivanov@theaienabledfinance.com">peter.at.ivanov@theaienabledfinance.com</a>. We will respond within 30 days.</p>
+
+  <h2>9. Cookies</h2>
+  <p>This website uses cookies for Google Analytics only. These are analytics cookies that collect anonymised usage data. No advertising cookies or third-party tracking cookies are used.</p>
+  <p>You can control cookies through your browser settings. Blocking analytics cookies will not affect your ability to use any part of this website.</p>
+
+  <h2>10. Children</h2>
+  <p>This website is intended for finance professionals and is not directed at children under 16. We do not knowingly collect data from children. If you believe a child has provided us with personal data, please contact us immediately.</p>
+
+  <h2>11. Changes to This Policy</h2>
+  <p>We may update this policy when our practices change — for example, when the Members Hub paid subscription launches. The date at the top of this page will reflect the most recent update. Significant changes will be communicated to email subscribers.</p>
+
+  <h2>12. Contact</h2>
+  <div class="highlight">
+    <p><strong>Data Controller:</strong> Petar Ivanov, The AI Enabled Finance<br>
+    <strong>Email:</strong> <a href="mailto:peter.at.ivanov@theaienabledfinance.com">peter.at.ivanov@theaienabledfinance.com</a><br>
+    <strong>Website:</strong> theaienabledfinance.com<br>
+    <strong>Location:</strong> Manchester, United Kingdom</p>
+  </div>
+  <p>If you have a concern about how we handle your data that we have not resolved to your satisfaction, you have the right to lodge a complaint with the <strong>Information Commissioner's Office (ICO)</strong> at <a href="https://ico.org.uk" target="_blank">ico.org.uk</a>.</p>
+
+</div>
+
+<footer>
+  <div class="fi">
+    <div>
+      <div class="fb">The AI Enabled Finance</div>
+      <div class="fc">© 2026 The AI Enabled Finance · Built by Petar Ivanov · Manchester, UK</div>
+    </div>
+    <div class="fl">
+      <a href="/">Home</a>
+      <a href="/prompts.html">Prompts</a>
+      <a href="/members.html">Members Hub</a>
+      <a href="/about.html">About</a>
+      <a href="mailto:peter.at.ivanov@theaienabledfinance.com">Contact</a>
+      <a href="/privacy.html">Privacy</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+const cur=document.getElementById('cur'),ring=document.getElementById('cur-ring');
+document.addEventListener('mousemove',e=>{cur.style.left=e.clientX+'px';cur.style.top=e.clientY+'px';ring.style.left=e.clientX+'px';ring.style.top=e.clientY+'px';},{passive:true});
+document.querySelectorAll('a').forEach(el=>{
+  el.addEventListener('mouseenter',()=>{cur.style.width='20px';cur.style.height='20px';});
+  el.addEventListener('mouseleave',()=>{cur.style.width='12px';cur.style.height='12px';});
+});
+</script>
+<script>
+function taief_getCookie(n){var m=document.cookie.match(new RegExp("(^| )"+n+"=([^;]+)"));return m?m[2]:null}
+function taief_isSubscriber(){return taief_getCookie("taief_subscriber")==="true"}
+function taief_updateNav(){if(!taief_isSubscriber())return;document.querySelectorAll("[data-sub-href]").forEach(function(el){el.href=el.getAttribute("data-sub-href");el.onclick=null;el.removeAttribute("onclick");});}
+document.addEventListener("DOMContentLoaded",taief_updateNav);
+</script>
+<script type="text/javascript" async src="https://subscribe-forms.beehiiv.com/attribution.js"></script>
+</body>
+</html>

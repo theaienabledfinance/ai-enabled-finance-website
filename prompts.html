@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>25 AI Finance Prompts — The AI Enabled Finance</title>
+<!-- GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CHYSB6ECQL"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-CHYSB6ECQL');</script>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;800;900&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#020B18;--navy2:#061120;--navy3:#0A1A2E;--navy4:#0F2240;--teal:#00E5C8;--teal2:#00BFFF;--gold:#D4A843;--gold2:#F2C76E;--blue:#1A6EFF;--blue2:#4D9FFF;--white:#EEF4FF;--muted:#7A9BBD;--muted2:#4A6A8A;--red:#FF4D6D;--amber:#FFB830;--green:#28C840;--neon:#39FF14}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--navy);color:var(--white);font-family:'Inter',sans-serif;line-height:1.6}
+.page-wrap{max-width:900px;margin:0 auto;padding:0 24px 80px}
+
+/* HERO */
+.hero{background:linear-gradient(135deg,var(--navy2) 0%,var(--navy3) 100%);border-bottom:1px solid rgba(0,229,200,0.1);padding:60px 24px 48px;text-align:center;position:relative;overflow:hidden}
+.hero::before{content:'AI';position:absolute;font-family:'Orbitron',sans-serif;font-size:300px;font-weight:900;color:rgba(0,229,200,0.025);top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none;user-select:none}
+.hero-eyebrow{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.25em;color:var(--teal);text-transform:uppercase;margin-bottom:16px}
+.hero-title{font-family:'Orbitron',sans-serif;font-size:clamp(28px,5vw,52px);font-weight:800;line-height:1.05;margin-bottom:12px}
+.hero-title .num{color:var(--teal)}
+.hero-title .fin{color:var(--gold)}
+.hero-sub{font-size:15px;font-weight:300;color:var(--muted);margin-bottom:24px}
+.hero-tags{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-bottom:24px}
+.hero-tag{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.14em;text-transform:uppercase;padding:5px 12px;border-radius:2px;border:1px solid}
+.hero-safe{display:inline-flex;align-items:center;gap:8px;background:rgba(0,229,200,0.06);border:1px solid rgba(0,229,200,0.2);border-radius:4px;padding:10px 18px;font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--teal);letter-spacing:0.1em}
+.hero-stat{background:var(--navy3);border:1px solid rgba(0,229,200,0.07);border-radius:6px;padding:16px 24px;margin-top:24px;text-align:center}
+.hero-stat strong{color:var(--teal);font-family:'Orbitron',sans-serif;font-size:20px}
+
+/* NAV BAR */
+.toc{background:var(--navy2);border-top:1px solid rgba(0,229,200,0.06);border-bottom:1px solid rgba(0,229,200,0.06);padding:20px 24px;margin-bottom:0}
+.toc-title{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted2);margin-bottom:14px}
+.toc-sections{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px}
+.toc-section{background:var(--navy3);border-radius:6px;padding:12px;border:1px solid rgba(255,255,255,0.04)}
+.toc-section-letter{font-family:'Orbitron',sans-serif;font-size:18px;font-weight:700;margin-bottom:4px}
+.toc-section-name{font-size:10px;font-weight:300;color:var(--muted);line-height:1.4}
+
+/* HOW TO USE */
+.how-to{background:var(--navy2);border-left:3px solid var(--teal);padding:28px 32px;margin:32px 0}
+.how-to-title{font-family:'Orbitron',sans-serif;font-size:14px;font-weight:700;color:var(--teal);margin-bottom:20px}
+.how-to-steps{display:grid;gap:14px}
+.how-to-step{display:flex;gap:14px;align-items:flex-start}
+.step-num{width:32px;height:32px;border-radius:50%;border:1px solid var(--teal);display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--teal);flex-shrink:0}
+.step-body strong{display:block;font-size:13px;margin-bottom:2px}
+.step-body span{font-size:12px;font-weight:300;color:var(--muted)}
+
+/* SECTION HEADER */
+.section-header{padding:40px 0 20px;border-top:1px solid rgba(255,255,255,0.04);margin-top:40px}
+.section-letter-bg{font-family:'Orbitron',sans-serif;font-size:100px;font-weight:900;opacity:0.04;position:absolute;right:0;top:50%;transform:translateY(-50%);pointer-events:none}
+.section-label{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.22em;text-transform:uppercase;margin-bottom:6px}
+.section-title{font-family:'Orbitron',sans-serif;font-size:22px;font-weight:700;margin-bottom:6px}
+.section-count{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted);letter-spacing:0.12em}
+
+/* PROMPT CARD */
+.prompt-card{background:var(--navy2);border:1px solid rgba(0,229,200,0.07);border-radius:10px;margin-bottom:20px;overflow:hidden;transition:border-color 0.3s}
+.prompt-card:hover{border-color:rgba(0,229,200,0.18)}
+.prompt-header{padding:18px 22px 14px;border-bottom:1px solid rgba(255,255,255,0.04);display:flex;align-items:flex-start;gap:14px}
+.prompt-num{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;width:36px;height:36px;border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;border:1px solid}
+.prompt-meta{flex:1}
+.prompt-type{font-family:'JetBrains Mono',monospace;font-size:8.5px;letter-spacing:0.14em;text-transform:uppercase;margin-bottom:4px}
+.prompt-title{font-family:'Orbitron',sans-serif;font-size:14px;font-weight:700}
+.prompt-body{padding:18px 22px}
+.key-q{background:var(--navy3);border-left:3px solid;border-radius:0 6px 6px 0;padding:12px 16px;margin-bottom:16px}
+.key-q-label{font-family:'JetBrains Mono',monospace;font-size:8px;letter-spacing:0.18em;text-transform:uppercase;margin-bottom:6px}
+.key-q-text{font-size:12.5px;font-style:italic;font-weight:300;line-height:1.65}
+.prompt-label{font-family:'JetBrains Mono',monospace;font-size:8.5px;letter-spacing:0.16em;text-transform:uppercase;color:var(--teal);margin-bottom:8px;display:flex;align-items:center;gap:8px}
+.prompt-label::after{content:'';flex:1;height:1px;background:rgba(0,229,200,0.1)}
+.prompt-text{background:var(--navy);border:1px solid rgba(255,255,255,0.05);border-radius:6px;padding:14px 16px;font-family:'JetBrains Mono',monospace;font-size:11.5px;line-height:1.75;color:rgba(238,244,255,0.75);margin-bottom:16px;white-space:pre-wrap;position:relative}
+.copy-btn{position:absolute;top:10px;right:10px;background:rgba(0,229,200,0.08);border:1px solid rgba(0,229,200,0.2);color:var(--teal);font-family:'JetBrains Mono',monospace;font-size:9px;padding:4px 10px;border-radius:3px;cursor:pointer;transition:all 0.2s}
+.copy-btn:hover{background:rgba(0,229,200,0.15)}
+.safe-box{background:rgba(212,168,67,0.05);border:1px solid rgba(212,168,67,0.2);border-radius:6px;padding:12px 16px;margin-bottom:14px}
+.safe-label{font-family:'JetBrains Mono',monospace;font-size:8.5px;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
+.safe-text{font-size:11.5px;font-weight:300;color:rgba(238,244,255,0.75);line-height:1.65}
+.works-with{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.works-label{font-family:'JetBrains Mono',monospace;font-size:8px;color:var(--muted2);letter-spacing:0.1em;text-transform:uppercase}
+.works-tool{font-family:'JetBrains Mono',monospace;font-size:8.5px;padding:3px 10px;border-radius:3px;border:1px solid rgba(0,229,200,0.2);color:var(--teal);background:rgba(0,229,200,0.04)}
+
+/* FINAL PAGE */
+.final{background:linear-gradient(135deg,var(--navy2),var(--navy3));border-top:1px solid rgba(212,168,67,0.15);padding:48px 32px;text-align:center;margin-top:40px;border-radius:10px}
+.final-heading{font-family:'Orbitron',sans-serif;font-size:28px;font-weight:800;margin-bottom:6px}
+.final-sub{font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:700;color:var(--gold2);margin-bottom:24px}
+.final-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin:28px 0}
+.final-card{background:var(--navy);border-radius:8px;padding:18px;text-align:left;border:1px solid rgba(255,255,255,0.05)}
+.final-card-num{font-family:'JetBrains Mono',monospace;font-size:9px;margin-bottom:6px}
+.final-card-title{font-family:'Orbitron',sans-serif;font-size:11px;font-weight:700;margin-bottom:6px}
+.final-card-desc{font-size:11px;font-weight:300;color:var(--muted);line-height:1.6}
+.final-reflection{background:var(--navy3);border:1px solid rgba(212,168,67,0.2);border-radius:8px;padding:18px;margin:20px 0;text-align:left}
+.final-reflection strong{display:block;color:var(--gold);font-family:'JetBrains Mono',monospace;font-size:8.5px;letter-spacing:0.14em;text-transform:uppercase;margin-bottom:8px}
+.coming{margin-top:24px;text-align:left}
+.coming-title{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted2);letter-spacing:0.16em;text-transform:uppercase;margin-bottom:12px}
+.coming-item{font-size:11px;font-weight:300;color:var(--muted);padding:6px 0;border-bottom:1px solid rgba(255,255,255,0.04);display:flex;align-items:center;gap:8px}
+.coming-item::before{content:'▸';color:var(--teal);flex-shrink:0}
+
+/* FOOTER */
+footer{text-align:center;padding:32px 0;border-top:1px solid rgba(0,229,200,0.07);margin-top:48px}
+footer .brand{font-family:'Orbitron',sans-serif;font-size:12px;font-weight:700;background:linear-gradient(90deg,var(--teal),var(--gold2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:6px}
+footer .copy{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted2);letter-spacing:0.08em}
+
+/* TOAST */
+.toast{position:fixed;bottom:20px;right:20px;background:var(--teal);color:var(--navy);font-family:'JetBrains Mono',monospace;font-size:11px;padding:10px 18px;border-radius:6px;z-index:9999;opacity:0;transition:opacity 0.3s;pointer-events:none}
+.toast.show{opacity:1}
+</style>
+
+<style>
+body{cursor:none}
+*{cursor:none!important}
+#cur{position:fixed;width:12px;height:12px;border-radius:50%;background:rgba(0,229,200,0.9);pointer-events:none;z-index:99999;transform:translate(-50%,-50%);transition:transform 0.1s,width 0.15s,height 0.15s;mix-blend-mode:screen}
+#cur-ring{position:fixed;width:32px;height:32px;border-radius:50%;border:1px solid rgba(0,229,200,0.35);pointer-events:none;z-index:99998;transform:translate(-50%,-50%);transition:transform 0.08s,width 0.2s,height 0.2s,border-color 0.2s}
+</style>
+</head>
+<body>
+
+<!-- PERMANENT HUB BAR - always visible -->
+<div style="position:fixed;top:0;left:0;right:0;z-index:1001;background:rgba(2,11,24,0.98);border-bottom:1px solid rgba(0,229,200,0.12);padding:0 24px;height:44px;display:flex;align-items:center;justify-content:space-between">
+  <a href="/members.html" style="display:flex;align-items:center;gap:8px;text-decoration:none;font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:500;color:#00E5C8;letter-spacing:0.1em;text-transform:uppercase;transition:opacity 0.2s" onmouseenter="this.style.opacity='.7'" onmouseleave="this.style.opacity='1'">
+    <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="flex-shrink:0"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
+    Members Hub
+  </a>
+  <span style="font-family:'Orbitron',sans-serif;font-size:10px;font-weight:700;color:rgba(238,244,255,0.5);letter-spacing:0.1em">THE AI ENABLED FINANCE</span>
+  <div style="display:flex;align-items:center;gap:6px">
+    <div style="display:flex;align-items:center;gap:10px">
+      <span style="font-family:'JetBrains Mono',monospace;font-size:8px;color:rgba(0,229,200,0.5);letter-spacing:0.1em;text-transform:uppercase">25 AI Enabled Prompts</span>
+      <span style="font-family:'Orbitron',sans-serif;font-size:13px;font-weight:900;color:#39FF14;letter-spacing:0.08em;text-shadow:0 0 12px rgba(57,255,20,0.6),0 0 24px rgba(57,255,20,0.3)">FREE</span>
+      <span style="width:4px;height:4px;border-radius:50%;background:#00E5C8;animation:pdot2 2s infinite"></span>
+    </div>
+  </div>
+</div>
+<style>
+@keyframes pdot2{0%,100%{opacity:1}50%{opacity:0.3}}
+</style>
+<!-- BOOKMARK BANNER -->
+<div id="bookmark-banner" style="background:rgba(0,229,200,0.07);border-bottom:1px solid rgba(0,229,200,0.2);padding:10px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;position:sticky;top:44px;z-index:999;backdrop-filter:blur(12px)">
+  <div style="display:flex;align-items:center;gap:10px">
+    <span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--teal);letter-spacing:0.08em">🔒 MEMBERS AREA</span>
+    <span style="width:1px;height:14px;background:rgba(0,229,200,0.2);display:inline-block"></span>
+    <span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:rgba(238,244,255,0.6);letter-spacing:0.06em">Bookmark this page — this is your <strong style="color:var(--teal)">AI Enabled home office</strong>. Or find this link in your welcome email.</span>
+  </div>
+  <button onclick="document.getElementById('bookmark-banner').style.display='none'" style="background:none;border:none;color:rgba(238,244,255,0.35);font-size:18px;cursor:pointer;padding:0 4px;line-height:1;flex-shrink:0">×</button>
+</div>
+
+<nav id="sticky-nav" style="position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(2,11,24,0.95);backdrop-filter:blur(10px);border-bottom:1px solid rgba(0,229,200,0.12);padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:52px;transform:translateY(-100%);transition:transform 0.3s ease;top:44px">
+  <span style="font-family:'Orbitron',sans-serif;font-size:11px;font-weight:700;color:#00E5C8;letter-spacing:0.1em">THE AI ENABLED FINANCE</span>
+  <div style="display:flex;gap:6px;flex-wrap:wrap">
+    <a href="#sec-a" style="font-family:'JetBrains Mono',monospace;font-size:9px;color:#00E5C8;text-decoration:none;padding:5px 10px;border:1px solid rgba(0,229,200,0.25);border-radius:3px">FP&amp;A</a>
+    <a href="#sec-b" style="font-family:'JetBrains Mono',monospace;font-size:9px;color:#D4A843;text-decoration:none;padding:5px 10px;border:1px solid rgba(212,168,67,0.25);border-radius:3px">CAPEX</a>
+    <a href="#sec-c" style="font-family:'JetBrains Mono',monospace;font-size:9px;color:#4D9FFF;text-decoration:none;padding:5px 10px;border:1px solid rgba(77,159,255,0.25);border-radius:3px">MONTH-END</a>
+    <a href="#sec-d" style="font-family:'JetBrains Mono',monospace;font-size:9px;color:#F2C76E;text-decoration:none;padding:5px 10px;border:1px solid rgba(242,199,110,0.25);border-radius:3px">BOARD</a>
+    <a href="#sec-e" style="font-family:'JetBrains Mono',monospace;font-size:9px;color:#00BFFF;text-decoration:none;padding:5px 10px;border:1px solid rgba(0,191,255,0.25);border-radius:3px">STRATEGY</a>
+  </div>
+</nav>
+<script>
+window.addEventListener('scroll',function(){
+  var n=document.getElementById('sticky-nav');
+  n.style.transform=window.scrollY>80?'translateY(0)':'translateY(-100%)';
+});
+</script>
+
+
+<div class="toast" id="toast">✓ Copied to clipboard</div>
+
+<!-- HERO -->
+<div class="hero" style="padding-top:44px">
+  <p class="hero-eyebrow">The AI Enabled Finance · June 2026</p>
+  <h1 class="hero-title">
+    <span class="num">25</span> AI Enabled<br>    <span class="fin">Finance Prompts</span>
+  </h1>
+  <p class="hero-sub">Practical · Safe · Compliant · For Corporate Finance Professionals</p>
+  <div class="hero-tags">
+    <span class="hero-tag" style="color:#00E5C8;border-color:rgba(0,229,200,0.3)">FP&amp;A</span>
+    <span class="hero-tag" style="color:#D4A843;border-color:rgba(212,168,67,0.3)">CAPEX</span>
+    <span class="hero-tag" style="color:#00BFFF;border-color:rgba(0,191,255,0.3)">Month-End</span>
+    <span class="hero-tag" style="color:#F2C76E;border-color:rgba(242,199,110,0.3)">Board Reporting</span>
+    <span class="hero-tag" style="color:#4D9FFF;border-color:rgba(77,159,255,0.3)">Decision Support</span>
+  </div>
+  <div class="hero-safe">🔒 SAFE AI USE INCLUDED — Data privacy guide in every prompt</div>
+  <div class="hero-stat">
+    <strong>79%</strong> of organisations now use generative AI regularly.
+    The gap between those who lead and those who follow is widening every quarter.
+    These 25 prompts are your starting point.
+  </div>
+</div>
+
+<!-- TOC -->
+<div class="toc">
+  <p class="toc-title">Contents</p>
+  <div class="toc-sections">
+    <div class="toc-section"><div class="toc-section-letter" style="color:#00E5C8">A</div><div class="toc-section-name">FP&amp;A — Planning, Forecasting &amp; Analysis<br><small style="color:#4A6A8A">Prompts 01–05</small></div></div>
+    <div class="toc-section"><div class="toc-section-letter" style="color:#D4A843">B</div><div class="toc-section-name">CAPEX Controlling — Governance &amp; Tracking<br><small style="color:#4A6A8A">Prompts 06–10</small></div></div>
+    <div class="toc-section"><div class="toc-section-letter" style="color:#4D9FFF">C</div><div class="toc-section-name">Month-End Close &amp; Reporting<br><small style="color:#4A6A8A">Prompts 11–15</small></div></div>
+    <div class="toc-section"><div class="toc-section-letter" style="color:#F2C76E">D</div><div class="toc-section-name">Board &amp; Senior Stakeholder Reporting<br><small style="color:#4A6A8A">Prompts 16–20</small></div></div>
+    <div class="toc-section"><div class="toc-section-letter" style="color:#00BFFF">E</div><div class="toc-section-name">Decision Support &amp; Strategic Finance<br><small style="color:#4A6A8A">Prompts 21–25</small></div></div>
+  </div>
+</div>
+
+<div class="page-wrap">
+
+<!-- HOW TO USE -->
+<div class="how-to">
+  <p class="how-to-title">How to Use These Prompts</p>
+  <div class="how-to-steps">
+    <div class="how-to-step"><div class="step-num">01</div><div class="step-body"><strong>Choose the right prompt</strong><span>Each is labelled by function and use case. Start with your most time-consuming recurring task.</span></div></div>
+    <div class="how-to-step"><div class="step-num">02</div><div class="step-body"><strong>Anonymise your data first</strong><span>Follow the Safe Input Guide. Replace company names, supplier names, and personal identifiers with generic labels. Non-negotiable.</span></div></div>
+    <div class="how-to-step"><div class="step-num">03</div><div class="step-body"><strong>Click Copy, paste the prompt, add your data</strong><span>Replace [bracketed text] with your anonymised data. The structure gives the AI the right context.</span></div></div>
+    <div class="how-to-step"><div class="step-num">04</div><div class="step-body"><strong>Review, edit, validate</strong><span>AI output is a first draft. Check numbers, validate logic, apply your own judgement before using in any formal document.</span></div></div>
+    <div class="how-to-step"><div class="step-num">05</div><div class="step-body"><strong>Document your AI use</strong><span>Note which tool you used, the date, and the task. Good practice — and increasingly required by corporate AI governance frameworks.</span></div></div>
+  </div>
+</div>
+
+<script>
+const PROMPTS = [
+  // SECTION A
+  {section:"A",sColor:"#00E5C8",sColor2:"#00BFFF",sTitle:"FP&A — Planning, Forecasting & Analysis",
+   num:"01",type:"FP&A · FORECASTING",title:"Rolling Forecast Narrative",
+   keyQ:"If your forecast narrative took 90 minutes last month — what would you do with 75 of them back?",
+   prompt:`You are a finance analyst assistant. Based on the anonymised variance summary below [paste summary — no company names, employee names, or client identifiers], draft a 150-word rolling forecast commentary for senior management.
+
+Structure: headline deviation, 3 key drivers, forward outlook.
+
+Use professional finance language. Do not invent numbers.`,
+   safe:"Remove company name, exact project codes, and personal identifiers before pasting. Use 'Business Unit A' instead of real division names."},
+  {section:"A",sColor:"#00E5C8",sColor2:"#00BFFF",sTitle:"FP&A — Planning, Forecasting & Analysis",
+   num:"02",type:"FP&A · VARIANCE",title:"Budget vs Actual Bridge Explanation",
+   keyQ:"Does your variance commentary explain what happened — or what it means?",
+   prompt:`Act as a senior FP&A analyst. I will provide a budget-to-actual bridge table [paste anonymised data — replace entity names with labels like 'Segment 1']. Explain the top 3 variances in plain business language suitable for a non-finance executive. Keep each explanation under 40 words. Flag any that may require further investigation.`,
+   safe:"Replace all legal entity names, product names, and geographical specifics with generic labels before input."},
+  {section:"A",sColor:"#00E5C8",sColor2:"#00BFFF",sTitle:"FP&A — Planning, Forecasting & Analysis",
+   num:"03",type:"FP&A · SCENARIO",title:"Scenario Modelling Assumptions Checker",
+   keyQ:"Are your scenario assumptions stress-tested — or just optimistic variations of the base case?",
+   prompt:`Review the following scenario modelling assumptions [paste: base, upside, downside assumptions — no entity names or proprietary data]. For each assumption:
+1. Assess whether it is internally consistent
+2. Flag any circular assumptions where one variable is used to justify another
+3. Identify the single assumption with the highest impact on the output
+4. Suggest one alternative assumption range based on macro or sector norms.
+
+Output as a structured table.`,
+   safe:"Share assumption ranges and percentages only. Do not paste proprietary financial models or unreleased forecasts."},
+  {section:"A",sColor:"#00E5C8",sColor2:"#00BFFF",sTitle:"FP&A — Planning, Forecasting & Analysis",
+   num:"04",type:"FP&A · COMMENTARY",title:"KPI Commentary Generator",
+   keyQ:"Would your KPI commentary pass the 'so what' test from a CFO reading it at 7am?",
+   prompt:`Act as a senior FP&A analyst preparing management commentary. For each KPI below [paste: KPI name, current value, target, prior period — no entity-identifying labels], write a 2-sentence commentary covering:
+1. What the number shows
+2. Why it matters and what action it implies.
+
+Tone: direct, professional, boardroom-ready. No passive voice.`,
+   safe:"Use generic KPI labels. Remove any personally identifiable targets or individual performance data."},
+  {section:"A",sColor:"#00E5C8",sColor2:"#00BFFF",sTitle:"FP&A — Planning, Forecasting & Analysis",
+   num:"05",type:"FP&A · ACCURACY",title:"Forecast Accuracy Review",
+   keyQ:"Is your forecasting process built to be accurate — or built to be defensible?",
+   prompt:`Analyse the following forecast accuracy data [paste: period, forecast value, actual value — anonymised]. Calculate MAPE (mean absolute percentage error) and identify the 3 periods with highest forecast error.
+
+Suggest 2 root cause hypotheses for each outlier based on common FP&A forecasting failure patterns. Present as a structured summary.`,
+   safe:"Financial values are fine as numbers — remove period labels that would identify specific reporting cycles tied to public disclosures."},
+  // SECTION B
+  {section:"B",sColor:"#D4A843",sColor2:"#F2C76E",sTitle:"CAPEX Controlling — Governance & Tracking",
+   num:"06",type:"CAPEX · GOVERNANCE",title:"CAPEX Variance Commentary — Board Ready",
+   keyQ:"Is your CAPEX variance a cost problem or a timing problem? Do you know the difference before the board asks?",
+   prompt:`Act as a CAPEX Controller preparing a board report. Based on the variance data below [paste: project label, approved budget, actual spend, forecast-to-complete, variance — no project names or supplier details], write a concise commentary for each project.
+
+Structure: headline variance → primary driver → timing vs cost distinction → risk flag if applicable.
+
+Max 60 words per project.`,
+   safe:"Replace project names with 'Project Alpha / Beta / Gamma'. Remove supplier names, contract values, and procurement-sensitive information."},
+  {section:"B",sColor:"#D4A843",sColor2:"#F2C76E",sTitle:"CAPEX Controlling — Governance & Tracking",
+   num:"07",type:"CAPEX · FORECASTING",title:"Forecast-to-Complete Sense Check",
+   keyQ:"If your FTC is wrong, your EAC is wrong. When did you last challenge it?",
+   prompt:`Review the following CAPEX forecast-to-complete (FTC) estimates [paste: project label, % complete, budget remaining, FTC submitted by project manager — no project names]. For each project:
+1. Calculate whether FTC is consistent with current spend rate
+2. Flag projects where FTC appears optimistic vs actual burn
+3. Suggest 2 questions to ask the project manager to validate the estimate.`,
+   safe:"Use project labels only. Do not include supplier names, contract values, or commercially sensitive procurement data."},
+  {section:"B",sColor:"#D4A843",sColor2:"#F2C76E",sTitle:"CAPEX Controlling — Governance & Tracking",
+   num:"08",type:"CAPEX · GOVERNANCE",title:"CAPEX Approval Checklist Drafter",
+   keyQ:"Does your CAPEX approval process catch the risks — or just rubber-stamp the numbers?",
+   prompt:`Draft a CAPEX approval checklist for a project of [size: <$1M / $1M–$5M / $5M–$10M] in [type: brownfield expansion / new equipment / IT infrastructure / process improvement]. Include:
+1. Financial approval criteria (NPV, payback period, IRR minimums)
+2. Non-financial governance checks (risk assessment, alternatives considered, ESG flags)
+3. Documentation required before submission
+4. 3 questions the approving committee will most likely challenge.
+
+Format as a checklist with Yes/No fields.`,
+   safe:"This prompt uses no sensitive data — all inputs are project type and size parameters only."},
+  {section:"B",sColor:"#D4A843",sColor2:"#F2C76E",sTitle:"CAPEX Controlling — Governance & Tracking",
+   num:"09",type:"CAPEX · CLASSIFICATION",title:"Spend Classification: CAPEX vs OPEX",
+   keyQ:"Is your spend capitalised correctly — or are you building an audit finding?",
+   prompt:`Review the following expenditure items [paste: description and approximate cost for each item — no supplier names or contract references]. Classify each as CAPEX or OPEX under IFRS/IAS 16 principles.
+
+For each item provide:
+1. Classification (CAPEX / OPEX / Borderline)
+2. Rationale in one sentence
+3. Flag if further finance judgement is required before finalising.
+
+Output as a structured table.`,
+   safe:"Describe expenditure items generically. Do not paste invoice details, supplier names, or contract-identifying information."},
+  {section:"B",sColor:"#D4A843",sColor2:"#F2C76E",sTitle:"CAPEX Controlling — Governance & Tracking",
+   num:"10",type:"CAPEX · REVIEW",title:"Post-Investment Review Framework",
+   keyQ:"Did the project deliver what the business case promised? Most organisations never formally check.",
+   prompt:`Design a post-investment review framework for a CAPEX project of [size] that has reached practical completion. Structure the review across:
+1. Financial performance vs business case (IRR, payback, NPV)
+2. Scope and timeline delivery
+3. Operational performance vs assumption
+4. Key lessons for future investment appraisals.
+
+Output: a structured review template with guidance notes for each section.`,
+   safe:"This is a framework design prompt — no sensitive data input required. Customise with anonymised project parameters."},
+  // SECTION C
+  {section:"C",sColor:"#4D9FFF",sColor2:"#00BFFF",sTitle:"Month-End Close & Reporting",
+   num:"11",type:"MONTH-END · PROCESS",title:"Month-End Close Checklist Builder",
+   keyQ:"Is your month-end process documented — or does it exist only in the head of one person?",
+   prompt:`Build a month-end close checklist for a [finance function type: FP&A / CAPEX Controlling / Financial Accounting] team with a [team size] closing a [reporting period: monthly / quarterly]. Include:
+1. Pre-close tasks (D-5 to D-1)
+2. Close day tasks
+3. Post-close reporting tasks
+4. Quality checks before sign-off
+5. Escalation triggers if milestones are missed.
+
+Format as a day-by-day checklist with responsible owner field.`,
+   safe:"No sensitive data input required. Replace function-specific references with generic equivalents if sharing externally."},
+  {section:"C",sColor:"#4D9FFF",sColor2:"#00BFFF",sTitle:"Month-End Close & Reporting",
+   num:"12",type:"MONTH-END · ACCRUALS",title:"Accrual Rationale Drafter",
+   keyQ:"Could your accrual rationale survive an audit query six months from now?",
+   prompt:`Draft an accrual rationale note for the following item [paste: accrual description, estimated value, basis of estimate, supporting evidence — no supplier names or contract values]. The note should:
+1. State the nature of the accrual
+2. Explain the estimation methodology
+3. Reference the accounting policy applied
+4. Confirm evidence available for audit.
+
+Max 150 words. Professional finance language.`,
+   safe:"Replace supplier names with 'Vendor A'. Remove contract values — use percentage of contract or estimated range instead."},
+  {section:"C",sColor:"#4D9FFF",sColor2:"#00BFFF",sTitle:"Month-End Close & Reporting",
+   num:"13",type:"MONTH-END · COMMUNICATION",title:"Variance Explanation Email Drafter",
+   keyQ:"Does your variance explanation email answer the question — or create three more?",
+   prompt:`Draft a variance explanation email for the following situation [paste: variance amount, affected cost centre label, primary driver, any mitigating actions]. Write two versions:
+
+Version 1: For a finance-literate audience (FD / CFO) — technical, concise, data-led.
+Version 2: For a non-finance business stakeholder — plain language, action-focused.
+
+Max 100 words each. No jargon in Version 2.`,
+   safe:"Use cost centre labels, not names. Replace manager names with 'Business Partner A'. Remove absolute figures if sensitive — use % variance instead."},
+  {section:"C",sColor:"#4D9FFF",sColor2:"#00BFFF",sTitle:"Month-End Close & Reporting",
+   num:"14",type:"MONTH-END · RECONCILIATION",title:"Reconciliation Exception Identifier",
+   keyQ:"Are your reconciliation exceptions being investigated — or just carried forward?",
+   prompt:`Review the following reconciliation exceptions [paste: exception description, age in days, value, current status — no entity names]. For each exception:
+1. Classify as: timing difference / error / missing transaction / escalation required
+2. Suggest the most likely root cause
+3. Recommend the specific investigation step needed to resolve it
+4. Flag any items that represent financial statement risk.
+
+Output as a prioritised action table.`,
+   safe:"Use generic account labels. Do not paste reconciliation reports containing personal data, supplier payment details, or banking information."},
+  {section:"C",sColor:"#4D9FFF",sColor2:"#00BFFF",sTitle:"Month-End Close & Reporting",
+   num:"15",type:"MONTH-END · NARRATIVE",title:"Management Accounts Narrative",
+   keyQ:"Does your management accounts narrative tell the story — or just repeat the numbers?",
+   prompt:`Draft a management accounts narrative for [reporting period] based on the following financial headlines [paste: revenue, cost, margin, key variances vs budget — anonymised]. Structure:
+1. Performance headline (one sentence)
+2. Revenue analysis (2-3 sentences)
+3. Cost analysis (2-3 sentences)
+4. Margin commentary (1-2 sentences)
+5. Forward outlook and key risks (2 sentences).
+
+Tone: direct, analytical, board-ready. Max 300 words total.`,
+   safe:"Use percentage variances and indexed values if absolute figures are sensitive. Remove all entity-identifying labels."},
+  // SECTION D
+  {section:"D",sColor:"#F2C76E",sColor2:"#D4A843",sTitle:"Board & Senior Stakeholder Reporting",
+   num:"16",type:"BOARD · EXECUTIVE SUMMARY",title:"Board Pack Executive Summary",
+   keyQ:"Does your board pack open with what matters — or with what's easiest to report?",
+   prompt:`Draft a board pack executive summary based on the following financial headlines [paste: 5-7 key metrics with brief context — no entity names]. Structure:
+1. Business performance in one sentence
+2. Three key financial developments with numbers
+3. One risk requiring board attention
+4. One strategic financial opportunity.
+
+Max 200 words. Write for a board audience — assume financial literacy but limited operational detail.`,
+   safe:"Do not paste full board papers. Share headline figures and context descriptions only. Avoid disclosing pre-release financial results."},
+  {section:"D",sColor:"#F2C76E",sColor2:"#D4A843",sTitle:"Board & Senior Stakeholder Reporting",
+   num:"17",type:"BOARD · PRESENTATION",title:"CFO Presentation Script",
+   keyQ:"Can your CFO present the numbers confidently — or are they reading slides for the first time in the room?",
+   prompt:`Write a CFO presentation script for the following financial results [paste: period, headline figures, top 3 variances, forward outlook — anonymised]. Structure:
+1. Opening context (30 seconds)
+2. Headline performance (60 seconds)
+3. Deep-dive on top variance (90 seconds)
+4. Forward outlook (60 seconds)
+5. Close with one key message (20 seconds).
+
+Write in natural spoken language. Confident, factual, no filler phrases.`,
+   safe:"Use indexed or anonymised figures. Avoid disclosing unreleased results or commercially sensitive forward guidance."},
+  {section:"D",sColor:"#F2C76E",sColor2:"#D4A843",sTitle:"Board & Senior Stakeholder Reporting",
+   num:"18",type:"BOARD · PREPARATION",title:"Anticipate Board Questions",
+   keyQ:"Are you prepared for the board questions — or just prepared for the slides?",
+   prompt:`Based on the following financial results and narrative [paste: key metrics, top variances, forward outlook — no entity names], generate the 10 most likely board questions, ranked by probability.
+
+For each question:
+1. Suggest the strongest 2-sentence answer
+2. Flag if additional data would be needed to answer fully
+3. Note if the question represents a reputational or governance risk.
+
+Be rigorous — boards ask uncomfortable questions.`,
+   safe:"This prompt works best with anonymised financial summaries. Remove all entity-identifying information."},
+  {section:"D",sColor:"#F2C76E",sColor2:"#D4A843",sTitle:"Board & Senior Stakeholder Reporting",
+   num:"19",type:"BOARD · INVESTMENT",title:"Investment Case One-Pager",
+   keyQ:"Would a board member understand your investment case in 90 seconds — without asking a follow-up question?",
+   prompt:`Draft an investment case one-pager for the following project [paste: project purpose, total cost, key financial metrics (IRR, NPV, payback), primary risk, alternative considered — no supplier names]. Structure:
+1. Strategic rationale (2 sentences)
+2. Financial summary (key metrics in a table)
+3. Risk and mitigations (3 bullet points)
+4. Recommended decision with timeline.
+
+Max 250 words. Board-ready language throughout.`,
+   safe:"Use generic project descriptions. Remove supplier names, contract values, and commercially sensitive pricing assumptions."},
+  {section:"D",sColor:"#F2C76E",sColor2:"#D4A843",sTitle:"Board & Senior Stakeholder Reporting",
+   num:"20",type:"BOARD · RISK",title:"Risk Dashboard Commentary",
+   keyQ:"Does your risk dashboard tell the board what to do — or just what to worry about?",
+   prompt:`Draft risk dashboard commentary for the following risk register items [paste: risk description, current status, financial exposure estimate — no entity names]. For each risk:
+1. Assign a RAG status (Red / Amber / Green) with brief justification
+2. State the single most important mitigating action
+3. Quantify financial exposure where possible
+4. Flag any risks that have escalated since last period.
+
+Output: structured commentary suitable for board risk section.`,
+   safe:"Use generic risk descriptions. Remove specific counterparty names, project identifiers, and commercially sensitive exposure amounts — use ranges instead."},
+  // SECTION E
+  {section:"E",sColor:"#00BFFF",sColor2:"#1A6EFF",sTitle:"Decision Support & Strategic Finance",
+   num:"21",type:"DECISION SUPPORT · MAKE VS BUY",title:"Make vs Buy Financial Analysis",
+   keyQ:"Is your make-vs-buy decision based on total cost of ownership — or just the invoice price?",
+   prompt:`Conduct a make-vs-buy financial analysis for the following scenario [paste: activity description, current in-house cost estimate, external quote, volume, quality requirements — no supplier names]. Analyse:
+1. Total cost of ownership comparison (5-year horizon)
+2. Break-even point between make and buy
+3. Non-financial factors that should influence the decision
+4. Recommended option with financial justification.
+
+Output as a structured comparison with clear recommendation.`,
+   safe:"Replace supplier names with 'Supplier A / B'. Use cost ranges rather than exact quotes if commercially sensitive."},
+  {section:"E",sColor:"#00BFFF",sColor2:"#1A6EFF",sTitle:"Decision Support & Strategic Finance",
+   num:"22",type:"DECISION SUPPORT · COST",title:"Cost Reduction Opportunity Scan",
+   keyQ:"Most cost reduction programmes find 80% of savings in 20% of the cost base. Are you looking in the right 20%?",
+   prompt:`Review the following cost base summary [paste: cost categories and approximate spend proportions — no vendor names or contract values]. Identify the top 5 categories most likely to contain optimisation opportunities based on general cost management principles.
+
+For each, suggest one analytical test to confirm whether an opportunity exists.
+
+Output: Category | Analytical Test | Typical Opportunity Type`,
+   safe:"Share cost category proportions and descriptions only. Do not paste supplier names, contract terms, or commercially sensitive pricing."},
+  {section:"E",sColor:"#00BFFF",sColor2:"#1A6EFF",sTitle:"Decision Support & Strategic Finance",
+   num:"23",type:"DECISION SUPPORT · STRESS TEST",title:"Business Case Stress Test",
+   keyQ:"A business case that only works in the base scenario is not a business case — it's a hope.",
+   prompt:`Take the following business case assumptions [paste: revenue growth rate, cost assumptions, margin target, payback period — no entity names]. Apply a stress test using:
+1. -20% on revenue assumption
+2. +15% on cost assumption
+3. Combined downside scenario (both simultaneously).
+
+For each, calculate the impact on NPV or payback period and state clearly whether the case remains viable. Show workings in a structured table.`,
+   safe:"Assumption inputs are appropriate to share. Do not include proprietary pricing models, market share data, or client revenue forecasts."},
+  {section:"E",sColor:"#00BFFF",sColor2:"#1A6EFF",sTitle:"Decision Support & Strategic Finance",
+   num:"24",type:"DECISION SUPPORT · AUTOMATION",title:"Finance Process Automation Assessment",
+   keyQ:"Which finance tasks are you still doing manually that an AI tool could do in seconds?",
+   prompt:`Assess the following finance processes for automation potential [paste: process name, frequency, time taken, current tool used, key pain point — no personal names]. For each process:
+1. Rate automation potential: High / Medium / Low
+2. Recommend the most suitable AI or automation approach
+3. Estimate time saving if automated
+4. Flag any compliance or audit considerations before automating.
+
+Output as a prioritised automation roadmap.`,
+   safe:"Use process descriptions only. Remove references to specific internal systems, ERP configurations, or IT infrastructure details."},
+  {section:"E",sColor:"#00BFFF",sColor2:"#1A6EFF",sTitle:"Decision Support & Strategic Finance",
+   num:"25",type:"DECISION SUPPORT · AI READINESS",title:"Finance Team AI Readiness Reflection",
+   keyQ:"Is your finance team ready to adopt AI — or will it be adopted for them?",
+   prompt:`Based on the following finance team profile [paste: team size, current tools, primary tasks, AI tools used to date if any — no personal names], assess AI readiness across 5 dimensions:
+1. Data quality and accessibility
+2. Process documentation maturity
+3. Team capability and appetite
+4. Governance and compliance framework
+5. Leadership support and vision.
+
+For each dimension: score 1-5 with justification and one recommended action.
+
+Output: AI Readiness Score with prioritised action plan.`,
+   safe:"Describe team profile generically. Do not include individual names, performance data, or HR-sensitive information."},
+];
+
+const SECTION_META = {
+  A:{color:"#00E5C8",label:"Section A"},
+  B:{color:"#D4A843",label:"Section B"},
+  C:{color:"#4D9FFF",label:"Section C"},
+  D:{color:"#F2C76E",label:"Section D"},
+  E:{color:"#00BFFF",label:"Section E"},
+};
+
+function copyPrompt(text, btn) {
+  navigator.clipboard.writeText(text).then(() => {
+    btn.textContent = '✓ Copied!';
+    const toast = document.getElementById('toast');
+    toast.classList.add('show');
+    setTimeout(() => { toast.classList.remove('show'); btn.textContent = 'Copy Prompt'; }, 2000);
+  });
+}
+
+function renderPrompts() {
+  const container = document.getElementById('prompts-container');
+  let currentSection = null;
+
+  PROMPTS.forEach((p, idx) => {
+    // Section header
+    if (p.section !== currentSection) {
+      currentSection = p.section;
+      const m = SECTION_META[p.section];
+      const sh = document.createElement('div');
+      sh.className = 'section-header';
+      sh.style.position = 'relative';
+      sh.id = 'sec-' + p.section.toLowerCase();
+      sh.innerHTML = `
+        <div style="font-size:80px;font-family:'Orbitron',sans-serif;font-weight:900;color:${m.color};opacity:0.04;position:absolute;right:0;top:0;line-height:1;user-select:none">${p.section}</div>
+        <p class="section-label" style="color:${m.color}">${m.label}  ·  5 Prompts</p>
+        <h2 class="section-title" style="color:${m.color}">${p.sTitle}</h2>
+        <p class="section-count">Prompts ${String(idx+1).padStart(2,'0')}–${String(idx+5).padStart(2,'0')}</p>`;
+      container.appendChild(sh);
+    }
+
+    const card = document.createElement('div');
+    card.className = 'prompt-card';
+    const promptId = `prompt-${p.num}`;
+
+    card.innerHTML = `
+      <div class="prompt-header">
+        <div class="prompt-num" style="color:${p.sColor};border-color:${p.sColor}44;background:${p.sColor}12">${p.num}</div>
+        <div class="prompt-meta">
+          <p class="prompt-type" style="color:${p.sColor}">${p.type}</p>
+          <h3 class="prompt-title">${p.title}</h3>
+        </div>
+      </div>
+      <div class="prompt-body">
+        <div class="key-q" style="border-left-color:${p.sColor2}">
+          <p class="key-q-label" style="color:${p.sColor2}">Key Question</p>
+          <p class="key-q-text">${p.keyQ}</p>
+        </div>
+        <p class="prompt-label">The Prompt — Copy &amp; Customise</p>
+        <div style="position:relative">
+          <div class="prompt-text" id="${promptId}">${p.prompt}</div>
+          <button class="copy-btn" onclick="copyPrompt(document.getElementById('${promptId}').textContent, this)">Copy Prompt</button>
+        </div>
+        <div class="safe-box">
+          <p class="safe-label">🔒 Safe Input Guide — Data Privacy</p>
+          <p class="safe-text">${p.safe}</p>
+        </div>
+        <div class="works-with">
+          <span class="works-label">Works with:</span>
+          ${['Claude','ChatGPT','Copilot','Gemini',p.section==='E'?'Perplexity':''].filter(Boolean).map(t=>`<span class="works-tool">${t}</span>`).join('')}
+        </div>
+      </div>`;
+    container.appendChild(card);
+  });
+}
+
+document.addEventListener('DOMContentLoaded', renderPrompts);
+</script>
+
+<div id="prompts-container"></div>
+
+<!-- FINAL PAGE -->
+<div class="final">
+  <p class="final-heading">You Now Have</p>
+  <p class="final-sub">25 Tested Prompts. The difference is in the doing.</p>
+  <div class="final-cards">
+    <div class="final-card"><div class="final-card-num" style="color:#00E5C8">01</div><div class="final-card-title" style="color:#00E5C8">Start With Prompt #01</div><div class="final-card-desc">Run your next variance commentary through it this week. See what happens. Then iterate.</div></div>
+    <div class="final-card"><div class="final-card-num" style="color:#D4A843">02</div><div class="final-card-title" style="color:#D4A843">Follow on LinkedIn</div><div class="final-card-desc">Weekly AI prompts, workflow breakdowns, and real-world finance insights.<br><a href="https://linkedin.com/in/petarativanov" style="color:#D4A843">linkedin.com/in/petarativanov</a></div></div>
+    <div class="final-card"><div class="final-card-num" style="color:#4D9FFF">03</div><div class="final-card-title" style="color:#4D9FFF">Share This Guide</div><div class="final-card-desc">Send it to one finance colleague. That is how this community grows — one professional at a time.</div></div>
+  </div>
+  <div class="final-reflection">
+    <strong>Final Reflection</strong>
+    <p style="font-size:13px;font-weight:300;line-height:1.7">Which one task in your finance workflow, if cut by 60%, would give you back the thinking time you actually need?<br><strong style="color:#00E5C8">Start there. Use Prompt #01 this week.</strong></p>
+  </div>
+  <div class="coming">
+    <p class="coming-title" style="font-size:14px;margin-bottom:20px">What's coming to The AI Enabled Finance</p>
+    <p style="font-family:'JetBrains Mono',monospace;font-size:9px;color:rgba(238,244,255,0.4);letter-spacing:0.08em;margin-bottom:20px">Access everything from your Members Hub — explore what's coming and get early access when it launches.</p>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-bottom:8px">
+
+      <a href="/members.html#insights" onclick="playClick()" style="text-decoration:none;display:block;background:rgba(6,17,32,0.8);border:1px solid rgba(212,168,67,0.3);border-radius:8px;padding:18px;transition:border-color 0.25s,transform 0.2s;cursor:none" onmouseenter="this.style.borderColor='rgba(212,168,67,0.55)';this.style.transform='translateY(-2px)';playHover();setCursorHover();" onmouseleave="this.style.borderColor='rgba(212,168,67,0.3)';this.style.transform='translateY(0)';setCursorNormal();">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:8px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(212,168,67,0.6);margin-bottom:10px">// Coming Soon</div>
+        <div style="font-family:'Orbitron',sans-serif;font-size:13px;font-weight:700;color:#F2C76E;margin-bottom:10px;line-height:1.3">Insights &amp; Walkthroughs</div>
+        <div style="font-size:11px;color:rgba(238,244,255,0.5);line-height:1.7;margin-bottom:8px">
+          → AI Enabled Finance Insights<br>
+          → AI Enabled Walkthroughs<br>
+          → YouTube Channel
+        </div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:rgba(212,168,67,0.5);letter-spacing:0.06em">View in Members Hub →</div>
+      </a>
+
+      <a href="/members.html#products" onclick="playClick()" style="text-decoration:none;display:block;background:rgba(6,17,32,0.8);border:1px solid rgba(212,168,67,0.3);border-radius:8px;padding:18px;transition:border-color 0.25s,transform 0.2s;cursor:none" onmouseenter="this.style.borderColor='rgba(212,168,67,0.55)';this.style.transform='translateY(-2px)';playHover();setCursorHover();" onmouseleave="this.style.borderColor='rgba(212,168,67,0.3)';this.style.transform='translateY(0)';setCursorNormal();">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:8px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(212,168,67,0.6);margin-bottom:10px">// Coming Very Soon</div>
+        <div style="font-family:'Orbitron',sans-serif;font-size:13px;font-weight:700;color:#F2C76E;margin-bottom:10px;line-height:1.3">Products</div>
+        <div style="font-size:11px;color:rgba(238,244,255,0.5);line-height:1.7;margin-bottom:8px">
+          → The AI Enabled Finance Prompt Vault<br>
+          → The AI Enabled Month-End Pack<br>
+          → The AI Enabled CAPEX Control Model
+        </div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:rgba(212,168,67,0.5);letter-spacing:0.06em">View in Members Hub →</div>
+      </a>
+
+      <a href="/members.html#personal" onclick="playClick()" style="text-decoration:none;display:block;background:rgba(6,17,32,0.8);border:1px solid rgba(212,168,67,0.3);border-radius:8px;padding:18px;transition:border-color 0.25s,transform 0.2s;cursor:none" onmouseenter="this.style.borderColor='rgba(212,168,67,0.55)';this.style.transform='translateY(-2px)';playHover();setCursorHover();" onmouseleave="this.style.borderColor='rgba(212,168,67,0.3)';this.style.transform='translateY(0)';setCursorNormal();">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:8px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(212,168,67,0.6);margin-bottom:10px">// Coming Soon</div>
+        <div style="font-family:'Orbitron',sans-serif;font-size:13px;font-weight:700;color:#F2C76E;margin-bottom:10px;line-height:1.3">20% Personal</div>
+        <div style="font-size:11px;color:rgba(238,244,255,0.5);line-height:1.7;margin-bottom:8px">
+          → How I Built This From Zero<br>
+          → AI Tools for Brand Building<br>
+          → Content Creation System
+        </div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:rgba(212,168,67,0.5);letter-spacing:0.06em">View in Members Hub →</div>
+      </a>
+
+    </div>
+  </div>
+</div>
+
+</div><!-- /page-wrap -->
+
+<footer>
+  <p class="brand">The AI Enabled Finance</p>
+  <p class="copy">© 2026 The AI Enabled Finance · theaienabledfinance.com · Petar Ivanov · All rights reserved<br>Unauthorised reproduction, redistribution, or resale is strictly prohibited.</p>
+  <div style="display:flex;gap:1.5rem;justify-content:center;flex-wrap:wrap;margin-top:1rem">
+    <a href="/" style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted2);text-decoration:none;text-transform:uppercase;letter-spacing:0.1em;transition:color 0.2s" onmouseover="this.style.color='var(--teal)'" onmouseout="this.style.color='var(--muted2)'">Home</a>
+    <a href="/members.html" style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted2);text-decoration:none;text-transform:uppercase;letter-spacing:0.1em;transition:color 0.2s" onmouseover="this.style.color='var(--teal)'" onmouseout="this.style.color='var(--muted2)'">Members Hub</a>
+    <a href="/newsletter.html" style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted2);text-decoration:none;text-transform:uppercase;letter-spacing:0.1em;transition:color 0.2s" onmouseover="this.style.color='var(--teal)'" onmouseout="this.style.color='var(--muted2)'">Newsletter</a>
+    <a href="/about.html" style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted2);text-decoration:none;text-transform:uppercase;letter-spacing:0.1em;transition:color 0.2s" onmouseover="this.style.color='var(--teal)'" onmouseout="this.style.color='var(--muted2)'">About</a>
+    <a href="mailto:peter.at.ivanov@theaienabledfinance.com" style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted2);text-decoration:none;text-transform:uppercase;letter-spacing:0.1em;transition:color 0.2s" onmouseover="this.style.color='var(--teal)'" onmouseout="this.style.color='var(--muted2)'">Contact</a>
+    <a href="/privacy.html" style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted2);text-decoration:none;text-transform:uppercase;letter-spacing:0.1em;transition:color 0.2s" onmouseover="this.style.color='var(--teal)'" onmouseout="this.style.color='var(--muted2)'">Privacy</a>
+    <a href="https://linkedin.com/in/petarativanov" target="_blank" style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted2);text-decoration:none;text-transform:uppercase;letter-spacing:0.1em;transition:color 0.2s" onmouseover="this.style.color='var(--teal)'" onmouseout="this.style.color='var(--muted2)'">LinkedIn</a>
+    <a href="https://www.youtube.com/@theaienabledfinance" target="_blank" style="font-family:'JetBrains Mono',monospace;font-size:9px;color:rgba(255,80,80,0.7);text-decoration:none;text-transform:uppercase;letter-spacing:0.1em">YouTube</a>
+  </div>
+</footer>
+
+
+<div id="cur"></div>
+<div id="cur-ring"></div>
+<script>
+// ── CURSOR ──
+const cur=document.getElementById('cur'),ring=document.getElementById('cur-ring');
+let mx=0,my=0;
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cur.style.left=mx+'px';cur.style.top=my+'px';ring.style.left=mx+'px';ring.style.top=my+'px';},{passive:true});
+function setCursorHover(){cur.style.width='20px';cur.style.height='20px';ring.style.width='44px';ring.style.height='44px';ring.style.borderColor='rgba(0,229,200,0.6)';}
+function setCursorNormal(){cur.style.width='12px';cur.style.height='12px';ring.style.width='32px';ring.style.height='32px';ring.style.borderColor='rgba(0,229,200,0.35)';}
+document.querySelectorAll('a,button,.toc-section,.prompt-card,.copy-btn').forEach(el=>{
+  el.addEventListener('mouseenter',setCursorHover);
+  el.addEventListener('mouseleave',setCursorNormal);
+});
+
+// ── SOUND SYSTEM ──
+let _muted=false,_audioCtx=null;
+function _getAudio(){if(!_audioCtx)_audioCtx=new(window.AudioContext||window.webkitAudioContext)();if(_audioCtx.state==='suspended')_audioCtx.resume();return _audioCtx;}
+function _play(fn){if(_muted)return;try{fn(_getAudio());}catch(e){}}
+function playHover(){_play(a=>{const o=a.createOscillator(),g=a.createGain(),filt=a.createBiquadFilter(),now=a.currentTime;o.type='sine';o.frequency.setValueAtTime(700,now);o.frequency.exponentialRampToValueAtTime(1600,now+.09);filt.type='highpass';filt.frequency.value=500;g.gain.setValueAtTime(0,now);g.gain.linearRampToValueAtTime(.032,now+.01);g.gain.exponentialRampToValueAtTime(.001,now+.11);o.connect(filt);filt.connect(g);g.connect(a.destination);o.start(now);o.stop(now+.13);});}
+function playClick(){_play(a=>{const now=a.currentTime;const o1=a.createOscillator(),g1=a.createGain();o1.type='square';o1.frequency.value=160;g1.gain.setValueAtTime(0,now);g1.gain.linearRampToValueAtTime(.055,now+.003);g1.gain.exponentialRampToValueAtTime(.001,now+.07);o1.connect(g1);g1.connect(a.destination);o1.start(now);o1.stop(now+.08);const o2=a.createOscillator(),g2=a.createGain();o2.type='sine';o2.frequency.value=2800;g2.gain.setValueAtTime(0,now);g2.gain.linearRampToValueAtTime(.025,now+.001);g2.gain.exponentialRampToValueAtTime(.001,now+.05);o2.connect(g2);g2.connect(a.destination);o2.start(now);o2.stop(now+.06);});}
+['mousedown','touchstart','keydown'].forEach(evt=>{
+  document.addEventListener(evt,function unlock(){
+    if(!_audioCtx)_audioCtx=new(window.AudioContext||window.webkitAudioContext)();
+    if(_audioCtx.state==='suspended')_audioCtx.resume();
+    document.removeEventListener(evt,unlock);
+  },{once:true,passive:true});
+});
+document.querySelectorAll('a,button,.toc-section,.copy-btn').forEach(el=>{
+  el.addEventListener('mouseenter',playHover);
+  el.addEventListener('click',playClick);
+});
+
+// ── TOC SECTION CLICK → scroll to section ──
+document.querySelectorAll('.toc-section').forEach(tile=>{
+  const letter=tile.querySelector('.toc-section-letter');
+  if(!letter)return;
+  const sec=letter.textContent.trim().toLowerCase();
+  tile.style.cursor='pointer';
+  tile.addEventListener('click',()=>{
+    playClick();
+    const target=document.getElementById('sec-'+sec);
+    if(target){
+      const offset=100;
+      const top=target.getBoundingClientRect().top+window.scrollY-offset;
+      window.scrollTo({top,behavior:'smooth'});
+    }
+  });
+});
+
+// TAIEF SUBSCRIBER COOKIE — set on arrival (post-subscribe redirect lands here)
+function taief_setCookie(n,v,d){const e=new Date();e.setTime(e.getTime()+(d*864e5));document.cookie=n+"="+v+";expires="+e.toUTCString()+";path=/;SameSite=Lax"}
+function taief_getCookie(n){const m=document.cookie.match(new RegExp('(^| )'+n+'=([^;]+)'));return m?m[2]:null}
+function taief_isSubscriber(){return taief_getCookie('taief_subscriber')==='true'}
+// Set cookie for 365 days when landing on this page
+taief_setCookie('taief_subscriber','true',365);
+// Update nav for subscribers
+function taief_updateNav(){
+  document.querySelectorAll('[data-sub-href]').forEach(el=>{
+    el.href=el.getAttribute('data-sub-href');
+    el.onclick=null;
+    el.removeAttribute('onclick');
+  });
+}
+document.addEventListener('DOMContentLoaded', taief_updateNav);
+</script>
+</body>
+</html>
+<!-- MOBILE RESPONSIVE PATCH -->
+<style>
+@media (hover: none) and (pointer: coarse) {
+  *{cursor:auto!important}
+}
+@media (max-width: 768px) {
+  .page-wrap{padding:0 1rem 60px}
+
+  /* Hero */
+  .hero{padding:40px 1rem 36px}
+  .hero-title{font-size:clamp(24px,7vw,40px)}
+  .hero-sub{font-size:13px}
+  .hero-tags{gap:6px}
+  .hero-safe{font-size:9px;padding:8px 14px}
+  .hero::before{font-size:180px}
+
+  /* TOC */
+  .toc{padding:16px 1rem}
+  .toc-sections{grid-template-columns:repeat(2,1fr);gap:8px}
+  .toc-section{padding:10px}
+  .toc-section-letter{font-size:16px}
+
+  /* How to use */
+  .how-to{padding:20px 1rem}
+
+  /* Prompt cards */
+  .prompt-header{padding:14px 16px 12px;gap:10px}
+  .prompt-body{padding:14px 16px}
+  .prompt-num{width:32px;height:32px;font-size:10px}
+  .prompt-title{font-size:13px}
+  .prompt-text{font-size:10.5px;padding:12px}
+  .copy-btn{font-size:8px;padding:3px 8px}
+  .safe-text{font-size:10.5px}
+  .works-with{gap:6px}
+
+  /* Section headers */
+  .section-header{padding:28px 0 14px}
+  .section-title{font-size:18px}
+
+  /* Final page */
+  .final{padding:32px 1rem}
+  .final-heading{font-size:22px}
+  .final-cards{grid-template-columns:1fr}
+
+  /* Key question box */
+  .key-q{padding:10px 12px}
+  .key-q-text{font-size:12px}
+}
+@media (max-width: 480px) {
+  .page-wrap{padding:0 0.75rem 48px}
+  .toc-sections{grid-template-columns:1fr 1fr}
+  .prompt-text{font-size:10px}
+}
+</style>
