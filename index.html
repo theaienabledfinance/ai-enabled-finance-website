@@ -108,7 +108,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 nav::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--teal),var(--gold),transparent);opacity:0.2}
 .nav-logo{display:flex;align-items:center;gap:12px;text-decoration:none}
 .nav-logo canvas{flex-shrink:0}
-.nav-brand-name{font-family:'Orbitron',sans-serif;font-size:13px;font-weight:700;letter-spacing:0.1em;background:linear-gradient(135deg,var(--white) 60%,var(--gold2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.nav-brand-name{font-family:'Orbitron',sans-serif;font-size:13px;font-weight:700;letter-spacing:0.1em;color:var(--white)}
 .nav-brand-sub{font-family:'JetBrains Mono',monospace;font-size:7.5px;letter-spacing:0.2em;text-transform:uppercase;color:var(--teal);margin-top:2px;display:block}
 .nav-links{display:flex;gap:2rem;align-items:center}
 .nav-links a{font-family:'JetBrains Mono',monospace;font-size:9.5px;letter-spacing:0.14em;color:var(--muted);text-decoration:none;text-transform:uppercase;transition:color 0.2s;position:relative}
@@ -127,8 +127,10 @@ nav::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;backg
 .hero-eyebrow-text{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.22em;color:var(--teal);text-transform:uppercase}
 .hero-title{font-family:'Orbitron',sans-serif;font-size:clamp(32px,4.5vw,60px);font-weight:800;line-height:1.05;letter-spacing:-0.01em;margin-bottom:1.5rem}
 .hero-title .l1{color:var(--white);display:block}
-.hero-title .l2{display:block;background:linear-gradient(90deg,var(--teal),var(--teal2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero-title .l2{display:block;background:linear-gradient(90deg,var(--gold),var(--gold2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .hero-title .l3{color:var(--gold);display:block}
+.brand-ai{background:linear-gradient(90deg,var(--gold),var(--gold2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.brand-fin{background:linear-gradient(90deg,var(--teal),var(--teal2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .hero-desc{font-size:15px;font-weight:300;line-height:1.85;color:var(--muted);max-width:480px;margin-bottom:2rem}
 .hero-desc strong{color:var(--white);font-weight:400}
 .hero-actions{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:2.5rem}
@@ -188,7 +190,7 @@ section.main-section{max-width:1200px;margin:0 auto;padding:6rem 3rem}
 .about-quote .works{color:var(--teal);font-style:normal;font-weight:600}
 .about-quote .vendors{color:#FFFFFF;font-style:normal;font-weight:700;text-shadow:0 0 14px rgba(255,255,255,0.2)}
 .about-body{font-size:14px;font-weight:300;line-height:1.9;color:var(--muted);margin-bottom:1rem}
-.about-body .brand-gold{background:linear-gradient(90deg,var(--gold),var(--gold2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-weight:600}
+.about-body .brand-ai,.about-body .brand-fin{font-weight:600}
 .about-cta{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--gold2);letter-spacing:0.12em}
 
 /* ── PILLARS ── */
@@ -312,7 +314,7 @@ section.main-section{max-width:1200px;margin:0 auto;padding:6rem 3rem}
 footer{background:var(--navy2);border-top:1px solid rgba(0,229,200,0.07);padding:2.5rem 3rem;position:relative}
 footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--teal),var(--gold2),var(--blue2),transparent);opacity:0.18}
 .footer-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between}
-.footer-brand{font-family:'Orbitron',sans-serif;font-size:12px;font-weight:700;background:linear-gradient(90deg,var(--teal),var(--gold2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:4px}
+.footer-brand{font-family:'Orbitron',sans-serif;font-size:12px;font-weight:700;color:var(--white);margin-bottom:4px}
 .footer-copy{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted2);letter-spacing:0.08em}
 .footer-links{display:flex;gap:1.75rem}
 .footer-links a{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted2);text-decoration:none;text-transform:uppercase;letter-spacing:0.1em;transition:color 0.2s}
@@ -342,7 +344,7 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
   <a href="#" class="nav-logo">
     <canvas id="mini-orb" width="76" height="76" style="width:38px;height:38px"></canvas>
     <div>
-      <span class="nav-brand-name">The AI Enabled Finance</span>
+      <span class="nav-brand-name">The <span class="brand-ai">AI Enabled</span> <span class="brand-fin">Finance</span></span>
       <span class="nav-brand-sub">Transforming Finance. Empowering Professionals.</span>
     </div>
   </a>
@@ -448,7 +450,7 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
         <p>I still work in finance. I learn in public. I share what <span class="works">actually works</span> — not what <span class="vendors">AI guru vendors</span> sell you.</p>
       </blockquote>
       <p class="about-body">
-        Launched <span class="brand-gold">The AI Enabled Finance</span> to document the real-world application of AI in corporate finance — from someone who lives it every day. I test what works. I share what doesn't. I do it compliantly, safely, and honestly — because that's the only way it actually sticks in a real finance function.
+        Launched The <span class="brand-ai">AI Enabled</span> <span class="brand-fin">Finance</span> to document the real-world application of AI in corporate finance — from someone who lives it every day. I test what works. I share what doesn't. I do it compliantly, safely, and honestly — because that's the only way it actually sticks in a real finance function.
       </p>
       <p class="about-cta">Follow the journey. Use what you learn. Come back and tell me what happened.</p>
     </div>
@@ -567,7 +569,7 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
         <div style="background:var(--navy2);border:1px solid rgba(57,255,20,0.15);border-radius:10px;padding:1.75rem">
           <div style="font-family:'Orbitron',sans-serif;font-size:28px;font-weight:800;color:#39FF14;margin-bottom:8px;text-shadow:0 0 14px rgba(57,255,20,0.4)">FREE</div>
           <h3 style="font-family:'Orbitron',sans-serif;font-size:13px;font-weight:700;color:var(--white);margin-bottom:10px">No Cost. No Catch.</h3>
-          <p style="font-size:12.5px;font-weight:300;color:var(--muted);line-height:1.8">Enter your email, get instant access. Join 759+ finance professionals already using The AI Enabled Finance system. That is it.</p>
+          <p style="font-size:12.5px;font-weight:300;color:var(--muted);line-height:1.8">Enter your email, get instant access. Join <span data-stat="subscribers">759+</span> finance professionals already using The AI Enabled Finance system. That is it.</p>
           <a href="#newsletter" style="display:inline-block;margin-top:14px;font-family:'Orbitron',sans-serif;font-size:10px;font-weight:700;background:linear-gradient(135deg,var(--teal),var(--teal2));color:var(--navy);padding:8px 20px;border-radius:2px;text-decoration:none"
              onmouseenter="playHover();setCursorHover()" onmouseleave="setCursorNormal()" onclick="playClick()">
             Get Them Free →
@@ -731,7 +733,7 @@ function toggleSection(which) {
     </div>
     <div class="stats-grid reveal" style="transition-delay:0.15s">
       <div class="stat-card highlight">
-        <div class="stat-big" style="color:var(--white)">759+</div>
+        <div class="stat-big" style="color:var(--white)" data-stat="subscribers">759+</div>
         <p class="stat-text">finance professionals following The AI Enabled Finance journey</p>
         <a href="https://linkedin.com/in/petarativanov" target="_blank" class="stat-source">LinkedIn Analytics, 2026</a>
       </div>
@@ -829,12 +831,12 @@ function toggleSection(which) {
       <div style="flex:1;min-width:260px">
         <div style="font-family:'JetBrains Mono',monospace;font-size:8px;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold2);margin-bottom:0.75rem">// Members Hub — What Is Inside</div>
         <h3 style="font-family:'Orbitron',sans-serif;font-size:18px;font-weight:800;margin-bottom:0.75rem;line-height:1.3">This is just the beginning.<br><span style="background:linear-gradient(90deg,var(--gold),var(--gold2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">Much more inside.</span></h3>
-        <p style="font-size:13px;color:var(--muted);line-height:1.75;max-width:480px">The 25 free prompts are the entry point. Inside the Members Hub: 335+ prompts across 13 finance functions, every field note as it publishes, the complete Safe AI Input Framework with decision trees, the CAPEX Control Model, the Month-End Pack, the AI Job Hunt Pack, the Compliance Bridge — and a senior finance career navigating AI, documented live from the inside.</p>
+        <p style="font-size:13px;color:var(--muted);line-height:1.75;max-width:480px">The 25 free prompts are the entry point. Inside the Members Hub: <span data-stat="vaultPrompts">335+</span> prompts across 13 finance functions, every field note as it publishes, the complete Safe AI Input Framework with decision trees, the CAPEX Control Model, the Month-End Pack, the AI Job Hunt Pack, the Compliance Bridge — and a senior finance career navigating AI, documented live from the inside.</p>
       </div>
       <div style="display:flex;flex-direction:column;gap:8px;min-width:200px">
         <div style="background:rgba(0,229,200,0.04);border:1px solid rgba(0,229,200,0.1);border-radius:6px;padding:10px 14px">
           <div style="font-family:'JetBrains Mono',monospace;font-size:8px;letter-spacing:0.12em;text-transform:uppercase;color:var(--teal);margin-bottom:4px">Prompts & Framework</div>
-          <div style="font-size:11px;color:var(--muted)">335+ prompts · Safe AI methodology · Audit trail system</div>
+          <div style="font-size:11px;color:var(--muted)"><span data-stat="vaultPrompts">335+</span> prompts · Safe AI methodology · Audit trail system</div>
         </div>
         <div style="background:rgba(212,168,67,0.04);border:1px solid rgba(212,168,67,0.1);border-radius:6px;padding:10px 14px">
           <div style="font-family:'JetBrains Mono',monospace;font-size:8px;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold2);margin-bottom:4px">Field Notes & Products</div>
@@ -996,15 +998,15 @@ function toggleSection(which) {
           <span class="coming-badge" style="color:var(--gold2);border-color:rgba(212,168,67,0.4);background:rgba(212,168,67,0.1)">Coming Soon</span>
         </div>
         <div class="coming-card">
-          <div class="coming-icon">🛠️</div>
-          <div class="coming-title">AI Tools for Brand Building</div>
-          <div class="coming-desc">The exact AI stack used to build this brand — website, content, design, automation. All tested. All free or near-free.</div>
+          <div class="coming-icon">🎯</div>
+          <div class="coming-title"><span class="brand-ai">AI Enabled</span> Job Hunting</div>
+          <div class="coming-desc">The real search — applications, CV, cover letters, interview prep — all done with AI, documented honestly as it happens. What worked, what didn't.</div>
           <span class="coming-badge">Coming</span>
         </div>
         <div class="coming-card">
-          <div class="coming-icon">📱</div>
-          <div class="coming-title">Content Creation System</div>
-          <div class="coming-desc">How to create consistent LinkedIn content, YouTube videos and written insights while working a full-time finance role.</div>
+          <div class="coming-icon">🚀</div>
+          <div class="coming-title">Starting the New Role</div>
+          <div class="coming-desc">Onboarding into a new finance function with AI from day one — the first month-end, the first board pack, building trust and speed at the same time.</div>
           <span class="coming-badge">Coming</span>
         </div>
       </div>
@@ -1023,10 +1025,10 @@ function toggleSection(which) {
       <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
     </div>
     <h2 class="nl-title">
-      Get The 25 <span style="background:linear-gradient(90deg,var(--gold),var(--gold2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">AI Enabled Finance</span> Prompts
+      Get The 25 <span class="brand-ai">AI Enabled</span> <span class="brand-fin">Finance</span> Prompts
     </h2>
     <p class="nl-free">FREE.</p>
-    <p class="nl-sub"><strong>759+</strong> finance professionals already following The AI Enabled Finance journey.</p>
+    <p class="nl-sub"><strong data-stat="subscribers">759+</strong> finance professionals already following The AI Enabled Finance journey.</p>
     <div style="margin-top:1.5rem;width:100%;max-width:480px;margin-left:auto;margin-right:auto;min-height:80px" id="taief-form-wrap">
       <script async src="https://subscribe-forms.beehiiv.com/v3/loader.js" data-beehiiv-form="66528f3c-cc98-4f59-9deb-b21c8519403b"></script>
       <p style="font-family:'JetBrains Mono',monospace;font-size:9px;color:rgba(122,155,189,0.5);margin-top:10px;letter-spacing:0.06em;text-align:center">No spam. Unsubscribe anytime. I respect your inbox.</p>
@@ -1041,7 +1043,7 @@ function toggleSection(which) {
 <footer>
   <div class="footer-inner">
     <div>
-      <div class="footer-brand">The AI Enabled Finance</div>
+      <div class="footer-brand">The <span class="brand-ai">AI Enabled</span> <span class="brand-fin">Finance</span></div>
       <div class="footer-copy">© 2026 The AI Enabled Finance · Built by Petar Ivanov · Manchester, UK</div>
     </div>
     <div class="footer-links">
@@ -1341,7 +1343,7 @@ const MILESTONES=[
   {year:'2023–2024',title:'FP&A, Global Fund & Finance Transformation',desc:'FP&A at Cargill Ocean Transportation — partnering with the Finance Director to deliver budgeting, forecasting, and finance transformation. Then Divisional Finance Controller at The Global Fund Geneva.',color:'gold',right:true},
   {year:'2025',title:'The Gap Year',desc:'A deliberate pause after a decade of high-intensity corporate finance. Used the time to study, experiment, and recalibrate — emerging with a clearer sense of what the next chapter of this profession looks like, and what role I want to play in it.',color:'teal',right:false},
   {year:'Jan 2026',title:'Currently — Lonza Group, Manchester',desc:'Currently a Senior CAPEX Controlling Analyst at a listed global pharmaceutical company. Sparring partner to the Associate Director — from CAPEX requests to project completion, variance analysis, financial modelling and board reporting.',color:'gold',right:true},
-  {year:'1 June 2026',title:'<span style="color:#EEF4FF">The </span><span style="color:#D4A843">AI Enabled Finance</span> — Live',desc:'Launched to share everything learned — the workflows, the prompts, the safe adoption frameworks, and the honest truth about what AI actually brings to the board table.',color:'gold',right:false,launch:true},
+  {year:'1 June 2026',title:'<span style="color:#EEF4FF">The </span><span class="brand-ai">AI Enabled</span> <span class="brand-fin">Finance</span> — Live',desc:'Launched to share everything learned — the workflows, the prompts, the safe adoption frameworks, and the honest truth about what AI actually brings to the board table.',color:'gold',right:false,launch:true},
 ];
 
 const jContainer=document.getElementById('journey-items');
@@ -1451,6 +1453,7 @@ attachAll();
 
 
 // Profile photo embedded directly in HTML</script>
+<script src="/site-stats.js"></script>
 
 </body>
 </html>

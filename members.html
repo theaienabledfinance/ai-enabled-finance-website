@@ -26,7 +26,9 @@ body::before{content:'';position:fixed;inset:0;z-index:1;background:repeating-li
 nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1rem 3rem;background:rgba(2,11,24,0.92);backdrop-filter:blur(24px);border-bottom:1px solid rgba(0,229,200,0.07);transition:background 0.3s}
 nav::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--teal),var(--gold),transparent);opacity:0.2}
 .nav-left{display:flex;align-items:center;gap:14px}
-.nav-brand{font-family:'Orbitron',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.1em;background:linear-gradient(135deg,var(--white) 60%,var(--gold2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;text-decoration:none}
+.nav-brand{font-family:'Orbitron',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.1em;color:var(--white);text-decoration:none}
+.brand-ai{background:linear-gradient(90deg,var(--gold),var(--gold2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.brand-fin{background:linear-gradient(90deg,var(--teal),var(--teal2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .nav-badge{font-family:'JetBrains Mono',monospace;font-size:8px;letter-spacing:0.14em;color:var(--teal);background:rgba(0,229,200,0.08);border:1px solid rgba(0,229,200,0.2);padding:3px 10px;border-radius:10px;text-transform:uppercase}
 .nav-right{display:flex;align-items:center;gap:2rem}
 .nav-links-hub{display:flex;gap:1.75rem;align-items:center}
@@ -133,7 +135,7 @@ nav::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;backg
 footer{background:var(--navy2);border-top:1px solid rgba(0,229,200,0.07);padding:2rem 3rem}
 footer::before{content:'';display:block;height:1px;background:linear-gradient(90deg,transparent,var(--teal),var(--gold2),transparent);opacity:0.15;margin-bottom:2rem}
 .footer-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between}
-.footer-brand{font-family:'Orbitron',sans-serif;font-size:11px;font-weight:700;background:linear-gradient(90deg,var(--teal),var(--gold2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:3px}
+.footer-brand{font-family:'Orbitron',sans-serif;font-size:11px;font-weight:700;color:var(--white);margin-bottom:3px}
 .footer-copy{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted2);letter-spacing:0.06em}
 .footer-links{display:flex;gap:1.5rem}
 .footer-links a{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted2);text-decoration:none;text-transform:uppercase;letter-spacing:0.1em;transition:color 0.2s}
@@ -152,7 +154,7 @@ footer::before{content:'';display:block;height:1px;background:linear-gradient(90
 <!-- ── MAIN NAV ── -->
 <nav id="main-nav">
   <div class="nav-left">
-    <a href="/" class="nav-brand">The AI Enabled Finance</a>
+    <a href="/" class="nav-brand">The <span class="brand-ai">AI Enabled</span> <span class="brand-fin">Finance</span></a>
     <span class="nav-badge" style="background:rgba(0,229,200,0.12);border:1px solid rgba(0,229,200,0.3);color:#00E5C8;font-family:'JetBrains Mono',monospace;font-size:8px;letter-spacing:0.14em;padding:4px 12px;border-radius:10px;text-transform:uppercase">Members Hub</span>
   </div>
   <div class="nav-right">
@@ -184,31 +186,21 @@ footer::before{content:'';display:block;height:1px;background:linear-gradient(90
         <div class="snav-letter" style="color:var(--teal);margin-bottom:0">⚡</div>
         <span style="font-family:'Orbitron',sans-serif;font-size:12px;font-weight:900;color:#39FF14;letter-spacing:0.1em;text-shadow:0 0 10px rgba(57,255,20,0.8),0 0 20px rgba(57,255,20,0.4),0 0 40px rgba(57,255,20,0.15)">FREE</span>
       </div>
-      <div class="snav-name" style="color:var(--white)"><span style="color:var(--white)">25 </span><span style="color:var(--white);font-weight:500">AI Enabled</span><span style="color:var(--teal)"> Prompts</span></div>
+      <div class="snav-name" style="color:var(--white)"><span style="color:var(--white)">25 </span><span class="brand-ai" style="font-weight:500">AI Enabled</span><span style="color:var(--white)"> Prompts</span></div>
       <div class="snav-lock" style="color:var(--teal);margin-top:4px">⚡ Live Now — Access Free</div>
     </a>
     <a href="#insights" class="snav-tile gold-tile">
       <div class="snav-letter" style="color:var(--gold2)">📝</div>
-      <div class="snav-name">AI Finance Insights</div>
-      <div class="snav-lock">Coming Soon</div>
+      <div class="snav-name"><span class="brand-ai">AI Enabled</span> Insights</div>
+      <div class="snav-lock">YouTube Walkthroughs — Coming Soon</div>
     </a>
-    <a href="#insights" class="snav-tile gold-tile">
-      <div class="snav-letter" style="color:var(--gold2)">🎥</div>
-      <div class="snav-name">YouTube Walkthroughs</div>
-      <div class="snav-lock">Coming Soon</div>
-    </a>
-    <a href="/compliance-bridge.html" class="snav-tile" style="border-color:rgba(0,229,200,0.3);position:relative;padding-bottom:14px">
+    <a href="#bridge" class="snav-tile" style="border-color:rgba(0,229,200,0.3);position:relative;padding-bottom:14px">
       <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:4px">
-        <div class="snav-letter" style="color:var(--teal);margin-bottom:0">🌉</div>
+        <div class="snav-letter" style="color:var(--gold2);margin-bottom:0">🌉</div>
         <span style="font-family:'Orbitron',sans-serif;font-size:10px;font-weight:900;color:#39FF14;letter-spacing:0.1em;text-shadow:0 0 10px rgba(57,255,20,0.8),0 0 20px rgba(57,255,20,0.4),0 0 40px rgba(57,255,20,0.15)">LIVE</span>
       </div>
-      <div class="snav-name" style="color:var(--white)">Compliance Bridge</div>
-      <div class="snav-lock" style="color:var(--teal);margin-top:4px">⚡ Free Framework Inside</div>
-    </a>
-    <a href="#bridge" class="snav-tile gold-tile">
-      <div class="snav-letter" style="color:var(--gold2)">🌉</div>
-      <div class="snav-name">The AI Enabled Bridge</div>
-      <div class="snav-lock">3 More Bridges — Preview</div>
+      <div class="snav-name"><span class="brand-ai">AI Enabled</span> Bridge</div>
+      <div class="snav-lock" style="color:var(--teal);margin-top:4px">⚡ Compliance Bridge Live — 3 More Coming</div>
     </a>
     <a href="#membership" class="snav-tile gold-tile">
       <div class="snav-letter" style="color:var(--gold2)">⭐</div>
@@ -216,9 +208,19 @@ footer::before{content:'';display:block;height:1px;background:linear-gradient(90
       <div class="snav-lock">£7/month — Reserve Now</div>
     </a>
     <a href="#personal" class="snav-tile gold-tile">
-      <div class="snav-letter" style="color:var(--gold2)">🏗️</div>
-      <div class="snav-name">How I Built This</div>
+      <div class="snav-letter" style="color:var(--gold2)">🎯</div>
+      <div class="snav-name">The Career Arc</div>
       <div class="snav-lock">Coming Soon</div>
+    </a>
+    <a href="#work-with-me" class="snav-tile gold-tile">
+      <div class="snav-letter" style="color:var(--gold2)">🤝</div>
+      <div class="snav-name">Work With Me</div>
+      <div class="snav-lock">Not Yet Open</div>
+    </a>
+    <a href="#products" class="snav-tile gold-tile">
+      <div class="snav-letter" style="color:var(--gold2)">📦</div>
+      <div class="snav-name">Upcoming Products</div>
+      <div class="snav-lock">Not Yet Open</div>
     </a>
   </div>
 </div>
@@ -227,14 +229,14 @@ footer::before{content:'';display:block;height:1px;background:linear-gradient(90
 <div class="hub-hero reveal">
   <div class="eyebrow"><div class="eyebrow-line"></div><span>Members Portal · Exclusive Access</span></div>
   <h1 class="hub-title">
-    Welcome to Your <span style="color:var(--teal)">AI Enabled</span><br>
+    Welcome to Your <span class="brand-ai">AI Enabled</span><br>
     <span style="color:var(--gold)">Home Office.</span>
   </h1>
-  <p style="font-size:15px;font-weight:300;color:var(--muted);line-height:1.85;max-width:580px;margin-top:1rem">Everything you need to become an <strong style="color:var(--white);font-weight:400">AI Enabled Finance professional</strong> — built from inside a live corporate finance function. Real workflows. Real results. No theory.</p>
+  <p style="font-size:15px;font-weight:300;color:var(--muted);line-height:1.85;max-width:580px;margin-top:1rem">Everything you need to become an <strong style="font-weight:400"><span class="brand-ai">AI Enabled</span> <span class="brand-fin">Finance</span></strong> professional — built from inside a live corporate finance function. Real workflows. Real results. No theory.</p>
   <div class="hub-stats">
     <div><span class="stat-val">25</span><span class="stat-lbl">Free AI Enabled Prompts</span></div>
     <div><span class="stat-val gold">1</span><span class="stat-lbl">Bridge Live — 3 More Coming</span></div>
-    <div><span class="stat-val">740+</span><span class="stat-lbl">Finance Professionals</span></div>
+    <div><span class="stat-val" data-stat="subscribers">759+</span><span class="stat-lbl">Finance Professionals</span></div>
     <div><span class="stat-val gold">∞</span><span class="stat-lbl">Growing Every Week</span></div>
   </div>
 </div>
@@ -246,7 +248,7 @@ footer::before{content:'';display:block;height:1px;background:linear-gradient(90
   <div class="hub-block reveal" id="prompts">
     <div class="hub-block-header">
       <div class="eyebrow"><div class="eyebrow-line"></div><span>Free · Available Now</span></div>
-      <h2 class="hub-block-title">25 AI Enabled Finance Prompts</h2>
+      <h2 class="hub-block-title">25 <span class="brand-ai">AI Enabled</span> Finance Prompts</h2>
       <p class="hub-block-desc">Tested inside a live CAPEX controlling and FP&A function. Every prompt includes a corporate safe use guide. Click a category to jump straight in.</p>
     </div>
     <div class="prompt-cats">
@@ -285,7 +287,7 @@ footer::before{content:'';display:block;height:1px;background:linear-gradient(90
       <a href="/prompts.html" class="btn-primary">Open Full Prompts Page →</a>
       <a href="/prompts.html" class="btn-secondary">View all 25 prompts with copy buttons ↗</a>
     </div>
-    <p style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted2);letter-spacing:0.06em;margin-top:14px">🔐 The Prompt Vault — 100+ more prompts across every finance function — unlocks with membership.</p>
+    <p style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted2);letter-spacing:0.06em;margin-top:14px">🔐 The Prompt Vault — <span data-stat="vaultPrompts">335+</span> prompts across every finance function — unlocks with membership.</p>
   </div>
 
   <div class="gold-divider reveal"></div>
@@ -294,8 +296,9 @@ footer::before{content:'';display:block;height:1px;background:linear-gradient(90
   <div class="hub-block reveal" id="insights">
     <div class="hub-block-header">
       <div class="eyebrow"><div class="eyebrow-line gold"></div><span class="gold">Coming Soon — Subscriber First Access</span></div>
-      <h2 class="hub-block-title">Insights & <span style="background:linear-gradient(90deg,var(--gold),var(--gold2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">Walkthroughs</span></h2>
-      <p class="hub-block-desc">Real AI workflows documented from inside a live corporate finance function. Written breakdowns and screen-recorded walkthroughs — no theory, no vendor decks.</p>
+      <h2 class="hub-block-title"><span class="brand-ai">AI Enabled</span> Insights</h2>
+      <p style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.1em;color:var(--teal);text-transform:uppercase;margin-bottom:0.75rem">— YouTube Walkthroughs —</p>
+      <p class="hub-block-desc">Real AI workflows documented from inside a live corporate finance function. Written breakdowns and screen-recorded YouTube walkthroughs — no theory, no vendor decks.</p>
     </div>
     <div class="cards-grid">
 
@@ -338,8 +341,8 @@ footer::before{content:'';display:block;height:1px;background:linear-gradient(90
   <div class="hub-block reveal" id="bridge">
     <div class="hub-block-header">
       <div class="eyebrow"><div class="eyebrow-line"></div><span>The Systems Behind The Content</span></div>
-      <h2 class="hub-block-title">The <span style="color:var(--teal)">AI Enabled</span> Bridge</h2>
-      <p class="hub-block-desc">Every Bridge connects a real finance problem to an AI-enabled way of working — built and tested inside a live corporate finance function. Each one pairs a <strong style="color:var(--white);font-weight:400">free example</strong> with the <strong style="color:var(--gold2);font-weight:400">complete system</strong> inside membership.</p>
+      <h2 class="hub-block-title">The <span class="brand-ai">AI Enabled</span> Bridge</h2>
+      <p class="hub-block-desc">Every Bridge connects a real finance problem to an AI-enabled way of working — built and tested inside a live corporate finance function. It starts with <strong style="color:var(--white);font-weight:400">Compliance Bridge</strong>, live now below. Each one pairs a <strong style="color:var(--white);font-weight:400">free example</strong> with the <strong style="color:var(--gold2);font-weight:400">complete system</strong> inside membership.</p>
     </div>
     <div class="cards-grid">
 
@@ -370,12 +373,30 @@ footer::before{content:'';display:block;height:1px;background:linear-gradient(90
         <div class="card-lock-row" style="color:var(--gold2);border-top:1px solid rgba(212,168,67,0.1);padding-top:12px">🔒 Journey begins 1 July — watch live</div>
       </div>
 
-      <!-- FORECASTING & BUDGETING BRIDGE — DIMMED -->
+      <!-- FORECASTING BRIDGE — DIMMED -->
       <div class="hub-card dimmed">
         <span class="card-badge badge-dim">🌉 Coming</span>
         <span class="card-icon">📈</span>
-        <h3 class="card-title">Forecasting &amp; Budgeting Bridge</h3>
-        <p class="card-desc">Rolling forecasts, budget cycles and assumption-setting with AI — built for the planning calendar finance teams run every quarter.</p>
+        <h3 class="card-title">Forecasting Bridge</h3>
+        <p class="card-desc">Rolling forecasts and assumption-setting with AI — built for the planning calendar finance teams run every quarter.</p>
+        <div class="card-lock-row">🔒 Coming soon</div>
+      </div>
+
+      <!-- BUDGETING BRIDGE — DIMMED -->
+      <div class="hub-card dimmed">
+        <span class="card-badge badge-dim">🌉 Coming</span>
+        <span class="card-icon">🧮</span>
+        <h3 class="card-title">Budgeting Bridge</h3>
+        <p class="card-desc">Budget cycles, cost-centre reviews and assumption packs with AI — from first draft to board-ready.</p>
+        <div class="card-lock-row">🔒 Coming soon</div>
+      </div>
+
+      <!-- MORE BRIDGES — DIMMED -->
+      <div class="hub-card dimmed">
+        <span class="card-badge badge-dim">🌉 Coming</span>
+        <span class="card-icon">➕</span>
+        <h3 class="card-title">More Bridges — Coming Soon</h3>
+        <p class="card-desc">New Bridges get added as real problems get solved inside a live finance function. Subscribers see each one first.</p>
         <div class="card-lock-row">🔒 Coming soon</div>
       </div>
 
@@ -400,7 +421,7 @@ footer::before{content:'';display:block;height:1px;background:linear-gradient(90
         <div style="font-size:11px;color:var(--muted);line-height:1.8">
           ✓ Full access to every Bridge (Compliance, Month-End, Career + more)<br>
           ✓ Complete Safe AI Framework<br>
-          ✓ Prompt Vault — 100+ finance prompts<br>
+          ✓ Prompt Vault — <span data-stat="vaultPrompts">335+</span> finance prompts<br>
           ✓ Newsletter 48hrs early<br>
           ✓ Founding member badge<br>
           ✓ Rate locked — never increases
@@ -421,50 +442,110 @@ footer::before{content:'';display:block;height:1px;background:linear-gradient(90
       <div style="font-family:'Orbitron',sans-serif;font-size:11px;font-weight:700;color:var(--gold2);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:8px">Join the Early Access List</div>
       <div style="font-size:13px;color:var(--muted);margin-bottom:20px;max-width:500px;margin-left:auto;margin-right:auto;line-height:1.7">No card. No commitment. You're notified first when membership opens — and your founding rate is reserved.</div>
       <a href="https://the-ai-enabled-finance.beehiiv.com/subscribe" target="_blank" style="display:inline-flex;align-items:center;gap:8px;background:linear-gradient(90deg,var(--gold),var(--gold2));color:var(--navy);font-family:'Orbitron',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.1em;padding:14px 32px;border-radius:6px;text-decoration:none;transition:opacity 0.2s">⚡ RESERVE YOUR FOUNDING RATE →</a>
-      <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted2);margin-top:12px">Join 740+ finance professionals already on the list</div>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted2);margin-top:12px">Join <span data-stat="subscribers">759+</span> finance professionals already on the list</div>
     </div>
   </div>
 
   <!-- ══ PERSONAL SECTION ══ -->
   <div class="hub-block reveal" id="personal">
     <div class="hub-block-header">
-      <div class="eyebrow"><div class="eyebrow-line gold"></div><span class="gold">20% Personal — Building This From Zero</span></div>
-      <h2 class="hub-block-title">Behind The <span style="background:linear-gradient(90deg,var(--gold),var(--gold2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">Brand</span></h2>
-      <p class="hub-block-desc">The honest, unfiltered story of building The AI Enabled Finance from scratch — while working a full-time finance role. Tools, decisions, mistakes, wins. All documented in real time.</p>
+      <div class="eyebrow"><div class="eyebrow-line gold"></div><span class="gold">20% Personal — The Career Journey</span></div>
+      <h2 class="hub-block-title">The Career <span style="background:linear-gradient(90deg,var(--gold),var(--gold2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">Arc</span></h2>
+      <p class="hub-block-desc">The next role search, the new job, and the honest story of building this from zero — all documented live, while working full-time in finance.</p>
     </div>
     <div class="cards-grid">
 
-      <!-- HOW I BUILT THIS TEASER -->
+      <!-- AI ENABLED JOB HUNTING TEASER -->
       <div class="teaser-card">
         <div class="teaser-header">
-          <div class="teaser-eyebrow" style="color:var(--gold2)">🏗️ How I Built This · Coming Soon</div>
-          <h3 class="teaser-title" style="color:var(--gold2)">I Built a Finance Brand From Zero in 90 Days While Working Full-Time. Here's Everything.</h3>
-          <p class="teaser-sub">The tools, the mistakes, the decisions, the cost, the time investment — and whether it's actually working. Nothing hidden. No highlight reel.</p>
+          <div class="teaser-eyebrow" style="color:var(--gold2)">🎯 <span class="brand-ai">AI Enabled</span> Job Hunting · Coming Soon</div>
+          <h3 class="teaser-title" style="color:var(--gold2)">The Next Senior Role Search, Done With AI at Every Step. Documented Live, Starting Now.</h3>
+          <p class="teaser-sub">The applications, the company research, the interview prep, the negotiation — all done with AI, all shared as it happens. Nothing edited out.</p>
         </div>
         <div class="teaser-body">
-          <div class="teaser-preview">Day 1. No website. No audience. No content. Just a LinkedIn profile with 340 connections and a conviction that someone had to document AI in real corporate finance from the inside. The first decision was the hardest: do this properly or not at all. Properly meant: real brand, real website, real strategy. Not a Substack and a hope. Total budget committed on day one: £0. Tools used: Claude, Netlify, MailerLite free tier, Canva free tier. Time available: evenings and weekends around a Senior CAPEX Analyst role at a listed pharmaceutical company...</div>
+          <div class="teaser-preview">This contract ends soon and the next senior role search starts immediately — with AI used at every stage of the process. Tailoring applications without sounding like everyone else's AI-tailored application. Researching companies and interviewers properly. Prepping for interviews with a sparring partner that never gets tired. What worked, what backfired, and where AI made the process worse, not better. Then the onboarding into a new environment and the first month-end from scratch — real time, nothing edited out...</div>
           <div class="teaser-overlay">
             <div class="teaser-lock-pill">🔒 Coming Soon — Subscribers First</div>
           </div>
         </div>
       </div>
 
-      <!-- AI TOOLS — DIMMED -->
+      <!-- STARTING THE NEW ROLE — DIMMED -->
       <div class="hub-card dimmed">
         <span class="card-badge badge-dim">Coming</span>
-        <span class="card-icon">🛠️</span>
-        <h3 class="card-title">AI Tools for Brand Building</h3>
-        <p class="card-desc">The exact AI stack used to build this brand — website, content, design, automation. All tested. All free or near-free. All practical.</p>
+        <span class="card-icon">🚀</span>
+        <h3 class="card-title">Starting the New Role</h3>
+        <p class="card-desc">Onboarding into a new finance function with AI from day one — the first month-end, the first board pack, building trust and speed at the same time.</p>
         <div class="card-lock-row">🔒 Coming soon</div>
       </div>
 
-      <!-- CONTENT SYSTEM — DIMMED -->
+      <!-- HOW I BUILT THIS — DIMMED -->
       <div class="hub-card dimmed">
         <span class="card-badge badge-dim">Coming</span>
-        <span class="card-icon">📱</span>
-        <h3 class="card-title">Content Creation System</h3>
-        <p class="card-desc">How to create consistent LinkedIn content, YouTube videos and written insights while working a full-time finance role. The system I actually use.</p>
+        <span class="card-icon">🏗️</span>
+        <h3 class="card-title">How I Built This</h3>
+        <p class="card-desc">The honest story of building The AI Enabled Finance from zero while working full-time — tools, decisions, mistakes, cost, and whether it's actually working.</p>
         <div class="card-lock-row">🔒 Coming soon</div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="gold-divider reveal"></div>
+
+  <!-- ══ WORK WITH ME ══ -->
+  <div class="hub-block reveal" id="work-with-me">
+    <div class="hub-block-header">
+      <div class="eyebrow"><div class="eyebrow-line gold"></div><span class="gold">Coming Soon — Not Yet Open</span></div>
+      <h2 class="hub-block-title">Work With <span style="background:linear-gradient(90deg,var(--gold),var(--gold2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">Me</span></h2>
+      <p class="hub-block-desc">For finance teams and professionals who want direct help, not just content. Structured here now — opened as capacity allows.</p>
+    </div>
+    <div class="cards-grid">
+
+      <div class="hub-card dimmed">
+        <span class="card-badge badge-dim">Coming</span>
+        <span class="card-icon">🧭</span>
+        <h3 class="card-title">AI Readiness Assessment</h3>
+        <p class="card-desc">A structured review of where your finance function actually stands on safe AI adoption — gaps, risks, and a practical next-steps plan.</p>
+        <div class="card-lock-row">🔒 Not yet open</div>
+      </div>
+
+      <div class="hub-card dimmed">
+        <span class="card-badge badge-dim">Coming</span>
+        <span class="card-icon">🤝</span>
+        <h3 class="card-title">1-on-1 Sessions</h3>
+        <p class="card-desc">Direct working sessions on your real AI-in-finance questions — prompts, workflows, safe input, career strategy.</p>
+        <div class="card-lock-row">🔒 Not yet open</div>
+      </div>
+
+      <div class="hub-card dimmed">
+        <span class="card-badge badge-dim">Coming</span>
+        <span class="card-icon">🏢</span>
+        <h3 class="card-title">Corporate Training</h3>
+        <p class="card-desc">Practical, safe AI adoption training for finance teams — built from what actually works inside a live corporate finance function, not vendor theory.</p>
+        <div class="card-lock-row">🔒 Not yet open</div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="gold-divider reveal"></div>
+
+  <!-- ══ UPCOMING PRODUCTS ══ -->
+  <div class="hub-block reveal" id="products">
+    <div class="hub-block-header">
+      <div class="eyebrow"><div class="eyebrow-line gold"></div><span class="gold">Coming Soon — Not Yet Open</span></div>
+      <h2 class="hub-block-title">Upcoming <span style="background:linear-gradient(90deg,var(--gold),var(--gold2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">Products</span></h2>
+      <p class="hub-block-desc">Tools and templates built from real use inside a live finance function — released here first as they're ready.</p>
+    </div>
+    <div class="cards-grid">
+
+      <div class="hub-card dimmed">
+        <span class="card-badge badge-dim">Coming</span>
+        <span class="card-icon">📦</span>
+        <h3 class="card-title">More to Come</h3>
+        <p class="card-desc">This section holds the structure for what's next — templates, models and tools, unlocked here as each one is ready.</p>
+        <div class="card-lock-row">🔒 Not yet open</div>
       </div>
 
     </div>
@@ -476,7 +557,7 @@ footer::before{content:'';display:block;height:1px;background:linear-gradient(90
 <footer>
   <div class="footer-inner">
     <div>
-      <div class="footer-brand">The AI Enabled Finance</div>
+      <div class="footer-brand">The <span class="brand-ai">AI Enabled</span> <span class="brand-fin">Finance</span></div>
       <div class="footer-copy">© 2026 The AI Enabled Finance · Built by Petar Ivanov · Manchester, UK</div>
     </div>
     <div class="footer-links">
@@ -529,6 +610,7 @@ const revObserver=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.is
 document.querySelectorAll('.reveal').forEach(r=>revObserver.observe(r));
 setTimeout(()=>document.querySelector('.hub-hero').classList.add('visible'),80);
 </script>
+<script src="/site-stats.js"></script>
 </body>
 </html>
 <!-- MOBILE RESPONSIVE PATCH -->

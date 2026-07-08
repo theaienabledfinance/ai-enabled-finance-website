@@ -23,7 +23,9 @@ body::before{content:'';position:fixed;inset:0;z-index:1;background:repeating-li
 /* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1rem 3rem;background:rgba(2,11,24,0.92);backdrop-filter:blur(24px);border-bottom:1px solid rgba(0,229,200,0.07)}
 nav::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--teal),var(--gold),transparent);opacity:0.2}
-.nav-brand{font-family:'Orbitron',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.1em;background:linear-gradient(135deg,var(--white) 60%,var(--gold2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;text-decoration:none}
+.nav-brand{font-family:'Orbitron',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.1em;color:var(--white);text-decoration:none}
+.brand-ai{background:linear-gradient(90deg,var(--gold),var(--gold2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.brand-fin{background:linear-gradient(90deg,var(--teal),var(--teal2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .nav-right{display:flex;gap:1.75rem;align-items:center}
 .nav-right a{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.14em;color:var(--muted);text-decoration:none;text-transform:uppercase;transition:color 0.2s}
 .nav-right a:hover{color:var(--teal)}
@@ -84,7 +86,7 @@ nav::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;backg
 footer{background:var(--navy2);border-top:1px solid rgba(0,229,200,0.07);padding:2rem 3rem;margin-top:0}
 footer::before{content:'';display:block;height:1px;background:linear-gradient(90deg,transparent,var(--teal),var(--gold2),transparent);opacity:0.12;margin-bottom:2rem}
 .fi{max-width:900px;margin:0 auto;display:flex;align-items:center;justify-content:space-between}
-.fb{font-family:'Orbitron',sans-serif;font-size:11px;font-weight:700;background:linear-gradient(90deg,var(--teal),var(--gold2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:3px}
+.fb{font-family:'Orbitron',sans-serif;font-size:11px;font-weight:700;color:var(--white);margin-bottom:3px}
 .fc{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted2);letter-spacing:0.05em}
 .fl{display:flex;gap:1.5rem;flex-wrap:wrap}
 .fl a{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted2);text-decoration:none;text-transform:uppercase;letter-spacing:0.1em;transition:color 0.2s}
@@ -113,7 +115,7 @@ footer::before{content:'';display:block;height:1px;background:linear-gradient(90
 <div class="page">
 
 <nav>
-  <a href="/" class="nav-brand">The AI Enabled Finance</a>
+  <a href="/" class="nav-brand">The <span class="brand-ai">AI Enabled</span> <span class="brand-fin">Finance</span></a>
   <div class="nav-right">
     <a href="/">Home</a>
     <a href="/prompts.html">Prompts</a>
@@ -211,7 +213,7 @@ footer::before{content:'';display:block;height:1px;background:linear-gradient(90
       <strong>No BS. No guru. No vendor deck.</strong><br><br>
       Just a finance professional documenting what actually works — and what does not — when you apply AI inside a real corporate finance role.<br><br>
       Safe. Compliant. Practical. Built for the finance professionals who want to stay ahead of the gap without putting their careers at risk.<br><br>
-      <strong>That is what <span style="background:linear-gradient(90deg,var(--gold),var(--gold2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">The AI Enabled Finance</span> is.</strong>
+      <strong>That is what The <span class="brand-ai">AI Enabled</span> <span class="brand-fin">Finance</span> is.</strong>
     </p>
   </div>
 
@@ -252,7 +254,7 @@ footer::before{content:'';display:block;height:1px;background:linear-gradient(90
 <footer>
   <div class="fi">
     <div>
-      <div class="fb">The AI Enabled Finance</div>
+      <div class="fb">The <span class="brand-ai">AI Enabled</span> <span class="brand-fin">Finance</span></div>
       <div class="fc">© 2026 The AI Enabled Finance · Built by Petar Ivanov · Manchester, UK</div>
     </div>
     <div class="fl">

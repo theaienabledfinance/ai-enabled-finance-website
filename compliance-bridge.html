@@ -30,7 +30,9 @@ body::before{content:'';position:fixed;inset:0;z-index:0;background:repeating-li
 /* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1rem 3rem;background:rgba(2,11,24,0.92);backdrop-filter:blur(24px);border-bottom:1px solid rgba(0,229,200,0.07)}
 nav::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--teal),var(--gold),transparent);opacity:0.2}
-.nav-brand{font-family:'Orbitron',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.1em;background:linear-gradient(135deg,var(--white) 60%,var(--gold2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;text-decoration:none}
+.nav-brand{font-family:'Orbitron',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.1em;color:var(--white);text-decoration:none}
+.brand-ai{background:linear-gradient(90deg,var(--gold),var(--gold2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.brand-fin{background:linear-gradient(90deg,var(--teal),var(--teal2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .nav-right{display:flex;gap:1.75rem;align-items:center}
 .nav-right a{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.14em;color:var(--muted);text-decoration:none;text-transform:uppercase;transition:color 0.2s}
 .nav-right a:hover,.nav-right a.active{color:var(--teal)}
@@ -148,7 +150,7 @@ nav::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;backg
 footer{background:var(--navy2);border-top:1px solid rgba(0,229,200,0.07);padding:2rem 3rem}
 footer::before{content:'';display:block;height:1px;background:linear-gradient(90deg,transparent,var(--teal),var(--gold2),transparent);opacity:0.12;margin-bottom:2rem}
 .fi{max-width:900px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
-.fb{font-family:'Orbitron',sans-serif;font-size:11px;font-weight:700;background:linear-gradient(90deg,var(--teal),var(--gold2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:3px}
+.fb{font-family:'Orbitron',sans-serif;font-size:11px;font-weight:700;color:var(--white);margin-bottom:3px}
 .fc{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted2)}
 .fl{display:flex;gap:1.5rem;flex-wrap:wrap}
 .fl a{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted2);text-decoration:none;text-transform:uppercase;letter-spacing:0.1em;transition:color 0.2s}
@@ -179,7 +181,7 @@ footer::before{content:'';display:block;height:1px;background:linear-gradient(90
 <!-- NAV -->
 <nav>
   <div style="display:flex;align-items:center;gap:14px">
-    <a href="/" class="nav-brand">The AI Enabled Finance</a>
+    <a href="/" class="nav-brand">The <span class="brand-ai">AI Enabled</span> <span class="brand-fin">Finance</span></a>
     <span style="font-family:'JetBrains Mono',monospace;font-size:8px;letter-spacing:0.14em;text-transform:uppercase;color:var(--teal);background:rgba(0,229,200,0.1);border:1px solid rgba(0,229,200,0.25);padding:4px 12px;border-radius:10px">Compliance Bridge</span>
   </div>
   <div class="nav-right">
@@ -193,9 +195,9 @@ footer::before{content:'';display:block;height:1px;background:linear-gradient(90
 
 <!-- BREADCRUMB -->
 <div style="max-width:900px;margin:62px auto 0;padding:14px 3rem 0;font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted2);letter-spacing:0.08em;display:flex;align-items:center;gap:8px;flex-wrap:wrap">
-  <a href="/members.html" style="color:var(--muted2);text-decoration:none">Members Hub</a>
+  <a href="/members.html" style="color:var(--teal);font-weight:700;text-decoration:none;display:inline-flex;align-items:center;gap:4px">← Members Hub</a>
   <span style="opacity:0.3">/</span>
-  <a href="/members.html#bridge" style="color:var(--muted2);text-decoration:none">The AI Enabled Bridge</a>
+  <a href="/members.html#bridge" style="color:var(--muted2);text-decoration:none"><span class="brand-ai">AI Enabled</span> Bridge</a>
   <span style="opacity:0.3">/</span>
   <span style="color:var(--teal)">Compliance Bridge</span>
 </div>
@@ -209,8 +211,18 @@ footer::before{content:'';display:block;height:1px;background:linear-gradient(90
   <h1 class="hero-title">Compliance <span class="teal">Bridge</span></h1>
   <p class="hero-sub">The bridge between <strong>"I want to use AI at work"</strong> and <strong>"I can actually do that safely."</strong> This is the Safe AI Framework — what to share, what never to share, how to stay compliant inside a real corporate finance role. Built and tested over six months of live use.</p>
   <div class="hero-actions">
-    <a href="/TAIEF_Safe_AI_Input_Framework.pdf" download class="btn-primary">↓ Download PDF Version</a>
-    <a href="#subscribe" onclick="document.getElementById('subscribe').scrollIntoView({behavior:'smooth'});return false;" class="btn-secondary">Get Full Framework + Prompts →</a>
+    <a href="/prompts.html" class="btn-primary">Get The 25 Free Prompts →</a>
+  </div>
+</div>
+
+<!-- FRAMEWORK TEASER -->
+<div style="max-width:900px;margin:0 auto;padding:0 3rem 1.5rem" class="reveal">
+  <div style="background:linear-gradient(135deg,rgba(212,168,67,0.06),rgba(212,168,67,0.02));border:1px solid rgba(212,168,67,0.2);border-radius:10px;padding:20px 24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px">
+    <div>
+      <div style="font-family:'Orbitron',sans-serif;font-size:11px;font-weight:700;color:var(--gold2);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:4px">🔒 This Is The Free Basic Framework</div>
+      <div style="font-size:12px;color:var(--muted)">The complete Safe AI Framework — decision trees, the compliance defence, and the full audit trail system — unlocks with membership.</div>
+    </div>
+    <a href="/members.html#membership" style="flex-shrink:0;font-family:'Orbitron',sans-serif;font-size:10px;font-weight:700;background:linear-gradient(90deg,var(--gold),var(--gold2));color:var(--navy);padding:10px 20px;border-radius:4px;text-decoration:none;white-space:nowrap">Join Early Access →</a>
   </div>
 </div>
 
@@ -438,32 +450,20 @@ footer::before{content:'';display:block;height:1px;background:linear-gradient(90
         <div class="mt-item-desc">The month-end context memory prompt. Log what AI found. Carry it forward each cycle. Stay protected and consistent.</div>
       </div>
       <div class="mt-item">
-        <div class="mt-item-title">335+ Safe Prompts</div>
+        <div class="mt-item-title"><span data-stat="vaultPrompts">335+</span> Safe Prompts</div>
         <div class="mt-item-desc">Every prompt built with this framework already applied. Safe input guide embedded in each one. Tested across real finance functions.</div>
       </div>
     </div>
-    <a href="#subscribe" onclick="document.getElementById('subscribe').scrollIntoView({behavior:'smooth'});return false;" class="btn-primary" style="display:inline-flex">Get Full Access — Subscribe Free →</a>
+    <a href="/members.html#membership" class="btn-primary" style="display:inline-flex">Get Full Access — Join Membership →</a>
   </div>
 
-</div>
-
-<!-- SUBSCRIBE -->
-<div class="subscribe-section" id="subscribe">
-  <div class="subscribe-inner reveal">
-    <div class="sub-eyebrow">Free · Takes 30 seconds</div>
-    <h2 class="sub-title">Get the full framework<br>and everything else.</h2>
-    <p class="sub-desc">Subscribe free and get <strong>25 AI finance prompts</strong> plus access to the Members Hub — the full Safe Input methodology, field notes, and everything being built.</p>
-
-    <script async src="https://subscribe-forms.beehiiv.com/v3/loader.js" data-beehiiv-form="66528f3c-cc98-4f59-9deb-b21c8519403b"></script>
-    <p class="sub-note">No spam. Unsubscribe anytime. No company data ever required.</p>
-  </div>
 </div>
 
 <!-- FOOTER -->
 <footer>
   <div class="fi">
     <div>
-      <div class="fb">The AI Enabled Finance</div>
+      <div class="fb">The <span class="brand-ai">AI Enabled</span> <span class="brand-fin">Finance</span></div>
       <div class="fc">© 2026 The AI Enabled Finance · Petar Ivanov · theaienabledfinance.com · All rights reserved</div>
     </div>
     <div class="fl">
@@ -505,5 +505,6 @@ function taief_updateNav(){if(!taief_isSubscriber())return;document.querySelecto
 document.addEventListener("DOMContentLoaded",taief_updateNav);
 </script>
 <script type="text/javascript" async src="https://subscribe-forms.beehiiv.com/attribution.js"></script>
+<script src="/site-stats.js"></script>
 </body>
 </html>

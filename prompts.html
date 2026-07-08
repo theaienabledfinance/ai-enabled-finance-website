@@ -20,7 +20,9 @@ body{background:var(--navy);color:var(--white);font-family:'Inter',sans-serif;li
 .hero-eyebrow{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.25em;color:var(--teal);text-transform:uppercase;margin-bottom:16px}
 .hero-title{font-family:'Orbitron',sans-serif;font-size:clamp(28px,5vw,52px);font-weight:800;line-height:1.05;margin-bottom:12px}
 .hero-title .num{color:var(--teal)}
-.hero-title .fin{color:var(--gold)}
+.hero-title .fin{background:linear-gradient(90deg,var(--teal),var(--teal2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.brand-ai{background:linear-gradient(90deg,var(--gold),var(--gold2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.brand-fin{background:linear-gradient(90deg,var(--teal),var(--teal2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .hero-sub{font-size:15px;font-weight:300;color:var(--muted);margin-bottom:24px}
 .hero-tags{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-bottom:24px}
 .hero-tag{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.14em;text-transform:uppercase;padding:5px 12px;border-radius:2px;border:1px solid}
@@ -94,7 +96,7 @@ body{background:var(--navy);color:var(--white);font-family:'Inter',sans-serif;li
 
 /* FOOTER */
 footer{text-align:center;padding:32px 0;border-top:1px solid rgba(0,229,200,0.07);margin-top:48px}
-footer .brand{font-family:'Orbitron',sans-serif;font-size:12px;font-weight:700;background:linear-gradient(90deg,var(--teal),var(--gold2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:6px}
+footer .brand{font-family:'Orbitron',sans-serif;font-size:12px;font-weight:700;color:var(--white);margin-bottom:6px}
 footer .copy{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted2);letter-spacing:0.08em}
 
 /* TOAST */
@@ -163,7 +165,7 @@ window.addEventListener('scroll',function(){
 <div class="hero" style="padding-top:44px">
   <p class="hero-eyebrow">The AI Enabled Finance · June 2026</p>
   <h1 class="hero-title">
-    <span class="num">25</span> AI Enabled<br>    <span class="fin">Finance Prompts</span>
+    <span class="num">25</span> <span class="brand-ai">AI Enabled</span><br>    <span class="fin">Finance Prompts</span>
   </h1>
   <p class="hero-sub">Practical · Safe · Compliant · For Corporate Finance Professionals</p>
   <div class="hero-tags">
@@ -190,6 +192,17 @@ window.addEventListener('scroll',function(){
     <div class="toc-section"><div class="toc-section-letter" style="color:#4D9FFF">C</div><div class="toc-section-name">Month-End Close &amp; Reporting<br><small style="color:#4A6A8A">Prompts 11–15</small></div></div>
     <div class="toc-section"><div class="toc-section-letter" style="color:#F2C76E">D</div><div class="toc-section-name">Board &amp; Senior Stakeholder Reporting<br><small style="color:#4A6A8A">Prompts 16–20</small></div></div>
     <div class="toc-section"><div class="toc-section-letter" style="color:#00BFFF">E</div><div class="toc-section-name">Decision Support &amp; Strategic Finance<br><small style="color:#4A6A8A">Prompts 21–25</small></div></div>
+  </div>
+</div>
+
+<!-- VAULT TEASER -->
+<div style="max-width:900px;margin:0 auto;padding:0 3rem 2rem" class="reveal">
+  <div style="background:linear-gradient(135deg,rgba(212,168,67,0.06),rgba(212,168,67,0.02));border:1px solid rgba(212,168,67,0.2);border-radius:10px;padding:20px 24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px">
+    <div>
+      <div style="font-family:'Orbitron',sans-serif;font-size:11px;font-weight:700;color:var(--gold2);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:4px">🔒 This Is The Free Vault Entry — Categories A–E</div>
+      <div style="font-size:12px;color:var(--muted)">The full Prompt Vault has <span data-stat="vaultPrompts">335+</span> prompts across 13 finance categories (F–M unlock with membership) — new ones added as they're tested live.</div>
+    </div>
+    <a href="/members.html#membership" style="flex-shrink:0;font-family:'Orbitron',sans-serif;font-size:10px;font-weight:700;background:linear-gradient(90deg,var(--gold),var(--gold2));color:var(--navy);padding:10px 20px;border-radius:4px;text-decoration:none;white-space:nowrap">Join Early Access →</a>
   </div>
 </div>
 
@@ -613,7 +626,7 @@ document.addEventListener('DOMContentLoaded', renderPrompts);
 </div><!-- /page-wrap -->
 
 <footer>
-  <p class="brand">The AI Enabled Finance</p>
+  <p class="brand">The <span class="brand-ai">AI Enabled</span> <span class="brand-fin">Finance</span></p>
   <p class="copy">© 2026 The AI Enabled Finance · theaienabledfinance.com · Petar Ivanov · All rights reserved<br>Unauthorised reproduction, redistribution, or resale is strictly prohibited.</p>
   <div style="display:flex;gap:1.5rem;justify-content:center;flex-wrap:wrap;margin-top:1rem">
     <a href="/" style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted2);text-decoration:none;text-transform:uppercase;letter-spacing:0.1em;transition:color 0.2s" onmouseover="this.style.color='var(--teal)'" onmouseout="this.style.color='var(--muted2)'">Home</a>
@@ -693,6 +706,7 @@ function taief_updateNav(){
 }
 document.addEventListener('DOMContentLoaded', taief_updateNav);
 </script>
+<script src="/site-stats.js"></script>
 </body>
 </html>
 <!-- MOBILE RESPONSIVE PATCH -->
