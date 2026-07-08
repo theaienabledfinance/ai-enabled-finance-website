@@ -128,7 +128,7 @@ nav::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;backg
 .hero-title{font-family:'Orbitron',sans-serif;font-size:clamp(32px,4.5vw,60px);font-weight:800;line-height:1.05;letter-spacing:-0.01em;margin-bottom:1.5rem}
 .hero-title .l1{color:var(--white);display:block}
 .hero-title .l2{display:block;background:linear-gradient(90deg,var(--gold),var(--gold2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.hero-title .l3{color:var(--gold);display:block}
+.hero-title .l3{color:var(--teal);display:block}
 .brand-ai{background:linear-gradient(90deg,var(--gold),var(--gold2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .brand-fin{background:linear-gradient(90deg,var(--teal),var(--teal2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .hero-desc{font-size:15px;font-weight:300;line-height:1.85;color:var(--muted);max-width:480px;margin-bottom:2rem}
@@ -220,7 +220,7 @@ section.main-section{max-width:1200px;margin:0 auto;padding:6rem 3rem}
 .tool-expand:hover{border-color:rgba(0,229,200,0.5)}
 .tool-expand-icon{width:36px;height:36px;border-radius:8px;background:rgba(0,229,200,0.07);border:1px solid rgba(0,229,200,0.18);display:flex;align-items:center;justify-content:center;color:var(--teal);font-size:20px;font-weight:300;transition:transform 0.3s}
 .tool-expand:hover .tool-expand-icon{transform:rotate(90deg)}
-.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:2.5rem}
+.stats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:2.5rem}
 .stat-card{background:var(--navy);border-radius:8px;padding:1.5rem;text-align:center;display:flex;flex-direction:column;gap:10px}
 .stat-card.highlight{border:1px solid rgba(212,168,67,0.35)}
 .stat-card:not(.highlight){border:1px solid rgba(0,229,200,0.07)}
@@ -747,11 +747,6 @@ function toggleSection(which) {
         <p class="stat-text">of CFOs expect AI to be extremely important to finance operations in 2026</p>
         <a href="https://www.deloitte.com/us/en/about/press-room/deloitte-q4-2025-cfo-signals-survey.html" target="_blank" class="stat-source">Deloitte CFO Signals Q4, 2025</a>
       </div>
-      <div class="stat-card highlight">
-        <div class="stat-big" style="color:var(--teal)">40%</div>
-        <p class="stat-text">average reduction in manual reporting time when AI-assisted workflows are embedded in the finance cycle</p>
-        <a href="https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai" target="_blank" class="stat-source">McKinsey & Company, 2025</a>
-      </div>
     </div>
   </div>
 </div>
@@ -782,24 +777,24 @@ function toggleSection(which) {
       </div>
     </div>
 
-    <!-- CARD 2 — LOCKED -->
-    <div class="insight-card" style="position:relative;overflow:hidden">
+    <!-- CARD 2 — YOUTUBE TEASER -->
+    <div class="insight-card" style="position:relative;overflow:hidden;border-color:rgba(255,77,109,0.35)">
       <div style="position:absolute;inset:0;background:rgba(2,11,24,0.65);backdrop-filter:blur(3px);z-index:2;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:1.5rem;text-align:center">
-        <div style="font-size:20px">🔒</div>
-        <div style="font-family:'Orbitron',sans-serif;font-size:11px;font-weight:700;color:var(--white)">Members Only</div>
-        <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted);line-height:1.6;max-width:180px">I Asked AI What Questions My CFO Would Ask. It Got 3 Out of 5 Right.</div>
+        <svg width="28" height="20" viewBox="0 0 28 20"><rect width="28" height="20" rx="6" fill="#FF0000"/><path d="M11 6l8 4-8 4V6z" fill="#fff"/></svg>
+        <div style="font-family:'Orbitron',sans-serif;font-size:11px;font-weight:700;color:var(--white)">YouTube Walkthroughs</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted);line-height:1.6;max-width:180px">Screen-recorded AI workflows — subscribe free to be first when they go live.</div>
         <a href="#newsletter" data-sub-href="/members.html" onclick="document.getElementById('newsletter').scrollIntoView({behavior:'smooth'});return false;" style="font-family:'Orbitron',sans-serif;font-size:9px;font-weight:700;background:linear-gradient(135deg,var(--teal),var(--teal2));color:var(--navy);padding:7px 16px;border-radius:2px;text-decoration:none;margin-top:4px">Subscribe Free →</a>
       </div>
-      <div class="insight-thumb" style="background:linear-gradient(135deg,rgba(212,168,67,0.1),transparent)">
-        <div class="insight-thumb-icon" style="color:rgba(212,168,67,0.07)">CFO</div>
-        <div class="insight-thumb-label" style="color:var(--gold2)">CAPEX</div>
+      <div class="insight-thumb" style="background:linear-gradient(135deg,rgba(255,77,109,0.12),transparent)">
+        <div class="insight-thumb-icon" style="color:rgba(255,77,109,0.1)">▶</div>
+        <div class="insight-thumb-label" style="color:#FF5555">YouTube</div>
       </div>
       <div class="insight-body">
-        <span class="insight-tag" style="background:rgba(212,168,67,0.1);color:var(--gold2)">CAPEX · Workflow</span>
-        <h3 class="insight-title">I Asked AI What Questions My CFO Would Ask. It Got 3 Out of 5 Right.</h3>
-        <p class="insight-desc">CFO question anticipation — the highest-value use case I have found. Here is what happened and why it works when the input is right.</p>
+        <span class="insight-tag" style="background:rgba(255,77,109,0.12);color:#FF5555">Video · Walkthrough</span>
+        <h3 class="insight-title">Watch Me Run a Full CAPEX Variance Review with AI. Live. No Edits.</h3>
+        <p class="insight-desc">Screen-recorded inside a real CAPEX controlling workflow — every prompt shown, every output reviewed, nothing hidden.</p>
       </div>
-      <div class="insight-footer" style="color:var(--gold2)"><span>Members Only</span></div>
+      <div class="insight-footer"><span style="color:#FF5555">Members Only</span></div>
     </div>
 
     <!-- CARD 3 — LOCKED -->
@@ -873,7 +868,7 @@ function toggleSection(which) {
         <div style="display:flex;align-items:center;gap:8px"><div style="width:5px;height:5px;border-radius:50%;background:var(--amber);box-shadow:0 0 6px var(--amber)"></div><span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted)">Safe Input Guide included in every prompt</span></div>
       </div>
       <div style="margin-top:2rem">
-        <a href="#newsletter" onclick="document.getElementById('newsletter').scrollIntoView({behavior:'smooth'});return false;" class="btn-primary" data-sub-href="/prompts.html">Download All 25 Free →</a>
+        <a href="#newsletter" onclick="document.getElementById('newsletter').scrollIntoView({behavior:'smooth'});return false;" class="btn-primary" data-sub-href="/prompts.html">Access The 25 <span class="brand-ai">AI Enabled</span> Prompts →</a>
       </div>
     </div>
     <div class="reveal" style="transition-delay:0.15s">
