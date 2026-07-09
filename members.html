@@ -229,6 +229,28 @@ footer::before{content:'';display:block;height:1px;background:linear-gradient(90
 </style>
 </head>
 <body>
+
+<!-- ── SUBSCRIBER GATE — shown until taief_subscriber cookie is set ── -->
+<div id="hub-gate" style="position:fixed;inset:0;z-index:500;background:rgba(2,11,24,0.97);backdrop-filter:blur(10px);display:none;align-items:center;justify-content:center;padding:2rem;text-align:center">
+  <div style="max-width:420px">
+    <div style="font-size:32px;margin-bottom:1rem">🔒</div>
+    <h1 style="font-family:'Orbitron',sans-serif;font-size:22px;font-weight:800;margin-bottom:0.75rem;color:var(--white)">Members Hub — Subscribers Only</h1>
+    <p style="font-size:14px;color:var(--muted);line-height:1.7;margin-bottom:1.75rem">Subscribe free to unlock the 25 <span class="brand-ai">AI Enabled</span> Prompts, the Compliance Bridge, and everything else inside.</p>
+    <a href="https://the-ai-enabled-finance.beehiiv.com/subscribe?utm_source=website&utm_medium=members_hub_gate&utm_campaign=gate" target="_blank" style="display:inline-flex;align-items:center;gap:8px;font-family:'Orbitron',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.06em;background:linear-gradient(135deg,var(--teal),var(--teal2));color:var(--navy);padding:14px 28px;border-radius:2px;text-decoration:none">Subscribe Free — Unlock Access →</a>
+    <p style="margin-top:1.25rem"><a href="/" style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted2);text-decoration:none;text-transform:uppercase;letter-spacing:0.1em">← Back to homepage</a></p>
+  </div>
+</div>
+<script>
+(function(){
+  var m = document.cookie.match(/(^| )taief_subscriber=([^;]+)/);
+  if (!m || m[2] !== 'true') {
+    var gate = document.getElementById('hub-gate');
+    gate.style.display = 'flex';
+    document.documentElement.style.overflow = 'hidden';
+  }
+})();
+</script>
+
 <canvas id="bg-canvas"></canvas>
 <div id="cur"></div>
 <div id="cur-ring"></div>
@@ -737,6 +759,7 @@ document.querySelectorAll('.reveal').forEach(r=>revObserver.observe(r));
 setTimeout(()=>document.querySelector('.hub-hero').classList.add('visible'),80);
 </script>
 <script src="/site-stats.js"></script>
+<script src="/subscriber-gate.js"></script>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   const nav = document.querySelector('nav');

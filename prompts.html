@@ -690,23 +690,9 @@ document.querySelectorAll('.toc-section').forEach(tile=>{
   });
 });
 
-// TAIEF SUBSCRIBER COOKIE — set on arrival (post-subscribe redirect lands here)
-function taief_setCookie(n,v,d){const e=new Date();e.setTime(e.getTime()+(d*864e5));document.cookie=n+"="+v+";expires="+e.toUTCString()+";path=/;SameSite=Lax"}
-function taief_getCookie(n){const m=document.cookie.match(new RegExp('(^| )'+n+'=([^;]+)'));return m?m[2]:null}
-function taief_isSubscriber(){return taief_getCookie('taief_subscriber')==='true'}
-// Set cookie for 365 days when landing on this page
-taief_setCookie('taief_subscriber','true',365);
-// Update nav for subscribers
-function taief_updateNav(){
-  document.querySelectorAll('[data-sub-href]').forEach(el=>{
-    el.href=el.getAttribute('data-sub-href');
-    el.onclick=null;
-    el.removeAttribute('onclick');
-  });
-}
-document.addEventListener('DOMContentLoaded', taief_updateNav);
 </script>
 <script src="/site-stats.js"></script>
+<script src="/subscriber-gate.js"></script>
 </body>
 </html>
 <!-- MOBILE RESPONSIVE PATCH -->

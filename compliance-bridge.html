@@ -497,12 +497,7 @@ const ro=new IntersectionObserver(e=>{e.forEach(el=>{if(el.isIntersecting)el.tar
 document.querySelectorAll('.reveal').forEach(r=>ro.observe(r));
 setTimeout(()=>document.querySelector('.hero')?.classList.add('visible'),80);
 </script>
-<script>
-function taief_getCookie(n){var m=document.cookie.match(new RegExp("(^| )"+n+"=([^;]+)"));return m?m[2]:null}
-function taief_isSubscriber(){return taief_getCookie("taief_subscriber")==="true"}
-function taief_updateNav(){if(!taief_isSubscriber())return;document.querySelectorAll("[data-sub-href]").forEach(function(el){el.href=el.getAttribute("data-sub-href");el.onclick=null;el.removeAttribute("onclick");});}
-document.addEventListener("DOMContentLoaded",taief_updateNav);
-</script>
+<script src="/subscriber-gate.js"></script>
 <script type="text/javascript" async src="https://subscribe-forms.beehiiv.com/attribution.js"></script>
 <script src="/site-stats.js"></script>
 </body>

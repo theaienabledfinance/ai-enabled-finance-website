@@ -1064,19 +1064,6 @@ function toggleSection(which) {
 </div><!-- /page -->
 
 <script>
-// TAIEF SUBSCRIBER COOKIE
-function taief_setCookie(n,v,d){const e=new Date();e.setTime(e.getTime()+(d*864e5));document.cookie=n+"="+v+";expires="+e.toUTCString()+";path=/;SameSite=Lax"}
-function taief_getCookie(n){const m=document.cookie.match(new RegExp('(^| )'+n+'=([^;]+)'));return m?m[2]:null}
-function taief_isSubscriber(){return taief_getCookie('taief_subscriber')==='true'}
-function taief_updateNav(){
-  if(!taief_isSubscriber())return;
-  document.querySelectorAll('[data-sub-href]').forEach(el=>{
-    el.href=el.getAttribute('data-sub-href');
-    el.onclick=null;
-    el.removeAttribute('onclick');
-  });
-}
-document.addEventListener('DOMContentLoaded', taief_updateNav);
 let _muted = false; // Sounds ON by default
 let _audioCtx = null;
 const _isFinePointer = window.matchMedia('(hover: hover) and (pointer: fine)').matches; // true = real mouse, false = touch device
@@ -1456,6 +1443,7 @@ attachAll();
 
 // Profile photo embedded directly in HTML</script>
 <script src="/site-stats.js"></script>
+<script src="/subscriber-gate.js"></script>
 
 </body>
 </html>
