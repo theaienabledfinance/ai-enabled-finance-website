@@ -89,6 +89,9 @@ body{background:var(--navy);color:var(--white);font-family:'Inter',sans-serif;ov
   /* Decorative-only elements: safe to hide on mobile, carry no information */
   .ticker{display:none}
   .about-photo-ring,.about-photo-glow{display:none}
+
+  /* Fixed-position decorative layers glitch/misalign on iOS Safari during pinch-zoom — drop them on mobile */
+  #bg-canvas,body::before{display:none!important}
 }
 @media (max-width:480px){
   .hero-title{font-size:clamp(26px,9vw,40px)}

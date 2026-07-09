@@ -148,6 +148,84 @@ footer::before{content:'';display:block;height:1px;background:linear-gradient(90
 
 .reveal{opacity:0;transform:translateY(20px);transition:opacity 0.7s ease,transform 0.7s ease}
 .reveal.visible{opacity:1;transform:translateY(0)}
+
+/* MOBILE RESPONSIVE PATCH — moved from after </html>, where it was invalid and parsed unreliably */
+@media (hover: none) and (pointer: coarse) {
+  *{cursor:auto!important}
+  #bg-canvas,body::before{display:none!important}
+  #cur,#cur-ring{display:none}
+}
+@media (max-width: 768px) {
+
+  /* Nav */
+  nav{padding:0.75rem 1rem}
+  .nav-brand{font-size:10px}
+  .nav-links-hub{display:none}
+  .nav-back{border-left:none;padding-left:0;font-size:8px}
+  .mob-hub-menu{display:flex!important}
+
+  /* Mobile hamburger for members */
+  .mob-hub-menu{display:none;align-items:center;justify-content:center;width:36px;height:36px;background:rgba(0,229,200,0.08);border:1px solid rgba(0,229,200,0.2);border-radius:4px;cursor:pointer}
+  .mob-hub-menu span{width:16px;height:1.5px;background:var(--teal);display:block;position:relative}
+  .mob-hub-menu span::before,.mob-hub-menu span::after{content:'';position:absolute;width:16px;height:1.5px;background:var(--teal)}
+  .mob-hub-menu span::before{top:-5px}
+  .mob-hub-menu span::after{top:5px}
+
+  /* Bookmark bar */
+  .bookmark-bar{padding:8px 1rem;margin-top:56px;flex-wrap:wrap;gap:6px}
+  .bookmark-bar span{font-size:9px}
+
+  /* Section nav */
+  .section-nav{padding:12px 1rem;top:56px}
+  .section-nav-tiles{grid-template-columns:repeat(3,1fr);gap:6px}
+  .snav-tile{padding:12px 10px}
+  .snav-letter{font-size:16px}
+  .snav-name{font-size:10px}
+
+  /* Hub hero */
+  .hub-hero{padding:2rem 1rem 1.5rem}
+  .hub-title{font-size:clamp(22px,7vw,36px)}
+  .hub-stats{gap:1.25rem;flex-wrap:wrap}
+  .stat-val{font-size:18px}
+
+  /* Hub content */
+  .hub-content{padding:0 1rem 4rem}
+  .hub-block{padding:2.5rem 0 0}
+  .hub-block-title{font-size:clamp(16px,5vw,24px)}
+
+  /* Prompt category tiles */
+  .prompt-cats{grid-template-columns:1fr 1fr;gap:8px}
+  .pcat{padding:12px}
+  .pcat-letter{font-size:18px}
+  .pcat-desc{font-size:10px}
+
+  /* Cards grid */
+  .cards-grid{grid-template-columns:1fr}
+  .hub-card{padding:16px}
+  .card-title{font-size:12px}
+  .card-desc{font-size:11px}
+
+  /* Teaser cards */
+  .teaser-header{padding:16px}
+  .teaser-body{padding:12px}
+  .teaser-preview{font-size:10px}
+
+  /* CTAs */
+  .prompts-cta-row{flex-direction:column;gap:0.75rem}
+  .btn-primary{width:100%;justify-content:center;font-size:10px;padding:12px}
+
+  /* Footer */
+  .footer-inner{flex-direction:column;gap:1rem;text-align:center;padding:1.5rem 1rem}
+  .footer-links{flex-wrap:wrap;justify-content:center;gap:1rem}
+  footer{padding:0}
+}
+@media (max-width: 480px) {
+  .hub-hero{padding:1.5rem 0.875rem 1rem}
+  .hub-content{padding:0 0.875rem 3rem}
+  .section-nav-tiles{grid-template-columns:repeat(2,1fr)}
+  .prompt-cats{grid-template-columns:1fr}
+  .snav-tile{padding:10px 8px}
+}
 </style>
 </head>
 <body>
@@ -654,89 +732,6 @@ document.querySelectorAll('.reveal').forEach(r=>revObserver.observe(r));
 setTimeout(()=>document.querySelector('.hub-hero').classList.add('visible'),80);
 </script>
 <script src="/site-stats.js"></script>
-</body>
-</html>
-<!-- MOBILE RESPONSIVE PATCH -->
-<style>
-@media (hover: none) and (pointer: coarse) {
-  *{cursor:auto!important}
-  #bg-canvas{opacity:0.25}
-  body::before{display:none}
-  #cur,#cur-ring{display:none}
-}
-@media (max-width: 768px) {
-
-  /* Nav */
-  nav{padding:0.75rem 1rem}
-  .nav-brand{font-size:10px}
-  .nav-links-hub{display:none}
-  .nav-back{border-left:none;padding-left:0;font-size:8px}
-  .mob-hub-menu{display:flex!important}
-
-  /* Mobile hamburger for members */
-  .mob-hub-menu{display:none;align-items:center;justify-content:center;width:36px;height:36px;background:rgba(0,229,200,0.08);border:1px solid rgba(0,229,200,0.2);border-radius:4px;cursor:pointer}
-  .mob-hub-menu span{width:16px;height:1.5px;background:var(--teal);display:block;position:relative}
-  .mob-hub-menu span::before,.mob-hub-menu span::after{content:'';position:absolute;width:16px;height:1.5px;background:var(--teal)}
-  .mob-hub-menu span::before{top:-5px}
-  .mob-hub-menu span::after{top:5px}
-
-  /* Bookmark bar */
-  .bookmark-bar{padding:8px 1rem;margin-top:56px;flex-wrap:wrap;gap:6px}
-  .bookmark-bar span{font-size:9px}
-
-  /* Section nav */
-  .section-nav{padding:12px 1rem;top:56px}
-  .section-nav-tiles{grid-template-columns:repeat(3,1fr);gap:6px}
-  .snav-tile{padding:12px 10px}
-  .snav-letter{font-size:16px}
-  .snav-name{font-size:10px}
-
-  /* Hub hero */
-  .hub-hero{padding:2rem 1rem 1.5rem}
-  .hub-title{font-size:clamp(22px,7vw,36px)}
-  .hub-stats{gap:1.25rem;flex-wrap:wrap}
-  .stat-val{font-size:18px}
-
-  /* Hub content */
-  .hub-content{padding:0 1rem 4rem}
-  .hub-block{padding:2.5rem 0 0}
-  .hub-block-title{font-size:clamp(16px,5vw,24px)}
-
-  /* Prompt category tiles */
-  .prompt-cats{grid-template-columns:1fr 1fr;gap:8px}
-  .pcat{padding:12px}
-  .pcat-letter{font-size:18px}
-  .pcat-desc{font-size:10px}
-
-  /* Cards grid */
-  .cards-grid{grid-template-columns:1fr}
-  .hub-card{padding:16px}
-  .card-title{font-size:12px}
-  .card-desc{font-size:11px}
-
-  /* Teaser cards */
-  .teaser-header{padding:16px}
-  .teaser-body{padding:12px}
-  .teaser-preview{font-size:10px}
-
-  /* CTAs */
-  .prompts-cta-row{flex-direction:column;gap:0.75rem}
-  .btn-primary{width:100%;justify-content:center;font-size:10px;padding:12px}
-
-  /* Footer */
-  .footer-inner{flex-direction:column;gap:1rem;text-align:center;padding:1.5rem 1rem}
-  .footer-links{flex-wrap:wrap;justify-content:center;gap:1rem}
-  footer{padding:0}
-}
-@media (max-width: 480px) {
-  .hub-hero{padding:1.5rem 0.875rem 1rem}
-  .hub-content{padding:0 0.875rem 3rem}
-  .section-nav-tiles{grid-template-columns:repeat(2,1fr)}
-  .prompt-cats{grid-template-columns:1fr}
-  .snav-tile{padding:10px 8px}
-}
-</style>
-
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   const nav = document.querySelector('nav');
@@ -756,8 +751,8 @@ document.addEventListener('DOMContentLoaded', function() {
   drawer.innerHTML = `
     <button style="position:absolute;top:1rem;right:1.25rem;background:none;border:none;color:#7A9BBD;font-size:26px;cursor:pointer">&#215;</button>
     <a href="#prompts" style="font-family:'JetBrains Mono',monospace;font-size:13px;color:#EEF4FF;text-decoration:none;text-transform:uppercase;letter-spacing:0.12em;border-bottom:1px solid rgba(255,255,255,0.06);padding-bottom:1rem">Prompts</a>
-    <a href="#tools" style="font-family:'JetBrains Mono',monospace;font-size:13px;color:#EEF4FF;text-decoration:none;text-transform:uppercase;letter-spacing:0.12em;border-bottom:1px solid rgba(255,255,255,0.06);padding-bottom:1rem">Tools</a>
     <a href="#insights" style="font-family:'JetBrains Mono',monospace;font-size:13px;color:#EEF4FF;text-decoration:none;text-transform:uppercase;letter-spacing:0.12em;border-bottom:1px solid rgba(255,255,255,0.06);padding-bottom:1rem">Insights</a>
+    <a href="#bridge" style="font-family:'JetBrains Mono',monospace;font-size:13px;color:#EEF4FF;text-decoration:none;text-transform:uppercase;letter-spacing:0.12em;border-bottom:1px solid rgba(255,255,255,0.06);padding-bottom:1rem">The Bridge</a>
     <a href="/" style="font-family:'JetBrains Mono',monospace;font-size:13px;color:#00E5C8;text-decoration:none;text-transform:uppercase;letter-spacing:0.12em">← Back to Site</a>
   `;
   document.body.appendChild(drawer);
@@ -776,3 +771,5 @@ document.addEventListener('DOMContentLoaded', function() {
   window.addEventListener('resize', checkMob);
 });
 </script>
+</body>
+</html>
