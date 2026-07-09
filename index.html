@@ -92,6 +92,10 @@ body{background:var(--navy);color:var(--white);font-family:'Inter',sans-serif;ov
 
   /* Fixed-position decorative layers glitch/misalign on iOS Safari during pinch-zoom — drop them on mobile */
   #bg-canvas,body::before{display:none!important}
+
+  /* Footer — stack instead of squeezing 8 links into one row */
+  .footer-inner{flex-direction:column;gap:1rem;text-align:center;padding:1.5rem 1rem}
+  .footer-links{flex-wrap:wrap;justify-content:center;gap:1rem}
 }
 @media (max-width:480px){
   .hero-title{font-size:clamp(26px,9vw,40px)}
@@ -388,11 +392,11 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
       </div>
       <div class="hero-stats">
         <div>
-          <span class="stat-val teal">325+</span>
-          <span class="stat-label">Tested Prompts</span>
+          <span class="stat-val teal">25</span>
+          <span class="stat-label">Battle-Tested Prompts</span>
         </div>
         <div>
-          <span class="stat-val teal">4+ hrs</span>
+          <span class="stat-val teal">~4+ hrs</span>
           <span class="stat-label">Back Every Month-End</span>
         </div>
         <div>
@@ -556,7 +560,7 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem">
         <div style="background:var(--navy2);border:1px solid rgba(0,229,200,0.1);border-radius:10px;padding:1.75rem">
           <div style="font-family:'Orbitron',sans-serif;font-size:28px;font-weight:800;color:var(--teal);margin-bottom:8px">25</div>
-          <h3 style="font-family:'Orbitron',sans-serif;font-size:13px;font-weight:700;color:var(--white);margin-bottom:10px">Tested AI Prompts</h3>
+          <h3 style="font-family:'Orbitron',sans-serif;font-size:13px;font-weight:700;color:var(--white);margin-bottom:10px">Battle-Tested AI Prompts</h3>
           <p style="font-size:12.5px;font-weight:300;color:var(--muted);line-height:1.8">FP&A, CAPEX, month-end, board reporting, and decision support. Every single one tested inside a live corporate finance function against real deadlines.</p>
         </div>
         <div style="background:var(--navy2);border:1px solid rgba(212,168,67,0.1);border-radius:10px;padding:1.75rem">
@@ -572,7 +576,7 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
         <div style="background:var(--navy2);border:1px solid rgba(57,255,20,0.15);border-radius:10px;padding:1.75rem">
           <div style="font-family:'Orbitron',sans-serif;font-size:28px;font-weight:800;color:#39FF14;margin-bottom:8px;text-shadow:0 0 14px rgba(57,255,20,0.4)">FREE</div>
           <h3 style="font-family:'Orbitron',sans-serif;font-size:13px;font-weight:700;color:var(--white);margin-bottom:10px">No Cost. No Catch.</h3>
-          <p style="font-size:12.5px;font-weight:300;color:var(--muted);line-height:1.8">Enter your email, get instant access. Join <span data-stat="subscribers">759+</span> finance professionals already using The AI Enabled Finance system. That is it.</p>
+          <p style="font-size:12.5px;font-weight:300;color:var(--muted);line-height:1.8">Enter your email, get instant access. Join <span data-stat="subscribers">759+</span> finance professionals already following the journey. That is it.</p>
           <a href="#newsletter" style="display:inline-block;margin-top:14px;font-family:'Orbitron',sans-serif;font-size:10px;font-weight:700;background:linear-gradient(135deg,var(--teal),var(--teal2));color:var(--navy);padding:8px 20px;border-radius:2px;text-decoration:none"
              onmouseenter="playHover();setCursorHover()" onmouseleave="setCursorNormal()" onclick="playClick()">
             Get Them Free →
@@ -608,7 +612,7 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
             <p style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted);margin-bottom:10px">Get all 25 prompts — free. No credit card. No catch.</p>
             <a href="#newsletter" style="display:inline-block;font-family:'Orbitron',sans-serif;font-size:11px;font-weight:800;background:linear-gradient(135deg,var(--teal),var(--teal2));color:var(--navy);padding:12px 32px;border-radius:2px;text-decoration:none;box-shadow:0 4px 20px rgba(0,229,200,0.2)"
                onmouseenter="playHover();setCursorHover()" onmouseleave="setCursorNormal()" onclick="playClick()">
-              <span style="font-size:13px;font-weight:900">FREE</span>  Download All 25 →
+              <span style="font-size:13px;font-weight:900">FREE</span>  Get All 25 →
             </a>
           </div>
         </div>
@@ -646,16 +650,16 @@ function toggleSection(which) {
 <section class="main-section" id="pillars">
   <div class="section-header reveal" style="margin-bottom:3rem">
     <div class="section-eyebrow"><div class="section-eyebrow-line"></div><span>The Framework</span></div>
-    <h2 class="section-title">Battle Tested. <em>Audit Ready.</em> Board Ready.</h2>
+    <h2 class="section-title">Battle Tested. <em>Audit Ready.</em> <span style="color:var(--gold2)">Board Ready.</span></h2>
     <p class="section-desc">Three pillars built by a practicing CAPEX Controller — for finance professionals who operate inside real governance constraints and answer to real CFOs.</p>
   </div>
   <div class="pillars-grid reveal" style="transition-delay:0.1s">
 
     <!-- Pillar 1 -->
     <div class="pillar">
-      <div class="pillar-top-line" style="background:linear-gradient(90deg,transparent,var(--teal),transparent)"></div>
-      <div class="pillar-num" style="color:rgba(0,229,200,0.45)">01</div>
-      <div class="pillar-icon" style="color:var(--teal)">
+      <div class="pillar-top-line" style="background:linear-gradient(90deg,transparent,var(--blue2),transparent)"></div>
+      <div class="pillar-num" style="color:rgba(77,159,255,0.45)">01</div>
+      <div class="pillar-icon" style="color:var(--blue2)">
         <svg fill="none" stroke="currentColor" viewBox="0 0 44 44" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
           <line x1="6" y1="6" x2="38" y2="38"/><polyline points="6,16 6,6 16,6"/>
           <line x1="28" y1="28" x2="36" y2="36"/>
@@ -664,42 +668,42 @@ function toggleSection(which) {
         </svg>
       </div>
       <h3 class="pillar-title" style="color:var(--white)">Battle Tested</h3>
-      <p class="pillar-subtitle" style="color:var(--teal)">AI Workflows &amp; Prompts</p>
+      <p class="pillar-subtitle" style="color:var(--blue2)">AI Workflows &amp; Prompts</p>
       <p class="pillar-desc">Every prompt has been run inside a live corporate finance function — not a sandbox. Variance commentary, rolling forecast narratives, CAPEX FTC analysis, budget bridge structures, key driver identification. Tested under real month-end pressure, against real deadlines.</p>
       <div class="tags">
-        <span class="tag" style="color:rgba(0,229,200,0.8);background:rgba(0,229,200,0.08)">Variance Prompts</span>
-        <span class="tag" style="color:rgba(0,229,200,0.8);background:rgba(0,229,200,0.08)">Key Drivers</span>
-        <span class="tag" style="color:rgba(0,229,200,0.8);background:rgba(0,229,200,0.08)">FTC Analysis</span>
-        <span class="tag" style="color:rgba(0,229,200,0.8);background:rgba(0,229,200,0.08)">Board Narrative</span>
+        <span class="tag" style="color:rgba(77,159,255,0.8);background:rgba(77,159,255,0.08)">Variance Prompts</span>
+        <span class="tag" style="color:rgba(77,159,255,0.8);background:rgba(77,159,255,0.08)">Key Drivers</span>
+        <span class="tag" style="color:rgba(77,159,255,0.8);background:rgba(77,159,255,0.08)">FTC Analysis</span>
+        <span class="tag" style="color:rgba(77,159,255,0.8);background:rgba(77,159,255,0.08)">Board Narrative</span>
       </div>
     </div>
 
     <!-- Pillar 2 -->
     <div class="pillar">
-      <div class="pillar-top-line" style="background:linear-gradient(90deg,transparent,var(--gold2),transparent)"></div>
-      <div class="pillar-num" style="color:rgba(212,168,67,0.45)">02</div>
-      <div class="pillar-icon" style="color:var(--gold2)">
+      <div class="pillar-top-line" style="background:linear-gradient(90deg,transparent,var(--teal),transparent)"></div>
+      <div class="pillar-num" style="color:rgba(0,229,200,0.45)">02</div>
+      <div class="pillar-icon" style="color:var(--teal)">
         <svg fill="none" stroke="currentColor" viewBox="0 0 44 44" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
           <path d="M22 4L38 12V24C38 33 22 40 22 40S6 33 6 24V12L22 4Z"/>
           <path d="M16 22L20 26L28 18"/>
         </svg>
       </div>
       <h3 class="pillar-title" style="color:var(--white)">Audit Ready</h3>
-      <p class="pillar-subtitle" style="color:var(--gold2)">Compliant AI Adoption</p>
+      <p class="pillar-subtitle" style="color:var(--teal)">Compliant AI Adoption</p>
       <p class="pillar-desc">AI in a regulated enterprise environment is not the same as AI on your laptop. Every workflow here is built around data privacy, GDPR compliance, internal governance frameworks, and audit trail requirements. AI-enabled — without the career risk.</p>
       <div class="tags">
-        <span class="tag" style="color:rgba(212,168,67,0.8);background:rgba(212,168,67,0.08)">Data Privacy</span>
-        <span class="tag" style="color:rgba(212,168,67,0.8);background:rgba(212,168,67,0.08)">GDPR Compliant</span>
-        <span class="tag" style="color:rgba(212,168,67,0.8);background:rgba(212,168,67,0.08)">Governance</span>
-        <span class="tag" style="color:rgba(212,168,67,0.8);background:rgba(212,168,67,0.08)">Audit Trail</span>
+        <span class="tag" style="color:rgba(0,229,200,0.8);background:rgba(0,229,200,0.08)">Data Privacy</span>
+        <span class="tag" style="color:rgba(0,229,200,0.8);background:rgba(0,229,200,0.08)">GDPR Compliant</span>
+        <span class="tag" style="color:rgba(0,229,200,0.8);background:rgba(0,229,200,0.08)">Governance</span>
+        <span class="tag" style="color:rgba(0,229,200,0.8);background:rgba(0,229,200,0.08)">Audit Trail</span>
       </div>
     </div>
 
     <!-- Pillar 3 -->
     <div class="pillar">
-      <div class="pillar-top-line" style="background:linear-gradient(90deg,transparent,var(--blue2),transparent)"></div>
-      <div class="pillar-num" style="color:rgba(77,159,255,0.45)">03</div>
-      <div class="pillar-icon" style="color:var(--blue2)">
+      <div class="pillar-top-line" style="background:linear-gradient(90deg,transparent,var(--gold2),transparent)"></div>
+      <div class="pillar-num" style="color:rgba(212,168,67,0.45)">03</div>
+      <div class="pillar-icon" style="color:var(--gold2)">
         <svg fill="none" stroke="currentColor" viewBox="0 0 44 44" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
           <rect x="6" y="6" width="13" height="13" rx="2"/><rect x="25" y="6" width="13" height="13" rx="2"/>
           <rect x="6" y="25" width="13" height="13" rx="2"/><rect x="25" y="25" width="13" height="13" rx="2"/>
@@ -708,13 +712,13 @@ function toggleSection(which) {
         </svg>
       </div>
       <h3 class="pillar-title" style="color:var(--white)">Board Ready</h3>
-      <p class="pillar-subtitle" style="color:var(--blue2)">Finance Models &amp; Templates</p>
+      <p class="pillar-subtitle" style="color:var(--gold2)">Finance Models &amp; Templates</p>
       <p class="pillar-desc">Production-grade Excel models, Power BI dashboards, and AI-enhanced reporting packs built inside a live pharma CAPEX environment. CAPEX tracking, FP&amp;A reporting packs, variance dashboards, and CFO-ready commentary structures. Works on Monday morning.</p>
       <div class="tags">
-        <span class="tag" style="color:rgba(77,159,255,0.8);background:rgba(77,159,255,0.08)">CAPEX Models</span>
-        <span class="tag" style="color:rgba(77,159,255,0.8);background:rgba(77,159,255,0.08)">FP&amp;A Packs</span>
-        <span class="tag" style="color:rgba(77,159,255,0.8);background:rgba(77,159,255,0.08)">Power BI</span>
-        <span class="tag" style="color:rgba(77,159,255,0.8);background:rgba(77,159,255,0.08)">CFO Reporting</span>
+        <span class="tag" style="color:rgba(212,168,67,0.8);background:rgba(212,168,67,0.08)">CAPEX Models</span>
+        <span class="tag" style="color:rgba(212,168,67,0.8);background:rgba(212,168,67,0.08)">FP&amp;A Packs</span>
+        <span class="tag" style="color:rgba(212,168,67,0.8);background:rgba(212,168,67,0.08)">Power BI</span>
+        <span class="tag" style="color:rgba(212,168,67,0.8);background:rgba(212,168,67,0.08)">CFO Reporting</span>
       </div>
     </div>
 
@@ -829,12 +833,12 @@ function toggleSection(which) {
       <div style="flex:1;min-width:260px">
         <div style="font-family:'JetBrains Mono',monospace;font-size:8px;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold2);margin-bottom:0.75rem">// Members Hub — What Is Inside</div>
         <h3 style="font-family:'Orbitron',sans-serif;font-size:18px;font-weight:800;margin-bottom:0.75rem;line-height:1.3">This is just the beginning.<br><span style="background:linear-gradient(90deg,var(--gold),var(--gold2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">Much more inside.</span></h3>
-        <p style="font-size:13px;color:var(--muted);line-height:1.75;max-width:480px">The 25 free prompts are the entry point. Inside the Members Hub: <span data-stat="vaultPrompts">335+</span> prompts across 13 finance functions, every field note as it publishes, the complete Safe AI Input Framework with decision trees, the CAPEX Control Model, the Month-End Pack, the AI Job Hunt Pack, the Compliance Bridge — and a senior finance career navigating AI, documented live from the inside.</p>
+        <p style="font-size:13px;color:var(--muted);line-height:1.75;max-width:480px">The 25 <span style="color:#39FF14;font-weight:600">FREE</span> prompts are battle-tested and yours already. Inside the Members Hub: every field note as it publishes, the complete Safe AI Input Framework with decision trees, the CAPEX Control Model, the Month-End Pack, the AI Job Hunt Pack, the Compliance Bridge — and a senior finance career navigating AI, documented live from the inside.</p>
       </div>
       <div style="display:flex;flex-direction:column;gap:8px;min-width:200px">
         <div style="background:rgba(0,229,200,0.04);border:1px solid rgba(0,229,200,0.1);border-radius:6px;padding:10px 14px">
           <div style="font-family:'JetBrains Mono',monospace;font-size:8px;letter-spacing:0.12em;text-transform:uppercase;color:var(--teal);margin-bottom:4px">Prompts & Framework</div>
-          <div style="font-size:11px;color:var(--muted)"><span data-stat="vaultPrompts">335+</span> prompts · Safe AI methodology · Audit trail system</div>
+          <div style="font-size:11px;color:var(--muted)">25 <span style="color:#39FF14;font-weight:700">FREE</span> prompts · Safe AI methodology · Audit trail system</div>
         </div>
         <div style="background:rgba(212,168,67,0.04);border:1px solid rgba(212,168,67,0.1);border-radius:6px;padding:10px 14px">
           <div style="font-family:'JetBrains Mono',monospace;font-size:8px;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold2);margin-bottom:4px">Field Notes & Products</div>
@@ -916,7 +920,7 @@ function toggleSection(which) {
   <div class="section-header reveal" style="margin-bottom:4rem;text-align:center">
     <div class="section-eyebrow" style="justify-content:center"><div class="section-eyebrow-line"></div><span style="color:var(--gold2)">The Path</span></div>
     <h2 class="section-title">The Journey</h2>
-    <p class="section-desc" style="margin:0 auto">From audit at Deloitte to AI-enabled finance — 10+ years of international experience across commodity trading, manufacturing, global health, and pharma.</p>
+    <p class="section-desc" style="margin:0 auto">From audit at Deloitte to AI-enabled finance — 12+ years of international experience across commodity trading, manufacturing, global health, and pharma.</p>
   </div>
   <div class="journey-wrapper reveal">
     <div class="journey-line"></div>
@@ -960,11 +964,11 @@ function toggleSection(which) {
           <div class="coming-desc">Written breakdowns of real AI workflows — tested inside a live CAPEX controlling function. What worked, what didn't, what to do next.</div>
           <span class="coming-badge" style="color:var(--gold2);border-color:rgba(212,168,67,0.4);background:rgba(212,168,67,0.1)">Coming Soon</span>
         </div>
-        <div class="coming-card" style="border-color:rgba(242,199,110,0.35);box-shadow:0 0 18px rgba(212,168,67,0.07)">
-          <div class="coming-icon">🎥</div>
-          <div class="coming-title" style="color:var(--gold2)">YouTube — Walkthroughs</div>
+        <div class="coming-card" style="border-color:rgba(255,77,109,0.35);box-shadow:0 0 18px rgba(255,77,109,0.07)">
+          <div class="coming-icon"><svg width="24" height="17" viewBox="0 0 28 20"><rect width="28" height="20" rx="6" fill="#FF0000"/><path d="M11 6l8 4-8 4V6z" fill="#fff"/></svg></div>
+          <div class="coming-title" style="color:#FF5555">YouTube — Walkthroughs</div>
           <div class="coming-desc">Screen-recorded, real workflow walkthroughs. AI inside corporate finance — no theory, no vendor decks. Just what actually works under deadline pressure.</div>
-          <span class="coming-badge" style="color:var(--gold2);border-color:rgba(212,168,67,0.4);background:rgba(212,168,67,0.1)">Coming Soon</span>
+          <span class="coming-badge" style="color:#FF5555;border-color:rgba(255,77,109,0.4);background:rgba(255,77,109,0.1)">Coming Soon</span>
         </div>
         <div class="coming-card">
           <div class="coming-icon">📊</div>
@@ -990,22 +994,22 @@ function toggleSection(which) {
       <p style="font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.18em;color:var(--gold2);text-transform:uppercase;margin-bottom:1.25rem;text-align:center">// 20% Personal — Building This From Zero</p>
       <div class="coming-cards">
         <div class="coming-card" style="border-color:rgba(242,199,110,0.35);box-shadow:0 0 18px rgba(212,168,67,0.07)">
-          <div class="coming-icon">🏗️</div>
-          <div class="coming-title" style="color:var(--gold2)">How I Built This — From Zero</div>
-          <div class="coming-desc">The honest, behind-the-scenes story of building The AI Enabled Finance from scratch — tools, decisions, mistakes and all.</div>
-          <span class="coming-badge" style="color:var(--gold2);border-color:rgba(212,168,67,0.4);background:rgba(212,168,67,0.1)">Coming Soon</span>
-        </div>
-        <div class="coming-card">
           <div class="coming-icon">🎯</div>
           <div class="coming-title"><span class="brand-ai">AI Enabled</span> Job Hunting</div>
           <div class="coming-desc">The real search — applications, CV, cover letters, interview prep — all done with AI, documented honestly as it happens. What worked, what didn't.</div>
-          <span class="coming-badge">Coming</span>
+          <span class="coming-badge" style="color:var(--gold2);border-color:rgba(212,168,67,0.4);background:rgba(212,168,67,0.1)">Coming Soon</span>
         </div>
-        <div class="coming-card">
+        <div class="coming-card" style="border-color:rgba(77,159,255,0.35);box-shadow:0 0 18px rgba(77,159,255,0.07)">
           <div class="coming-icon">🚀</div>
-          <div class="coming-title">Starting the New Role</div>
+          <div class="coming-title" style="color:var(--blue2)">Starting the New Role</div>
           <div class="coming-desc">Onboarding into a new finance function with AI from day one — the first month-end, the first board pack, building trust and speed at the same time.</div>
-          <span class="coming-badge">Coming</span>
+          <span class="coming-badge" style="color:var(--blue2);border-color:rgba(77,159,255,0.4);background:rgba(77,159,255,0.1)">Coming Soon</span>
+        </div>
+        <div class="coming-card" style="border-color:rgba(0,229,200,0.35);box-shadow:0 0 18px rgba(0,229,200,0.07)">
+          <div class="coming-icon">🏗️</div>
+          <div class="coming-title" style="color:var(--teal)">How I Built This — From Zero</div>
+          <div class="coming-desc">The honest, behind-the-scenes story of building The AI Enabled Finance from scratch — tools, decisions, mistakes and all.</div>
+          <span class="coming-badge" style="color:var(--teal);border-color:rgba(0,229,200,0.4);background:rgba(0,229,200,0.1)">Coming Soon</span>
         </div>
       </div>
     </div>
@@ -1026,7 +1030,7 @@ function toggleSection(which) {
       Get The 25 <span class="brand-ai">AI Enabled</span> <span class="brand-fin">Finance</span> Prompts
     </h2>
     <p class="nl-free">FREE.</p>
-    <p class="nl-sub"><strong data-stat="subscribers">759+</strong> finance professionals already following The AI Enabled Finance journey.</p>
+    <p class="nl-sub">Finance professionals already following The AI Enabled Finance journey.</p>
     <div style="margin-top:1.5rem;width:100%;max-width:480px;margin-left:auto;margin-right:auto;min-height:80px" id="taief-form-wrap">
       <script async src="https://subscribe-forms.beehiiv.com/v3/loader.js" data-beehiiv-form="66528f3c-cc98-4f59-9deb-b21c8519403b"></script>
       <p style="font-family:'JetBrains Mono',monospace;font-size:9px;color:rgba(122,155,189,0.5);margin-top:10px;letter-spacing:0.06em;text-align:center">No spam. Unsubscribe anytime. I respect your inbox.</p>
