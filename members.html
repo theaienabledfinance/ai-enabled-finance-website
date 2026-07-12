@@ -49,14 +49,14 @@ nav::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;backg
 .section-nav{background:var(--navy2);border-top:1px solid rgba(0,229,200,0.06);border-bottom:1px solid rgba(0,229,200,0.06);padding:18px 3rem;position:sticky;top:62px;z-index:90}
 .section-nav-label{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted2);margin-bottom:12px}
 .section-nav-tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px}
-.snav-tile{background:var(--navy3);border-radius:8px;padding:20px 16px;border:1px solid rgba(255,255,255,0.04);text-decoration:none;transition:border-color 0.2s,background 0.2s;display:block;text-align:center}
+.snav-tile{background:var(--navy3);border-radius:8px;padding:20px 16px;border:1px solid rgba(255,255,255,0.04);text-decoration:none;transition:border-color 0.2s,background 0.2s;display:flex;flex-direction:column;align-items:center;text-align:center}
 .snav-tile:hover{border-color:rgba(0,229,200,0.2);background:rgba(0,229,200,0.04)}
 .snav-tile.active{border-color:rgba(0,229,200,0.3);background:rgba(0,229,200,0.06)}
 .snav-tile.gold-tile{border-color:rgba(212,168,67,0.15)}
 .snav-tile.gold-tile:hover{border-color:rgba(212,168,67,0.35);background:rgba(212,168,67,0.04)}
 .snav-letter{font-family:'Orbitron',sans-serif;font-size:22px;font-weight:700;margin-bottom:6px}
-.snav-name{font-size:13px;font-weight:600;color:var(--white);line-height:1.35}
-.snav-lock{font-size:9px;color:var(--muted2);margin-top:6px;font-family:'JetBrains Mono',monospace}
+.snav-name{font-size:13px;font-weight:600;color:var(--white);line-height:1.35;min-height:2.7em;display:flex;align-items:center;justify-content:center}
+.snav-lock{font-size:9px;color:var(--muted2);margin-top:auto;padding-top:6px;font-family:'JetBrains Mono',monospace}
 
 /* ── HERO ── */
 .hub-hero{padding:3rem 3rem 2rem;max-width:1200px;margin:0 auto}
@@ -99,14 +99,14 @@ nav::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;backg
 .cards-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.25rem}
 
 /* ── LIVE CARD ── */
-.hub-card{background:var(--navy2);border:1px solid rgba(255,255,255,0.06);border-radius:10px;padding:22px;position:relative;overflow:hidden;transition:border-color 0.3s,transform 0.2s}
+.hub-card{background:var(--navy2);border:1px solid rgba(255,255,255,0.06);border-radius:10px;padding:22px;position:relative;overflow:hidden;transition:border-color 0.3s,transform 0.2s;display:flex;flex-direction:column;height:100%}
 .hub-card.live{border-color:rgba(0,229,200,0.2)}
 .hub-card.live:hover{border-color:rgba(0,229,200,0.4);transform:translateY(-2px)}
 .hub-card.coming-gold{border-color:rgba(212,168,67,0.25)}
 .hub-card.coming-gold:hover{border-color:rgba(212,168,67,0.45);transform:translateY(-2px)}
 .hub-card.dimmed{opacity:0.35;pointer-events:none}
 
-.card-badge{display:inline-flex;align-items:center;gap:5px;font-family:'JetBrains Mono',monospace;font-size:8px;letter-spacing:0.12em;text-transform:uppercase;padding:3px 10px;border-radius:10px;margin-bottom:12px}
+.card-badge{display:inline-flex;align-items:center;gap:5px;font-family:'JetBrains Mono',monospace;font-size:8px;letter-spacing:0.12em;text-transform:uppercase;padding:3px 10px;border-radius:10px;margin-bottom:12px;align-self:flex-start}
 .badge-live{background:rgba(0,229,200,0.1);color:var(--teal);border:1px solid rgba(0,229,200,0.25)}
 .badge-live::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--teal);animation:pdot 2s infinite}
 .badge-gold{background:rgba(212,168,67,0.1);color:var(--gold2);border:1px solid rgba(212,168,67,0.3)}
@@ -114,7 +114,7 @@ nav::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;backg
 @keyframes pdot{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.4;transform:scale(0.7)}}
 
 .card-icon{font-size:26px;margin-bottom:10px;display:block}
-.card-title{font-family:'Orbitron',sans-serif;font-size:13px;font-weight:700;margin-bottom:8px;line-height:1.3}
+.card-title{font-family:'Orbitron',sans-serif;font-size:13px;font-weight:700;margin-bottom:8px;line-height:1.3;min-height:2.6em}
 .card-desc{font-size:12px;color:var(--muted);line-height:1.7;margin-bottom:14px}
 
 .li-expand{background:var(--navy);border:1px dashed rgba(0,229,200,0.25);border-radius:10px;padding:22px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;min-height:140px;cursor:pointer;transition:border-color 0.3s}
@@ -134,7 +134,7 @@ nav::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;backg
 .teaser-overlay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:linear-gradient(180deg,transparent 0%,rgba(6,17,32,0.7) 40%,rgba(6,17,32,0.95) 100%)}
 .teaser-lock-pill{display:inline-flex;align-items:center;gap:6px;background:rgba(212,168,67,0.12);border:1px solid rgba(212,168,67,0.35);border-radius:20px;padding:7px 16px;font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--gold2);letter-spacing:0.1em}
 
-.card-lock-row{display:flex;align-items:center;gap:6px;font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted2);letter-spacing:0.06em;margin-top:8px}
+.card-lock-row{display:flex;align-items:center;gap:6px;font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted2);letter-spacing:0.06em;margin-top:auto;padding-top:8px}
 
 /* ── FOOTER ── */
 footer{background:var(--navy2);border-top:1px solid rgba(0,229,200,0.07);padding:2rem 3rem}
@@ -267,10 +267,9 @@ footer::before{content:'';display:block;height:1px;background:linear-gradient(90
   </div>
   <div class="nav-right">
     <div class="nav-links-hub">
-      <a href="#prompts"><span class="brand-ai">AI Enabled</span> 80%</a>
       <a href="#prompts">Prompts</a>
-      <a href="#insights">Insights</a>
       <a href="#bridge">The Bridge</a>
+      <a href="#insights"><span class="brand-ai">AI Enabled</span> 80%</a>
       <a href="#personal">Personal 20%</a>
     </div>
     <a href="/" class="nav-back" style="font-size:9px;color:var(--muted);text-decoration:none;letter-spacing:0.1em;text-transform:uppercase;transition:color 0.2s;display:flex;align-items:center;gap:5px;border-left:1px solid rgba(255,255,255,0.06);padding-left:1.75rem">
@@ -484,9 +483,11 @@ footer::before{content:'';display:block;height:1px;background:linear-gradient(90
     <div class="cards-grid">
 
       <!-- COMPLIANCE BRIDGE — LIVE -->
-      <a href="/compliance-bridge.html" class="hub-card live" style="text-decoration:none;color:inherit;display:block">
-        <span style="position:absolute;top:14px;right:14px;font-family:'Orbitron',sans-serif;font-size:13px;font-weight:900;color:#39FF14;letter-spacing:0.08em;text-shadow:0 0 10px rgba(57,255,20,0.8),0 0 20px rgba(57,255,20,0.4)">FREE</span>
-        <span class="card-badge badge-live">⚡ Live Now — Free Inside</span>
+      <a href="/compliance-bridge.html" class="hub-card live" style="text-decoration:none;color:inherit">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px">
+          <span class="card-badge badge-live" style="margin-bottom:0">Live Now</span>
+          <span style="font-family:'Orbitron',sans-serif;font-size:13px;font-weight:900;color:#39FF14;letter-spacing:0.08em;text-shadow:0 0 10px rgba(57,255,20,0.8),0 0 20px rgba(57,255,20,0.4)">FREE</span>
+        </div>
         <span class="card-icon">🌉</span>
         <h3 class="card-title" style="color:var(--white)">Compliance Bridge</h3>
         <p class="card-desc">The free Safe AI Framework — what to share, what never to share, and how to anonymise real finance data before it ever reaches an AI tool. The exact methodology used for every prompt on this site.</p>
@@ -542,48 +543,6 @@ footer::before{content:'';display:block;height:1px;background:linear-gradient(90
   </div>
 
   <div class="gold-divider reveal"></div>
-
-  <!-- ══ MEMBERSHIP EARLY ACCESS ══ -->
-  <div class="hub-block reveal" id="membership">
-    <div class="hub-block-header">
-      <div class="eyebrow"><div class="eyebrow-line gold"></div><span class="gold">Founding Membership — Limited Window</span></div>
-      <h2 class="hub-block-title">Join The <span style="background:linear-gradient(90deg,var(--gold),var(--gold2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">Early Access List</span></h2>
-      <p class="hub-block-desc">When membership opens — and it will open on signal, not on a calendar date — the founding rate is reserved for everyone on this list. Standard rate is £19/month. Founding rate: £7/month. Locked permanently for founding members.</p>
-    </div>
-
-    <div class="pricing-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-bottom:2rem">
-      <div style="background:var(--navy2);border:1px solid rgba(212,168,67,0.25);border-radius:10px;padding:24px;position:relative">
-        <div style="position:absolute;top:-10px;left:20px;font-family:'Orbitron',sans-serif;font-size:9px;font-weight:900;background:var(--gold);color:var(--navy);padding:3px 12px;border-radius:10px;letter-spacing:0.1em">FOUNDING RATE</div>
-        <div style="position:absolute;top:-10px;right:20px;font-family:'JetBrains Mono',monospace;font-size:8px;font-weight:700;background:rgba(255,255,255,0.08);color:var(--white);padding:3px 10px;border-radius:10px;letter-spacing:0.06em;border:1px solid rgba(255,255,255,0.15)">🔖 REGISTER INTEREST — NO CHARGE</div>
-        <div style="font-family:'Orbitron',sans-serif;font-size:32px;font-weight:800;color:var(--gold2);margin:16px 0 4px">£7<span style="font-size:16px;color:var(--muted)">/month</span></div>
-        <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--gold2);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:12px">Locked permanently for founding members</div>
-        <div style="font-size:11px;color:var(--muted);line-height:1.8">
-          ✓ Full access to every Bridge (Compliance, Month-End, Career + more)<br>
-          ✓ Complete Safe AI Framework<br>
-          ✓ New prompts added first — before anyone else<br>
-          ✓ Newsletter 48hrs early<br>
-          ✓ Founding member badge<br>
-          ✓ Rate locked — never increases
-        </div>
-      </div>
-      <div style="background:var(--navy2);border:1px solid rgba(255,255,255,0.06);border-radius:10px;padding:24px;position:relative;opacity:0.6">
-        <div style="position:absolute;top:-10px;left:20px;font-family:'Orbitron',sans-serif;font-size:9px;font-weight:900;background:rgba(255,255,255,0.1);color:var(--muted);padding:3px 12px;border-radius:10px;letter-spacing:0.1em">STANDARD RATE</div>
-        <div style="font-family:'Orbitron',sans-serif;font-size:32px;font-weight:800;color:var(--muted);margin:12px 0 4px">£19<span style="font-size:16px;color:var(--muted2)">/month</span></div>
-        <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted2);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:12px">Once Membership Opens · New Members Only</div>
-        <div style="font-size:11px;color:var(--muted2);line-height:1.8">
-          Same access as founding members.<br>
-          Founding rate closes permanently once the founding window ends.
-        </div>
-      </div>
-    </div>
-
-    <div style="background:linear-gradient(135deg,rgba(212,168,67,0.06),rgba(212,168,67,0.02));border:1px solid rgba(212,168,67,0.2);border-radius:10px;padding:28px;text-align:center">
-      <div style="font-family:'Orbitron',sans-serif;font-size:11px;font-weight:700;color:var(--gold2);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:8px">Join the Early Access List</div>
-      <div style="font-size:13px;color:var(--muted);margin-bottom:20px;max-width:500px;margin-left:auto;margin-right:auto;line-height:1.7">No card. No commitment. You're notified first when membership opens — and your founding rate is reserved.</div>
-      <a href="https://the-ai-enabled-finance.beehiiv.com/subscribe?utm_source=website&utm_medium=members_hub&utm_campaign=founding_rate" target="_blank" style="display:inline-flex;align-items:center;gap:8px;background:linear-gradient(90deg,var(--gold),var(--gold2));color:var(--navy);font-family:'Orbitron',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.1em;padding:14px 32px;border-radius:6px;text-decoration:none;transition:opacity 0.2s">⚡ RESERVE YOUR FOUNDING RATE →</a>
-      <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted2);margin-top:12px">Join <span data-stat="subscribers">759+</span> finance professionals already on the list</div>
-    </div>
-  </div>
 
   <!-- ══ PERSONAL SECTION ══ -->
   <div class="hub-block reveal" id="personal">
@@ -646,7 +605,7 @@ footer::before{content:'';display:block;height:1px;background:linear-gradient(90
         <span class="card-icon">🧭</span>
         <h3 class="card-title" style="color:var(--gold2)">AI Readiness Assessment</h3>
         <p class="card-desc">A structured review of where your finance function actually stands on safe AI adoption — gaps, risks, and a practical next-steps plan.</p>
-        <a href="mailto:peter.at.ivanov@theaienabledfinance.com?subject=AI%20Readiness%20Assessment%20Enquiry" style="display:inline-flex;align-items:center;gap:6px;font-family:'Orbitron',sans-serif;font-size:9px;font-weight:700;color:var(--gold2);border:1px solid rgba(212,168,67,0.35);padding:8px 16px;border-radius:4px;text-decoration:none;margin-top:8px">✉ Get In Touch</a>
+        <a href="mailto:peter.at.ivanov@theaienabledfinance.com?subject=AI%20Readiness%20Assessment%20Enquiry" style="display:inline-flex;align-items:center;gap:6px;font-family:'Orbitron',sans-serif;font-size:9px;font-weight:700;color:var(--gold2);border:1px solid rgba(212,168,67,0.35);padding:8px 16px;border-radius:4px;text-decoration:none;margin-top:auto;align-self:flex-start">✉ Get In Touch</a>
       </div>
 
       <div class="hub-card coming-gold">
@@ -654,7 +613,7 @@ footer::before{content:'';display:block;height:1px;background:linear-gradient(90
         <span class="card-icon">🤝</span>
         <h3 class="card-title" style="color:var(--gold2)">1-on-1 Sessions</h3>
         <p class="card-desc">Direct working sessions on your real AI-in-finance questions — prompts, workflows, safe input, career strategy.</p>
-        <a href="mailto:peter.at.ivanov@theaienabledfinance.com?subject=1-on-1%20Session%20Enquiry" style="display:inline-flex;align-items:center;gap:6px;font-family:'Orbitron',sans-serif;font-size:9px;font-weight:700;color:var(--gold2);border:1px solid rgba(212,168,67,0.35);padding:8px 16px;border-radius:4px;text-decoration:none;margin-top:8px">✉ Get In Touch</a>
+        <a href="mailto:peter.at.ivanov@theaienabledfinance.com?subject=1-on-1%20Session%20Enquiry" style="display:inline-flex;align-items:center;gap:6px;font-family:'Orbitron',sans-serif;font-size:9px;font-weight:700;color:var(--gold2);border:1px solid rgba(212,168,67,0.35);padding:8px 16px;border-radius:4px;text-decoration:none;margin-top:auto;align-self:flex-start">✉ Get In Touch</a>
       </div>
 
       <div class="hub-card coming-gold">
@@ -662,7 +621,7 @@ footer::before{content:'';display:block;height:1px;background:linear-gradient(90
         <span class="card-icon">🏢</span>
         <h3 class="card-title" style="color:var(--gold2)">Corporate Training</h3>
         <p class="card-desc">Practical, safe AI adoption training for finance teams — built from what actually works inside a live corporate finance function, not vendor theory.</p>
-        <a href="mailto:peter.at.ivanov@theaienabledfinance.com?subject=Corporate%20Training%20Enquiry" style="display:inline-flex;align-items:center;gap:6px;font-family:'Orbitron',sans-serif;font-size:9px;font-weight:700;color:var(--gold2);border:1px solid rgba(212,168,67,0.35);padding:8px 16px;border-radius:4px;text-decoration:none;margin-top:8px">✉ Get In Touch</a>
+        <a href="mailto:peter.at.ivanov@theaienabledfinance.com?subject=Corporate%20Training%20Enquiry" style="display:inline-flex;align-items:center;gap:6px;font-family:'Orbitron',sans-serif;font-size:9px;font-weight:700;color:var(--gold2);border:1px solid rgba(212,168,67,0.35);padding:8px 16px;border-radius:4px;text-decoration:none;margin-top:auto;align-self:flex-start">✉ Get In Touch</a>
       </div>
 
     </div>
@@ -687,6 +646,50 @@ footer::before{content:'';display:block;height:1px;background:linear-gradient(90
         <div class="card-lock-row">🔒 Not yet open</div>
       </div>
 
+    </div>
+  </div>
+
+  <div class="gold-divider reveal"></div>
+
+  <!-- ══ MEMBERSHIP EARLY ACCESS ══ -->
+  <div class="hub-block reveal" id="membership">
+    <div class="hub-block-header">
+      <div class="eyebrow"><div class="eyebrow-line gold"></div><span class="gold">Founding Membership — Limited Window</span></div>
+      <h2 class="hub-block-title">Join The <span style="background:linear-gradient(90deg,var(--gold),var(--gold2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">Early Access List</span></h2>
+      <p class="hub-block-desc">When membership opens — and it will open on signal, not on a calendar date — the founding rate is reserved for everyone on this list. Standard rate is £19/month. Founding rate: £7/month. Locked permanently for founding members.</p>
+    </div>
+
+    <div class="pricing-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-bottom:2rem">
+      <div style="background:var(--navy2);border:1px solid rgba(212,168,67,0.25);border-radius:10px;padding:24px;position:relative">
+        <div style="position:absolute;top:-10px;left:20px;font-family:'Orbitron',sans-serif;font-size:9px;font-weight:900;background:var(--gold);color:var(--navy);padding:3px 12px;border-radius:10px;letter-spacing:0.1em">FOUNDING RATE</div>
+        <div style="position:absolute;top:-10px;right:20px;font-family:'JetBrains Mono',monospace;font-size:8px;font-weight:700;background:rgba(255,255,255,0.08);color:var(--white);padding:3px 10px;border-radius:10px;letter-spacing:0.06em;border:1px solid rgba(255,255,255,0.15)">🔖 REGISTER INTEREST — NO CHARGE</div>
+        <div style="font-family:'Orbitron',sans-serif;font-size:32px;font-weight:800;color:var(--gold2);margin:16px 0 4px">£7<span style="font-size:16px;color:var(--muted)">/month</span></div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--gold2);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:12px">Locked permanently for founding members</div>
+        <div style="font-size:11px;color:var(--muted);line-height:1.8">
+          ✓ Full access to every Bridge (Compliance, Month-End, Career + more)<br>
+          ✓ Complete Safe AI Framework<br>
+          ✓ New prompts added first — before anyone else<br>
+          ✓ Newsletter 48hrs early<br>
+          ✓ Founding member badge<br>
+          ✓ Rate locked — never increases
+        </div>
+      </div>
+      <div style="background:var(--navy2);border:1px solid rgba(255,255,255,0.06);border-radius:10px;padding:24px;position:relative;opacity:0.6">
+        <div style="position:absolute;top:-10px;left:20px;font-family:'Orbitron',sans-serif;font-size:9px;font-weight:900;background:rgba(255,255,255,0.1);color:var(--muted);padding:3px 12px;border-radius:10px;letter-spacing:0.1em">STANDARD RATE</div>
+        <div style="font-family:'Orbitron',sans-serif;font-size:32px;font-weight:800;color:var(--muted);margin:12px 0 4px">£19<span style="font-size:16px;color:var(--muted2)">/month</span></div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted2);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:12px">Once Membership Opens · New Members Only</div>
+        <div style="font-size:11px;color:var(--muted2);line-height:1.8">
+          Same access as founding members.<br>
+          Founding rate closes permanently once the founding window ends.
+        </div>
+      </div>
+    </div>
+
+    <div style="background:linear-gradient(135deg,rgba(212,168,67,0.06),rgba(212,168,67,0.02));border:1px solid rgba(212,168,67,0.2);border-radius:10px;padding:28px;text-align:center">
+      <div style="font-family:'Orbitron',sans-serif;font-size:11px;font-weight:700;color:var(--gold2);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:8px">Join the Early Access List</div>
+      <div style="font-size:13px;color:var(--muted);margin-bottom:20px;max-width:500px;margin-left:auto;margin-right:auto;line-height:1.7">No card. No commitment. You're notified first when membership opens — and your founding rate is reserved.</div>
+      <a href="https://the-ai-enabled-finance.beehiiv.com/subscribe?utm_source=website&utm_medium=members_hub&utm_campaign=founding_rate" target="_blank" style="display:inline-flex;align-items:center;gap:8px;background:linear-gradient(90deg,var(--gold),var(--gold2));color:var(--navy);font-family:'Orbitron',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.1em;padding:14px 32px;border-radius:6px;text-decoration:none;transition:opacity 0.2s">⚡ RESERVE YOUR FOUNDING RATE →</a>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted2);margin-top:12px">Join <span data-stat="subscribers">759+</span> finance professionals already on the list</div>
     </div>
   </div>
 
@@ -750,7 +753,7 @@ function renderLiPosts(){
   const grid=document.getElementById('li-posts-grid');
   if(!grid)return;
   const posts=liPostsExpanded?[...LI_POSTS_VISIBLE,...LI_POSTS_HIDDEN]:LI_POSTS_VISIBLE;
-  grid.innerHTML=posts.map(p=>`<a href="${LI_PROFILE}" target="_blank" class="hub-card live" style="text-decoration:none;color:inherit;display:block"><span class="card-badge" style="background:${p.color}18;color:${p.color};border:1px solid ${p.color}35">${p.tag} · ${p.date}</span><h3 class="card-title" style="color:var(--white)">${p.title}</h3><p class="card-desc">${p.desc}</p><div class="card-lock-row" style="color:${p.color};border-top:1px solid rgba(255,255,255,0.06);padding-top:12px">Read on LinkedIn →</div></a>`).join('')+(liPostsExpanded?'':`<div class="li-expand" onclick="expandLiPosts()"><div class="li-expand-icon">+</div><span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:rgba(0,229,200,.65)">+${LI_POSTS_HIDDEN.length} more posts</span></div>`);
+  grid.innerHTML=posts.map(p=>`<a href="${LI_PROFILE}" target="_blank" class="hub-card live" style="text-decoration:none;color:inherit"><span class="card-badge" style="background:${p.color}18;color:${p.color};border:1px solid ${p.color}35">${p.tag} · ${p.date}</span><h3 class="card-title" style="color:var(--white)">${p.title}</h3><p class="card-desc">${p.desc}</p><div class="card-lock-row" style="color:${p.color};border-top:1px solid rgba(255,255,255,0.06);padding-top:12px">Read on LinkedIn →</div></a>`).join('')+(liPostsExpanded?'':`<div class="li-expand" onclick="expandLiPosts()"><div class="li-expand-icon">+</div><span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:rgba(0,229,200,.65)">+${LI_POSTS_HIDDEN.length} more posts</span></div>`);
 }
 function expandLiPosts(){liPostsExpanded=true;renderLiPosts();}
 renderLiPosts();
