@@ -103,7 +103,7 @@ body{background:var(--navy);color:var(--white);font-family:'Inter',sans-serif;ov
 }
 
 /* ── CANVAS BG ── */
-#bg-canvas{position:fixed;top:0;left:0;width:100%;height:100%;z-index:0;opacity:0.63;pointer-events:none}
+#bg-canvas{position:fixed;top:0;left:0;width:100%;height:100%;z-index:0;opacity:0.72;pointer-events:none}
 
 /* ── SCANLINES ── */
 body::before{content:'';position:fixed;inset:0;z-index:1;background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,0,0,0.012) 2px,rgba(0,0,0,0.012) 4px);pointer-events:none}
@@ -300,6 +300,9 @@ section.main-section{max-width:1200px;margin:0 auto;padding:6rem 3rem}
 .coming-title{font-family:'Orbitron',sans-serif;font-size:11px;font-weight:700;margin-bottom:6px;line-height:1.3}
 .coming-desc{font-size:11px;font-weight:300;color:var(--muted);line-height:1.7;margin-bottom:10px}
 .coming-badge{font-family:'JetBrains Mono',monospace;font-size:7.5px;letter-spacing:0.12em;color:rgba(0,229,200,0.55);border:1px solid rgba(0,229,200,0.15);background:rgba(0,229,200,0.04);padding:2px 8px;border-radius:10px;display:inline-block}
+.coming-badge.badge-live-pulse{display:inline-flex;align-items:center;gap:5px;color:#39FF14;border-color:rgba(57,255,20,0.3);background:rgba(57,255,20,0.06)}
+.live-pulse-dot{width:6px;height:6px;border-radius:50%;background:#39FF14;box-shadow:0 0 6px #39FF14;animation:pdot 2s infinite}
+@keyframes pdot{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.4;transform:scale(0.7)}}
 
 /* ── NEWSLETTER ── */
 .newsletter-inner{max-width:640px;margin:0 auto;text-align:center}
@@ -392,7 +395,7 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
       </div>
       <div class="hero-stats">
         <div>
-          <span class="stat-val teal">25</span>
+          <span class="stat-val teal">25 <span style="color:#39FF14;font-size:0.7em;text-shadow:0 0 10px rgba(57,255,20,0.7),0 0 20px rgba(57,255,20,0.35)">FREE</span></span>
           <span class="stat-label">Battle-Tested Prompts</span>
         </div>
         <div>
@@ -875,7 +878,7 @@ function toggleSection(which) {
         <div style="display:flex;align-items:center;gap:8px"><div style="width:5px;height:5px;border-radius:50%;background:var(--amber);box-shadow:0 0 6px var(--amber)"></div><span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted)">Safe Input Guide included in every prompt</span></div>
       </div>
       <div style="margin-top:2rem">
-        <a href="#newsletter" onclick="document.getElementById('newsletter').scrollIntoView({behavior:'smooth'});return false;" class="btn-primary" data-sub-href="/prompts.html">Access The 25 <span class="brand-ai">AI Enabled</span> Prompts →</a>
+        <a href="#newsletter" onclick="document.getElementById('newsletter').scrollIntoView({behavior:'smooth'});return false;" class="btn-primary" data-sub-href="/prompts.html">Access The 25 AI Enabled Prompts →</a>
       </div>
     </div>
     <div class="reveal" style="transition-delay:0.15s">
@@ -952,42 +955,48 @@ function toggleSection(which) {
     <div style="margin-bottom:2.5rem" class="reveal" style="transition-delay:0.05s">
       <p style="font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.18em;color:var(--teal);text-transform:uppercase;margin-bottom:1.25rem;text-align:center">// 80% AI Finance</p>
       <div class="coming-cards">
-        <div class="coming-card" style="border-color:rgba(0,229,200,0.25)">
+        <a href="/members.html" class="coming-card" style="border-color:rgba(0,229,200,0.25);text-decoration:none;color:inherit;display:block">
           <div class="coming-icon">⚡</div>
           <div class="coming-title">Members Portal — Live Now</div>
-          <div class="coming-desc">Your AI Enabled home office. 25 prompts, insights, walkthroughs and more — all in one place. Subscriber access only.</div>
-          <span class="coming-badge" style="color:var(--teal);border-color:rgba(0,229,200,0.3);background:rgba(0,229,200,0.08)">Live</span>
-        </div>
-        <div class="coming-card" style="border-color:rgba(242,199,110,0.35);box-shadow:0 0 18px rgba(212,168,67,0.07)">
-          <div class="coming-icon">📝</div>
-          <div class="coming-title" style="color:var(--gold2)">AI Finance Insights</div>
-          <div class="coming-desc">Written breakdowns of real AI workflows — tested inside a live CAPEX controlling function. What worked, what didn't, what to do next.</div>
+          <div class="coming-desc">Your AI Enabled home office — prompts, insights, the Bridge, and more. All in one place. Subscriber access only.</div>
+          <span class="coming-badge badge-live-pulse"><span class="live-pulse-dot"></span>LIVE</span>
+        </a>
+        <a href="/members.html#prompts" class="coming-card" style="border-color:rgba(57,255,20,0.3);box-shadow:0 0 18px rgba(57,255,20,0.06);text-decoration:none;color:inherit;display:block">
+          <div class="coming-icon">🎯</div>
+          <div class="coming-title">25 Battle-Tested Prompts</div>
+          <div class="coming-desc">Across 5 finance categories — FP&amp;A, CAPEX, Month-End, Board Reporting, Strategy. Every one includes a safe input guide.</div>
+          <span class="coming-badge" style="color:#39FF14;border-color:rgba(57,255,20,0.35);background:rgba(57,255,20,0.08)">FREE</span>
+        </a>
+        <a href="/compliance-bridge.html" class="coming-card" style="border-color:rgba(57,255,20,0.3);box-shadow:0 0 18px rgba(57,255,20,0.06);text-decoration:none;color:inherit;display:block">
+          <div class="coming-icon">🔐</div>
+          <div class="coming-title">Safe AI Framework</div>
+          <div class="coming-desc">What to share with AI, what never to share, how to anonymise real finance data. The exact methodology behind every prompt on this site.</div>
+          <span class="coming-badge" style="color:#39FF14;border-color:rgba(57,255,20,0.35);background:rgba(57,255,20,0.08)">FREE</span>
+        </a>
+        <a href="/members.html#bridge" class="coming-card" style="border-color:rgba(242,199,110,0.35);box-shadow:0 0 18px rgba(212,168,67,0.07);text-decoration:none;color:inherit;display:block">
+          <div class="coming-icon">🌉</div>
+          <div class="coming-title" style="color:var(--gold2)">The <span class="brand-ai">AI Enabled</span> Bridge</div>
+          <div class="coming-desc">Real finance problems, solved with AI — Month-End, Forecasting, Budgeting, Career Bridge. More unlock with membership.</div>
           <span class="coming-badge" style="color:var(--gold2);border-color:rgba(212,168,67,0.4);background:rgba(212,168,67,0.1)">Coming Soon</span>
-        </div>
-        <div class="coming-card" style="border-color:rgba(255,77,109,0.35);box-shadow:0 0 18px rgba(255,77,109,0.07)">
+        </a>
+        <a href="/members.html#youtube" class="coming-card" style="border-color:rgba(255,77,109,0.35);box-shadow:0 0 18px rgba(255,77,109,0.07);text-decoration:none;color:inherit;display:block">
           <div class="coming-icon"><svg width="24" height="17" viewBox="0 0 28 20"><rect width="28" height="20" rx="6" fill="#FF0000"/><path d="M11 6l8 4-8 4V6z" fill="#fff"/></svg></div>
-          <div class="coming-title" style="color:#FF5555">YouTube — Walkthroughs</div>
+          <div class="coming-title" style="color:#FF5555">The <span class="brand-ai">AI Enabled</span> Channel</div>
           <div class="coming-desc">Screen-recorded, real workflow walkthroughs. AI inside corporate finance — no theory, no vendor decks. Just what actually works under deadline pressure.</div>
           <span class="coming-badge" style="color:#FF5555;border-color:rgba(255,77,109,0.4);background:rgba(255,77,109,0.1)">Coming Soon</span>
-        </div>
-        <div class="coming-card">
-          <div class="coming-icon">📊</div>
-          <div class="coming-title">CAPEX Control Model</div>
-          <div class="coming-desc">Production-grade Excel model — single project edition up to $10M. Built and used in a listed pharmaceutical company.</div>
-          <span class="coming-badge">Product · Locked</span>
-        </div>
-        <div class="coming-card">
-          <div class="coming-icon">🤖</div>
-          <div class="coming-title">FP&amp;A Automation Pack</div>
-          <div class="coming-desc">Step-by-step AI workflow blueprints for rolling forecasts, variance analysis, and board pack preparation.</div>
-          <span class="coming-badge">Product · Locked</span>
-        </div>
-        <div class="coming-card">
-          <div class="coming-icon">📧</div>
-          <div class="coming-title">Weekly AI Finance Digest</div>
-          <div class="coming-desc">One insight. One tested prompt. One tool. Every week — straight from the job.</div>
-          <span class="coming-badge">Coming</span>
-        </div>
+        </a>
+        <a href="/members.html#work-with-me" class="coming-card" style="border-color:rgba(242,199,110,0.35);box-shadow:0 0 18px rgba(212,168,67,0.07);text-decoration:none;color:inherit;display:block">
+          <div class="coming-icon">🤝</div>
+          <div class="coming-title" style="color:var(--gold2)">Work With Me</div>
+          <div class="coming-desc">AI readiness assessments, 1-on-1 sessions, corporate training — direct help, not just content.</div>
+          <span class="coming-badge" style="color:var(--gold2);border-color:rgba(212,168,67,0.4);background:rgba(212,168,67,0.1)">Get In Touch</span>
+        </a>
+        <a href="/members.html#products" class="coming-card" style="text-decoration:none;color:inherit;display:block">
+          <div class="coming-icon">📦</div>
+          <div class="coming-title">Upcoming Products</div>
+          <div class="coming-desc">Tools and templates built from real use inside a live finance function — released here first, as they're ready.</div>
+          <span class="coming-badge">Coming Soon</span>
+        </a>
       </div>
     </div>
     <div style="margin-bottom:2.5rem" class="reveal" style="transition-delay:0.15s">
@@ -1174,8 +1183,8 @@ for(let i=0;i<85;i++){const type=i%12===0?'gold':i%5===0?'blue':'teal';nodes.pus
 (function drawBg(){
   bgCtx.clearRect(0,0,bgCanvas.width,bgCanvas.height);
   nodes.forEach(n=>{n.x+=n.vx;n.y+=n.vy;n.pulse+=.014;if(n.x<0||n.x>bgCanvas.width)n.vx*=-1;if(n.y<0||n.y>bgCanvas.height)n.vy*=-1;});
-  for(let i=0;i<nodes.length;i++){for(let j=i+1;j<nodes.length;j++){const dx=nodes[i].x-nodes[j].x,dy=nodes[i].y-nodes[j].y,dist=Math.sqrt(dx*dx+dy*dy);if(dist<125){const alpha=.05*(1-dist/125),isGold=nodes[i].type==='gold'||nodes[j].type==='gold';bgCtx.beginPath();bgCtx.strokeStyle=isGold?`rgba(212,168,67,${alpha*.7})`:`rgba(0,229,200,${alpha})`;bgCtx.lineWidth=.5;bgCtx.moveTo(nodes[i].x,nodes[i].y);bgCtx.lineTo(nodes[j].x,nodes[j].y);bgCtx.stroke();}}
-    const n=nodes[i],p=.8+.2*Math.sin(n.pulse);bgCtx.beginPath();bgCtx.fillStyle=n.type==='gold'?`rgba(212,168,67,${.45*p})`:n.type==='blue'?`rgba(77,159,255,${.32*p})`:`rgba(0,191,255,${.35*p})`;bgCtx.arc(n.x,n.y,n.r,0,Math.PI*2);bgCtx.fill();}
+  for(let i=0;i<nodes.length;i++){for(let j=i+1;j<nodes.length;j++){const dx=nodes[i].x-nodes[j].x,dy=nodes[i].y-nodes[j].y,dist=Math.sqrt(dx*dx+dy*dy);if(dist<125){const alpha=.0575*(1-dist/125),isGold=nodes[i].type==='gold'||nodes[j].type==='gold';bgCtx.beginPath();bgCtx.strokeStyle=isGold?`rgba(212,168,67,${alpha*.7})`:`rgba(0,229,200,${alpha})`;bgCtx.lineWidth=.5;bgCtx.moveTo(nodes[i].x,nodes[i].y);bgCtx.lineTo(nodes[j].x,nodes[j].y);bgCtx.stroke();}}
+    const n=nodes[i],p=.8+.2*Math.sin(n.pulse);bgCtx.beginPath();bgCtx.fillStyle=n.type==='gold'?`rgba(212,168,67,${.52*p})`:n.type==='blue'?`rgba(77,159,255,${.37*p})`:`rgba(0,191,255,${.40*p})`;bgCtx.arc(n.x,n.y,n.r,0,Math.PI*2);bgCtx.fill();}
   requestAnimationFrame(drawBg);
 })();
 
@@ -1208,7 +1217,7 @@ for(let i=0;i<85;i++){const type=i%12===0?'gold':i%5===0?'blue':'teal';nodes.pus
   let pulse=0,last=0;
 
   function pos(oi,angle){const o=ORBITS[oi],t=tilts[oi],ex=o.rx*Math.cos(angle),ey=o.ry*Math.sin(angle);return{x:CX+ex*t.cos-ey*t.sin,y:CY+o.offy+ex*t.sin+ey*t.cos,z:Math.sin(angle)};}
-  function drawEllipse(oi){const o=ORBITS[oi],t=tilts[oi];ctx.save();ctx.translate(CX,CY+o.offy);ctx.transform(t.cos,t.sin,-t.sin,t.cos,0,0);ctx.beginPath();ctx.ellipse(0,0,o.rx,o.ry,0,0,Math.PI*2);ctx.strokeStyle=o.color+'28';ctx.lineWidth=0.8;if(o.dash)ctx.setLineDash([5,9]);else ctx.setLineDash([]);ctx.stroke();ctx.setLineDash([]);ctx.restore();}
+  function drawEllipse(oi){const o=ORBITS[oi],t=tilts[oi];ctx.save();ctx.translate(CX,CY+o.offy);ctx.transform(t.cos,t.sin,-t.sin,t.cos,0,0);ctx.beginPath();ctx.ellipse(0,0,o.rx,o.ry,0,0,Math.PI*2);ctx.strokeStyle=o.color+'2E';ctx.lineWidth=0.8;if(o.dash)ctx.setLineDash([5,9]);else ctx.setLineDash([]);ctx.stroke();ctx.setLineDash([]);ctx.restore();}
 
   function drawCore(p){
     const pp=.72+.28*Math.sin(p);
@@ -1260,7 +1269,7 @@ for(let i=0;i<85;i++){const type=i%12===0?'gold':i%5===0?'blue':'teal';nodes.pus
 
   function drawKW(text,x,y,color,depth,nova,oi){
     // Keywords always in background (z controls order, alpha controls depth feel)
-    const brightness=.35+.65*nova,alpha=(0.3+0.7*depth)*brightness;
+    const brightness=.40+.65*nova,alpha=(0.35+0.7*depth)*brightness;
     ctx.save();ctx.font='500 12px "JetBrains Mono",monospace';
     const tw=ctx.measureText(text).width,bw=tw+22,bh=22;
     if(nova>.78){ctx.shadowColor=color;ctx.shadowBlur=6+(nova-.78)*30;}

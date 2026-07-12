@@ -32,7 +32,8 @@ nav::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;backg
 .nav-right a.active{color:var(--teal)}
 
 /* MAIN */
-.main{max-width:900px;margin:0 auto;padding:120px 3rem 6rem}
+.main{max-width:900px;margin:0 auto;padding:120px 3rem 6rem;position:relative}
+.main::before{content:'';position:absolute;top:130px;bottom:6rem;left:0;width:3px;background:linear-gradient(180deg,var(--teal),var(--gold2),var(--blue2));opacity:0.55}
 
 /* HERO */
 .about-hero{display:grid;grid-template-columns:200px 1fr;gap:4rem;align-items:start;margin-bottom:5rem}
@@ -99,6 +100,7 @@ footer::before{content:'';display:block;height:1px;background:linear-gradient(90
   nav{padding:0.75rem 1rem}
   .nav-right{gap:1rem}
   .main{padding:100px 1rem 4rem}
+  .main::before{display:none}
   .about-hero{grid-template-columns:1fr;gap:2rem;text-align:center}
   .photo-wrap{margin:0 auto;width:180px}
   .about-eyebrow{justify-content:center}
@@ -147,7 +149,7 @@ footer::before{content:'';display:block;height:1px;background:linear-gradient(90
   <!-- STORY -->
   <div class="story reveal">
     <p class="story-line">
-      <strong>12 years in corporate finance.</strong>
+      <strong style="color:var(--white)">12 years in corporate finance.</strong>
     </p>
     <p class="story-line">
       Audit. Commodity trading. Manufacturing.
@@ -163,7 +165,7 @@ footer::before{content:'';display:block;height:1px;background:linear-gradient(90
       Then AI came into the conversation.
     </p>
     <p class="story-line">
-      <strong>Everyone started talking about it.</strong><br>
+      <strong style="color:var(--white)">Everyone started talking about it.</strong><br>
       Nobody knew how to actually use it<br>
       inside a real corporate finance role.
     </p>
@@ -184,7 +186,7 @@ footer::before{content:'';display:block;height:1px;background:linear-gradient(90
       Live board preparation.
     </p>
     <p class="story-line">
-      <strong>Real data. Anonymised. Compliant. Under real pressure.</strong>
+      <strong style="color:var(--gold2)">Real data. Anonymised. Compliant. Under real pressure.</strong>
     </p>
 
     <div class="story-divider"></div>
@@ -197,7 +199,7 @@ footer::before{content:'';display:block;height:1px;background:linear-gradient(90
       I nearly sent to my Finance Director.
     </p>
     <p class="story-line">
-      <strong>That moment told me everything.</strong>
+      <strong style="color:var(--teal)">That moment told me everything.</strong>
     </p>
     <p class="story-line">
       AI reasons well with data.<br>
@@ -210,10 +212,10 @@ footer::before{content:'';display:block;height:1px;background:linear-gradient(90
   <div class="mission reveal">
     <div class="mission-label">// The Mission</div>
     <p class="mission-text">
-      <strong>No BS. No guru. No vendor deck.</strong><br><br>
+      <strong style="color:var(--white)">No BS. No guru. No vendor deck.</strong><br><br>
       Just a finance professional documenting what actually works — and what does not — when you apply AI inside a real corporate finance role.<br><br>
-      Safe. Compliant. Practical. Built for the finance professionals who want to stay ahead of the gap without putting their careers at risk.<br><br>
-      <strong>That is what The <span class="brand-ai">AI Enabled</span> <span class="brand-fin">Finance</span> is.</strong>
+      <span style="color:rgba(238,244,255,0.75)">Safe. Compliant. Practical.</span> Built for the finance professionals who want to stay ahead of the gap without putting their careers at risk.<br><br>
+      <strong style="color:var(--white)">That is what The <span class="brand-ai">AI Enabled</span> <span class="brand-fin">Finance</span> is.</strong>
     </p>
   </div>
 
@@ -221,24 +223,24 @@ footer::before{content:'';display:block;height:1px;background:linear-gradient(90
   <div class="principles reveal">
     <div class="principles-title">What this platform is built on</div>
     <div class="principle">
-      <span class="principle-marker">01</span>
-      <p class="principle-text"><strong>Observation first.</strong> Every piece of content starts with something that actually happened — not something that could theoretically happen in a demo.</p>
+      <span class="principle-marker" style="color:var(--teal)">01</span>
+      <p class="principle-text"><strong style="color:var(--teal)">Observation first.</strong> Every piece of content starts with something that actually happened — not something that could theoretically happen in a demo.</p>
     </div>
     <div class="principle">
-      <span class="principle-marker">02</span>
-      <p class="principle-text"><strong>Safe by default.</strong> Every prompt, framework, and tool is built around GDPR, data privacy, and corporate governance constraints. Not as an afterthought. As the foundation.</p>
+      <span class="principle-marker" style="color:var(--gold2)">02</span>
+      <p class="principle-text"><strong style="color:var(--gold2)">Safe by default.</strong> Every prompt, framework, and tool is built around GDPR, data privacy, and corporate governance constraints. Not as an afterthought. As the foundation.</p>
     </div>
     <div class="principle">
-      <span class="principle-marker">03</span>
-      <p class="principle-text"><strong>Honest when it fails.</strong> AI gets things wrong. I document that too. The finance professionals who will use this well are the ones who understand both sides.</p>
+      <span class="principle-marker" style="color:var(--blue2)">03</span>
+      <p class="principle-text"><strong style="color:var(--blue2)">Honest when it fails.</strong> AI gets things wrong. I document that too. The finance professionals who will use this well are the ones who understand both sides.</p>
     </div>
     <div class="principle">
-      <span class="principle-marker">04</span>
-      <p class="principle-text"><strong>Peer to peer.</strong> Not above you. Not below you. I am a finance professional sharing what I found with other finance professionals. That is the only relationship this platform has.</p>
+      <span class="principle-marker" style="color:var(--teal)">04</span>
+      <p class="principle-text"><strong style="color:var(--teal)">Peer to peer.</strong> Not above you. Not below you. I am a finance professional sharing what I found with other finance professionals. That is the only relationship this platform has.</p>
     </div>
     <div class="principle">
-      <span class="principle-marker">05</span>
-      <p class="principle-text"><strong>Your judgment stays yours.</strong> The capital allocation decision. The re-phasing call. The stakeholder read. AI cannot make those. This platform never pretends otherwise.</p>
+      <span class="principle-marker" style="color:var(--gold2)">05</span>
+      <p class="principle-text"><strong style="color:var(--gold2)">Your judgment stays yours.</strong> The capital allocation decision. The re-phasing call. The stakeholder read. AI cannot make those. This platform never pretends otherwise.</p>
     </div>
   </div>
 

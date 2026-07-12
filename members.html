@@ -157,6 +157,9 @@ footer::before{content:'';display:block;height:1px;background:linear-gradient(90
 }
 @media (max-width: 768px) {
 
+  /* Pricing comparison */
+  .pricing-grid{grid-template-columns:1fr!important}
+
   /* Nav */
   nav{padding:0.75rem 1rem}
   .nav-brand{font-size:10px}
@@ -264,10 +267,11 @@ footer::before{content:'';display:block;height:1px;background:linear-gradient(90
   </div>
   <div class="nav-right">
     <div class="nav-links-hub">
+      <a href="#prompts"><span class="brand-ai">AI Enabled</span> 80%</a>
       <a href="#prompts">Prompts</a>
       <a href="#insights">Insights</a>
       <a href="#bridge">The Bridge</a>
-      <a href="#personal">The 20%</a>
+      <a href="#personal">Personal 20%</a>
     </div>
     <a href="/" class="nav-back" style="font-size:9px;color:var(--muted);text-decoration:none;letter-spacing:0.1em;text-transform:uppercase;transition:color 0.2s;display:flex;align-items:center;gap:5px;border-left:1px solid rgba(255,255,255,0.06);padding-left:1.75rem">
       <svg width="12" height="12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
@@ -291,13 +295,18 @@ footer::before{content:'';display:block;height:1px;background:linear-gradient(90
         <div class="snav-letter" style="color:var(--teal);margin-bottom:0">⚡</div>
         <span style="font-family:'Orbitron',sans-serif;font-size:12px;font-weight:900;color:#39FF14;letter-spacing:0.1em;text-shadow:0 0 10px rgba(57,255,20,0.8),0 0 20px rgba(57,255,20,0.4),0 0 40px rgba(57,255,20,0.15)">FREE</span>
       </div>
-      <div class="snav-name" style="color:var(--white)"><span style="color:var(--white)">25 </span><span class="brand-ai" style="font-weight:500">AI Enabled</span><span style="color:var(--white)"> Prompts</span></div>
+      <div class="snav-name" style="color:var(--white)">25 <span style="color:#39FF14;text-shadow:0 0 8px rgba(57,255,20,0.6)">FREE</span><br><span class="brand-ai" style="font-weight:500">AI Enabled</span> Prompts</div>
       <div class="snav-lock" style="color:var(--teal);margin-top:4px">⚡ Live Now — Access Free</div>
     </a>
-    <a href="#insights" class="snav-tile gold-tile" style="border-color:rgba(255,77,109,0.3)">
-      <div class="snav-letter" style="color:#FF5555">▶</div>
+    <a href="#insights" class="snav-tile gold-tile">
+      <div class="snav-letter" style="color:var(--gold2)">📝</div>
       <div class="snav-name"><span class="brand-ai">AI Enabled</span> Insights</div>
-      <div class="snav-lock">YouTube Walkthroughs — Coming Soon</div>
+      <div class="snav-lock">Newsletter + LinkedIn — Coming Soon</div>
+    </a>
+    <a href="#youtube" class="snav-tile gold-tile" style="border-color:rgba(255,77,109,0.3)">
+      <div class="snav-letter" style="color:#FF5555">▶</div>
+      <div class="snav-name">The <span class="brand-ai">AI Enabled</span> Channel</div>
+      <div class="snav-lock">YouTube — Coming Soon</div>
     </a>
     <a href="#bridge" class="snav-tile" style="border-color:rgba(0,229,200,0.3);position:relative;padding-bottom:14px">
       <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:4px">
@@ -309,7 +318,7 @@ footer::before{content:'';display:block;height:1px;background:linear-gradient(90
     </a>
     <a href="#personal" class="snav-tile gold-tile">
       <div class="snav-letter" style="color:var(--gold2)">🎯</div>
-      <div class="snav-name">The Career Arc</div>
+      <div class="snav-name">The <span class="brand-ai">AI Enabled</span> Career</div>
       <div class="snav-lock">Coming Soon</div>
     </a>
     <a href="#work-with-me" class="snav-tile gold-tile">
@@ -325,7 +334,7 @@ footer::before{content:'';display:block;height:1px;background:linear-gradient(90
     <a href="#membership" class="snav-tile gold-tile">
       <div class="snav-letter" style="color:var(--gold2)">⭐</div>
       <div class="snav-name">Founding Membership</div>
-      <div class="snav-lock">£7/month — Reserve Now</div>
+      <div class="snav-lock">£7/month — <span style="color:var(--white);font-weight:700">RESERVE NOW</span></div>
     </a>
   </div>
 </div>
@@ -397,13 +406,12 @@ footer::before{content:'';display:block;height:1px;background:linear-gradient(90
 
   <div class="gold-divider reveal"></div>
 
-  <!-- ══ INSIGHTS & YOUTUBE SECTION ══ -->
+  <!-- ══ AI ENABLED INSIGHTS SECTION ══ -->
   <div class="hub-block reveal" id="insights">
     <div class="hub-block-header">
       <div class="eyebrow"><div class="eyebrow-line gold"></div><span class="gold">Coming Soon — Subscriber First Access</span></div>
       <h2 class="hub-block-title"><span class="brand-ai">AI Enabled</span> Insights</h2>
-      <p style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.1em;color:var(--teal);text-transform:uppercase;margin-bottom:0.75rem">— YouTube Walkthroughs —</p>
-      <p class="hub-block-desc">Real AI workflows documented from inside a live corporate finance function. Written breakdowns and screen-recorded YouTube walkthroughs — no theory, no vendor decks.</p>
+      <p class="hub-block-desc">Real AI workflows documented from inside a live corporate finance function — written breakdowns, the newsletter, and every LinkedIn post. No theory, no vendor decks.</p>
     </div>
     <div class="cards-grid">
 
@@ -421,6 +429,27 @@ footer::before{content:'';display:block;height:1px;background:linear-gradient(90
           </div>
         </div>
       </div>
+
+    </div>
+
+    <!-- LATEST FROM LINKEDIN -->
+    <div style="margin-top:2rem;padding-top:2rem;border-top:1px solid rgba(255,255,255,0.06)" id="li-posts">
+      <p style="font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.14em;color:var(--muted);text-transform:uppercase;margin-bottom:1rem">// Latest From LinkedIn — Updated As I Post</p>
+      <div class="cards-grid" id="li-posts-grid"></div>
+    </div>
+
+  </div>
+
+  <div class="gold-divider reveal"></div>
+
+  <!-- ══ THE AI ENABLED CHANNEL (YOUTUBE) SECTION ══ -->
+  <div class="hub-block reveal" id="youtube">
+    <div class="hub-block-header">
+      <div class="eyebrow"><div class="eyebrow-line" style="background:#FF5555"></div><span style="color:#FF5555;font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.14em;text-transform:uppercase">Coming Soon — Subscriber First Access</span></div>
+      <h2 class="hub-block-title" style="display:flex;align-items:center;gap:10px"><svg width="30" height="21" viewBox="0 0 28 20" style="flex-shrink:0"><rect width="28" height="20" rx="6" fill="#FF0000"/><path d="M11 6l8 4-8 4V6z" fill="#fff"/></svg> The <span class="brand-ai">AI Enabled</span> Channel</h2>
+      <p class="hub-block-desc">Screen-recorded YouTube walkthroughs — real AI workflows inside a live corporate finance function. No theory, no vendor decks.</p>
+    </div>
+    <div class="cards-grid">
 
       <!-- YOUTUBE TEASER -->
       <div class="teaser-card" style="border-color:rgba(255,77,109,0.35)">
@@ -441,13 +470,6 @@ footer::before{content:'';display:block;height:1px;background:linear-gradient(90
       </div>
 
     </div>
-
-    <!-- LATEST FROM LINKEDIN -->
-    <div style="margin-top:2rem;padding-top:2rem;border-top:1px solid rgba(255,255,255,0.06)" id="li-posts">
-      <p style="font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.14em;color:var(--muted);text-transform:uppercase;margin-bottom:1rem">// Latest From LinkedIn — Updated As I Post</p>
-      <div class="cards-grid" id="li-posts-grid"></div>
-    </div>
-
   </div>
 
   <div class="gold-divider reveal"></div>
@@ -463,6 +485,7 @@ footer::before{content:'';display:block;height:1px;background:linear-gradient(90
 
       <!-- COMPLIANCE BRIDGE — LIVE -->
       <a href="/compliance-bridge.html" class="hub-card live" style="text-decoration:none;color:inherit;display:block">
+        <span style="position:absolute;top:14px;right:14px;font-family:'Orbitron',sans-serif;font-size:13px;font-weight:900;color:#39FF14;letter-spacing:0.08em;text-shadow:0 0 10px rgba(57,255,20,0.8),0 0 20px rgba(57,255,20,0.4)">FREE</span>
         <span class="card-badge badge-live">⚡ Live Now — Free Inside</span>
         <span class="card-icon">🌉</span>
         <h3 class="card-title" style="color:var(--white)">Compliance Bridge</h3>
@@ -481,11 +504,11 @@ footer::before{content:'';display:block;height:1px;background:linear-gradient(90
 
       <!-- CAREER BRIDGE — COMING SOON -->
       <div class="hub-card coming-gold">
-        <span class="card-badge badge-gold">🌉 Coming Soon — From 1 July</span>
+        <span class="card-badge badge-gold">🌉 Coming Very Soon</span>
         <span class="card-icon">🧭</span>
         <h3 class="card-title" style="color:var(--gold2)">Career Bridge</h3>
-        <p class="card-desc">Finding, landing and starting a new finance role — with AI, documented live. The free tier <em>is</em> the journey: the job hunt arc on LinkedIn and YouTube starting 1 July. The complete system — CV frameworks, interview prep prompts, first-90-days playbook — follows for members.</p>
-        <div class="card-lock-row" style="color:var(--gold2);border-top:1px solid rgba(212,168,67,0.1);padding-top:12px">🔒 Journey begins 1 July — watch live</div>
+        <p class="card-desc">Finding, landing and starting a new finance role — with AI, documented live. The free tier <em>is</em> the journey: the job hunt arc on LinkedIn and YouTube. The complete system — CV frameworks, interview prep prompts, first-90-days playbook — follows for members.</p>
+        <div class="card-lock-row" style="color:var(--gold2);border-top:1px solid rgba(212,168,67,0.1);padding-top:12px">🔒 Journey begins soon — watch live</div>
       </div>
 
       <!-- FORECASTING BRIDGE — DIMMED -->
@@ -528,10 +551,11 @@ footer::before{content:'';display:block;height:1px;background:linear-gradient(90
       <p class="hub-block-desc">When membership opens — and it will open on signal, not on a calendar date — the founding rate is reserved for everyone on this list. Standard rate is £19/month. Founding rate: £7/month. Locked permanently for founding members.</p>
     </div>
 
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-bottom:2rem">
+    <div class="pricing-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-bottom:2rem">
       <div style="background:var(--navy2);border:1px solid rgba(212,168,67,0.25);border-radius:10px;padding:24px;position:relative">
         <div style="position:absolute;top:-10px;left:20px;font-family:'Orbitron',sans-serif;font-size:9px;font-weight:900;background:var(--gold);color:var(--navy);padding:3px 12px;border-radius:10px;letter-spacing:0.1em">FOUNDING RATE</div>
-        <div style="font-family:'Orbitron',sans-serif;font-size:32px;font-weight:800;color:var(--gold2);margin:12px 0 4px">£7<span style="font-size:16px;color:var(--muted)">/month</span></div>
+        <div style="position:absolute;top:-10px;right:20px;font-family:'JetBrains Mono',monospace;font-size:8px;font-weight:700;background:rgba(255,255,255,0.08);color:var(--white);padding:3px 10px;border-radius:10px;letter-spacing:0.06em;border:1px solid rgba(255,255,255,0.15)">🔖 REGISTER INTEREST — NO CHARGE</div>
+        <div style="font-family:'Orbitron',sans-serif;font-size:32px;font-weight:800;color:var(--gold2);margin:16px 0 4px">£7<span style="font-size:16px;color:var(--muted)">/month</span></div>
         <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--gold2);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:12px">Locked permanently for founding members</div>
         <div style="font-size:11px;color:var(--muted);line-height:1.8">
           ✓ Full access to every Bridge (Compliance, Month-End, Career + more)<br>
@@ -545,10 +569,10 @@ footer::before{content:'';display:block;height:1px;background:linear-gradient(90
       <div style="background:var(--navy2);border:1px solid rgba(255,255,255,0.06);border-radius:10px;padding:24px;position:relative;opacity:0.6">
         <div style="position:absolute;top:-10px;left:20px;font-family:'Orbitron',sans-serif;font-size:9px;font-weight:900;background:rgba(255,255,255,0.1);color:var(--muted);padding:3px 12px;border-radius:10px;letter-spacing:0.1em">STANDARD RATE</div>
         <div style="font-family:'Orbitron',sans-serif;font-size:32px;font-weight:800;color:var(--muted);margin:12px 0 4px">£19<span style="font-size:16px;color:var(--muted2)">/month</span></div>
-        <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted2);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:12px">From 1 August 2026 · New members only</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted2);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:12px">Once Membership Opens · New Members Only</div>
         <div style="font-size:11px;color:var(--muted2);line-height:1.8">
           Same access as founding members.<br>
-          Founding rate permanently closed after 1 August 2026.
+          Founding rate closes permanently once the founding window ends.
         </div>
       </div>
     </div>
@@ -565,7 +589,7 @@ footer::before{content:'';display:block;height:1px;background:linear-gradient(90
   <div class="hub-block reveal" id="personal">
     <div class="hub-block-header">
       <div class="eyebrow"><div class="eyebrow-line gold"></div><span class="gold">20% Personal — The Career Journey</span></div>
-      <h2 class="hub-block-title">The Career <span style="background:linear-gradient(90deg,var(--gold),var(--gold2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">Arc</span></h2>
+      <h2 class="hub-block-title">The <span class="brand-ai">AI Enabled</span> Career</h2>
       <p class="hub-block-desc">The next role search, the new job, and the honest story of building this from zero — all documented live, while working full-time in finance.</p>
     </div>
     <div class="cards-grid">
@@ -617,28 +641,28 @@ footer::before{content:'';display:block;height:1px;background:linear-gradient(90
     </div>
     <div class="cards-grid">
 
-      <div class="hub-card dimmed">
-        <span class="card-badge badge-dim">Coming</span>
+      <div class="hub-card coming-gold">
+        <span class="card-badge badge-gold">🌱 Early Days</span>
         <span class="card-icon">🧭</span>
-        <h3 class="card-title">AI Readiness Assessment</h3>
+        <h3 class="card-title" style="color:var(--gold2)">AI Readiness Assessment</h3>
         <p class="card-desc">A structured review of where your finance function actually stands on safe AI adoption — gaps, risks, and a practical next-steps plan.</p>
-        <div class="card-lock-row">🔒 Not yet open</div>
+        <a href="mailto:peter.at.ivanov@theaienabledfinance.com?subject=AI%20Readiness%20Assessment%20Enquiry" style="display:inline-flex;align-items:center;gap:6px;font-family:'Orbitron',sans-serif;font-size:9px;font-weight:700;color:var(--gold2);border:1px solid rgba(212,168,67,0.35);padding:8px 16px;border-radius:4px;text-decoration:none;margin-top:8px">✉ Get In Touch</a>
       </div>
 
-      <div class="hub-card dimmed">
-        <span class="card-badge badge-dim">Coming</span>
+      <div class="hub-card coming-gold">
+        <span class="card-badge badge-gold">🌱 Early Days</span>
         <span class="card-icon">🤝</span>
-        <h3 class="card-title">1-on-1 Sessions</h3>
+        <h3 class="card-title" style="color:var(--gold2)">1-on-1 Sessions</h3>
         <p class="card-desc">Direct working sessions on your real AI-in-finance questions — prompts, workflows, safe input, career strategy.</p>
-        <div class="card-lock-row">🔒 Not yet open</div>
+        <a href="mailto:peter.at.ivanov@theaienabledfinance.com?subject=1-on-1%20Session%20Enquiry" style="display:inline-flex;align-items:center;gap:6px;font-family:'Orbitron',sans-serif;font-size:9px;font-weight:700;color:var(--gold2);border:1px solid rgba(212,168,67,0.35);padding:8px 16px;border-radius:4px;text-decoration:none;margin-top:8px">✉ Get In Touch</a>
       </div>
 
-      <div class="hub-card dimmed">
-        <span class="card-badge badge-dim">Coming</span>
+      <div class="hub-card coming-gold">
+        <span class="card-badge badge-gold">🌱 Early Days</span>
         <span class="card-icon">🏢</span>
-        <h3 class="card-title">Corporate Training</h3>
+        <h3 class="card-title" style="color:var(--gold2)">Corporate Training</h3>
         <p class="card-desc">Practical, safe AI adoption training for finance teams — built from what actually works inside a live corporate finance function, not vendor theory.</p>
-        <div class="card-lock-row">🔒 Not yet open</div>
+        <a href="mailto:peter.at.ivanov@theaienabledfinance.com?subject=Corporate%20Training%20Enquiry" style="display:inline-flex;align-items:center;gap:6px;font-family:'Orbitron',sans-serif;font-size:9px;font-weight:700;color:var(--gold2);border:1px solid rgba(212,168,67,0.35);padding:8px 16px;border-radius:4px;text-decoration:none;margin-top:8px">✉ Get In Touch</a>
       </div>
 
     </div>
