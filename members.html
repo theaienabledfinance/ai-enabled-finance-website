@@ -49,13 +49,14 @@ nav::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;backg
 .section-nav{background:var(--navy2);border-top:1px solid rgba(0,229,200,0.06);border-bottom:1px solid rgba(0,229,200,0.06);padding:18px 3rem;position:sticky;top:62px;z-index:90}
 .section-nav-label{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted2);margin-bottom:12px}
 .section-nav-tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px}
-.snav-tile{background:var(--navy3);border-radius:8px;padding:20px 16px;border:1px solid rgba(255,255,255,0.04);text-decoration:none;transition:border-color 0.2s,background 0.2s;display:flex;flex-direction:column;align-items:center;text-align:center}
+.snav-tile{background:var(--navy3);border-radius:8px;padding:20px 16px;border:1px solid rgba(255,255,255,0.04);text-decoration:none;transition:border-color 0.2s,background 0.2s;display:flex;flex-direction:column;align-items:center;text-align:center;position:relative}
+.snav-badge-corner{position:absolute;top:12px;right:12px;font-family:'Orbitron',sans-serif;font-size:9px;font-weight:900;letter-spacing:0.08em;color:#39FF14;text-shadow:0 0 10px rgba(57,255,20,0.8),0 0 20px rgba(57,255,20,0.4)}
 .snav-tile:hover{border-color:rgba(0,229,200,0.2);background:rgba(0,229,200,0.04)}
 .snav-tile.active{border-color:rgba(0,229,200,0.3);background:rgba(0,229,200,0.06)}
 .snav-tile.gold-tile{border-color:rgba(212,168,67,0.15)}
 .snav-tile.gold-tile:hover{border-color:rgba(212,168,67,0.35);background:rgba(212,168,67,0.04)}
 .snav-letter{font-family:'Orbitron',sans-serif;font-size:22px;font-weight:700;margin-bottom:6px}
-.snav-name{font-size:13px;font-weight:600;color:var(--white);line-height:1.35;min-height:2.7em;display:flex;align-items:center;justify-content:center}
+.snav-name{font-size:13px;font-weight:600;color:var(--white);line-height:1.35;white-space:nowrap}
 .snav-lock{font-size:9px;color:var(--muted2);margin-top:auto;padding-top:6px;font-family:'JetBrains Mono',monospace}
 
 /* ── HERO ── */
@@ -289,31 +290,29 @@ footer::before{content:'';display:block;height:1px;background:linear-gradient(90
 <div class="section-nav">
   <p class="section-nav-label">// Navigate your hub</p>
   <div class="section-nav-tiles">
-    <a href="#prompts" class="snav-tile active" style="border-color:rgba(0,229,200,0.3);position:relative;padding-bottom:14px">
-      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:4px">
-        <div class="snav-letter" style="color:var(--teal);margin-bottom:0">⚡</div>
-        <span style="font-family:'Orbitron',sans-serif;font-size:12px;font-weight:900;color:#39FF14;letter-spacing:0.1em;text-shadow:0 0 10px rgba(57,255,20,0.8),0 0 20px rgba(57,255,20,0.4),0 0 40px rgba(57,255,20,0.15)">FREE</span>
-      </div>
-      <div class="snav-name" style="color:var(--white)"><span style="color:var(--white)">25 </span><span class="brand-ai" style="font-weight:500">AI Enabled</span><span style="color:var(--white)"> Prompts</span></div>
-      <div class="snav-lock" style="color:var(--teal);margin-top:4px">⚡ Live Now — Access Free</div>
+    <a href="#prompts" class="snav-tile active" style="border-color:rgba(0,229,200,0.3)">
+      <span class="snav-badge-corner">FREE</span>
+      <div class="snav-letter" style="color:var(--teal)">⚡</div>
+      <div class="snav-name" style="color:var(--white)">25 <span class="brand-ai" style="font-weight:500">AI Enabled</span> Prompts</div>
+      <div class="snav-lock" style="color:var(--teal)">⚡ Live Now — Access Free</div>
     </a>
-    <a href="#insights" class="snav-tile gold-tile">
-      <div class="snav-letter" style="color:var(--gold2)">📝</div>
+    <a href="#insights" class="snav-tile gold-tile" style="border-color:rgba(10,102,194,0.4)">
+      <span class="snav-badge-corner">LIVE</span>
+      <div class="snav-letter" style="color:#0A66C2">📝</div>
       <div class="snav-name"><span class="brand-ai">AI Enabled</span> Insights</div>
-      <div class="snav-lock">Newsletter + LinkedIn — Coming Soon</div>
+      <div class="snav-lock">Newsletter + LinkedIn</div>
     </a>
-    <a href="#youtube" class="snav-tile gold-tile" style="border-color:rgba(255,77,109,0.3)">
+    <a href="#youtube" class="snav-tile gold-tile" style="border-color:rgba(255,77,109,0.4)">
+      <span class="snav-badge-corner">LIVE</span>
       <div class="snav-letter" style="color:#FF5555">▶</div>
       <div class="snav-name">The <span class="brand-ai">AI Enabled</span> Channel</div>
-      <div class="snav-lock">YouTube — Coming Soon</div>
+      <div class="snav-lock">YouTube Walkthroughs</div>
     </a>
-    <a href="#bridge" class="snav-tile" style="border-color:rgba(0,229,200,0.3);position:relative;padding-bottom:14px">
-      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:4px">
-        <div class="snav-letter" style="color:var(--gold2);margin-bottom:0">🌉</div>
-        <span style="font-family:'Orbitron',sans-serif;font-size:10px;font-weight:900;color:#39FF14;letter-spacing:0.1em;text-shadow:0 0 10px rgba(57,255,20,0.8),0 0 20px rgba(57,255,20,0.4),0 0 40px rgba(57,255,20,0.15)">LIVE</span>
-      </div>
+    <a href="#bridge" class="snav-tile" style="border-color:rgba(0,229,200,0.3)">
+      <span class="snav-badge-corner">LIVE</span>
+      <div class="snav-letter" style="color:var(--gold2)">🌉</div>
       <div class="snav-name"><span class="brand-ai">AI Enabled</span> Bridge</div>
-      <div class="snav-lock" style="color:var(--teal);margin-top:4px">⚡ Compliance Bridge Live — 3 More Coming</div>
+      <div class="snav-lock" style="color:var(--teal)">⚡ Compliance Bridge Live — 3 More Coming</div>
     </a>
     <a href="#personal" class="snav-tile gold-tile">
       <div class="snav-letter" style="color:var(--gold2)">🎯</div>
@@ -323,17 +322,17 @@ footer::before{content:'';display:block;height:1px;background:linear-gradient(90
     <a href="#work-with-me" class="snav-tile gold-tile">
       <div class="snav-letter" style="color:var(--gold2)">🤝</div>
       <div class="snav-name">Work With Me</div>
-      <div class="snav-lock">Not Yet Open</div>
+      <div class="snav-lock">Get In Touch</div>
     </a>
     <a href="#products" class="snav-tile gold-tile">
       <div class="snav-letter" style="color:var(--gold2)">📦</div>
       <div class="snav-name">Upcoming Products</div>
-      <div class="snav-lock">Not Yet Open</div>
+      <div class="snav-lock">Coming Soon</div>
     </a>
     <a href="#membership" class="snav-tile gold-tile">
       <div class="snav-letter" style="color:var(--gold2)">⭐</div>
       <div class="snav-name">Founding Membership</div>
-      <div class="snav-lock">£7/month — <span style="color:var(--teal);font-weight:700">RESERVE NOW</span></div>
+      <div class="snav-lock"><span style="color:var(--gold2);font-weight:700">£7/month</span> — <span style="color:var(--teal);font-weight:700">RESERVE NOW</span></div>
     </a>
   </div>
 </div>
