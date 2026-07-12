@@ -41,7 +41,11 @@ nav::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;backg
 .nav-right a:hover,.nav-right a.active{color:var(--teal)}
 
 /* ISSUE HEADER */
-.issue-header{max-width:760px;margin:0 auto;padding:120px 3rem 64px;text-align:center}
+.issue-header{max-width:760px;margin:0 auto;padding:28px 3rem 64px;text-align:center}
+.edition-switcher{max-width:760px;margin:0 auto;padding:112px 3rem 0;display:flex;gap:8px;justify-content:center;flex-wrap:wrap}
+.edition-tab{font-family:'Orbitron',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.06em;padding:8px 18px;border-radius:20px;text-decoration:none;transition:all 0.2s;border:1px solid transparent}
+.edition-tab.active{background:var(--teal);color:var(--navy)}
+.edition-tab.locked{background:rgba(255,255,255,0.03);color:var(--muted2);border-color:rgba(255,255,255,0.06);cursor:default;pointer-events:none}
 .issue-meta{display:flex;align-items:center;justify-content:center;gap:16px;margin-bottom:2rem;flex-wrap:wrap}
 .issue-badge{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.18em;text-transform:uppercase;color:var(--teal);background:rgba(0,229,200,0.08);border:1px solid rgba(0,229,200,0.2);padding:5px 14px;border-radius:20px}
 .issue-date{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.14em;color:var(--muted2);text-transform:uppercase}
@@ -168,6 +172,14 @@ footer::before{content:'';display:block;height:1px;background:linear-gradient(90
     <a href="/about.html">About</a>
   </div>
 </nav>
+
+<!-- EDITION SWITCHER -->
+<div class="edition-switcher reveal">
+  <a href="/newsletter.html" class="edition-tab active">Edition 01</a>
+  <span class="edition-tab locked">Edition 02</span>
+  <span class="edition-tab locked">Edition 03</span>
+  <span class="edition-tab locked">Edition 04</span>
+</div>
 
 <!-- ISSUE HEADER -->
 <div class="issue-header reveal">
